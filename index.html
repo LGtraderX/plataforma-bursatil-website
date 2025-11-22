@@ -1,150 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Plataforma Bursátil - Niveles Diarios y Expected Moves</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #050816;
-      color: #f5f5f5;
-    }
-    header {
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-    }
-    .sub {
-      font-size: 14px;
-      color: #bbbbbb;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px 40px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 30px;
-      margin-bottom: 16px;
-    }
-    p {
-      line-height: 1.6;
-      font-size: 16px;
-      color: #dddddd;
-      margin: 0 0 10px;
-    }
-    .buttons {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .btn {
-      display: block;
-      padding: 14px 20px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #ffd369;
-      max-width: 800px;
-      margin: 0 auto;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-    }
-    .btn-primary {
-      background: #ffd369;
-      color: #000000;
-    }
-    .btn-outline {
-      background: transparent;
-      color: #ffd369;
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      background: rgba(255, 211, 105, 0.1);
-    }
-    .btn-primary:hover {
-      background: #ffe08f;
-    }
-    footer {
-      margin-top: 20px;
-      padding: 20px;
-      text-align: center;
-      font-size: 13px;
-      color: #888;
-      border-top: 1px solid #333;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma Bursátil - Niveles Diarios y Expected Moves</title>
+
+    <style>
+        :root {
+            --bg: #050816;
+            --card: #0d1020;
+            --accent: #ffd369;
+            --accent-soft: #ffe08f;
+            --text-main: #f5f5f5;
+            --text-soft: #bbbbbb;
+            --border: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            background: #0a0d18;
+            border-bottom: 1px solid #111;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav img.logo-img {
+            height: 55px;
+            margin-right: 25px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .container h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            color: var(--text-soft);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            background: var(--card);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-soft);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 14px;
+            color: var(--text-soft);
+        }
+
+    </style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">Plataforma Bursátil</div>
-    <div class="sub">Niveles diarios · Expected Moves · Disciplina</div>
-  </header>
 
-  <main>
-    <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
-    <p>
-      Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves
-      y contexto de volatilidad. Todo pensado para ayudarte a calificar y
-      mantener cuentas de fondeo de manera profesional.
-    </p>
-    <p>
-      Primero la disciplina, después los resultados. Sin FOMO, sin chisme,
-      solo plan y ejecución.
-    </p>
+    <!-- NAVBAR -->
+    <nav>
+        <img src="Logo Plataforma Bursatil.jpg" class="logo-img" alt="Plataforma Bursátil" />
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Suite PB</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Paquete Tecnológico</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <div class="buttons">
-      <!-- Substack (ajusta si tu URL es diferente) -->
-      <a class="btn btn-primary"
-         href="https://plataformabursatil.substack.com"
-         target="_blank">
-        Ver niveles diarios (Substack)
-      </a>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
 
-      <!-- WhatsApp público: +1 908 468 0867 -->
-      <a class="btn btn-outline"
-         href="https://api.whatsapp.com/send?phone=19084680867&text=Hola%20Luis%2C%20quiero%20informaci%C3%B3n%20sobre%20Plataforma%20Burs%C3%A1til"
-         target="_blank">
-        Hablar por WhatsApp
-      </a>
+        <p>
+            Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves y contexto
+            de volatilidad. Todo pensado para ayudarte a hacer crecer tu propio capital con el menor
+            riesgo posible. Y si operas con cuentas de fondeo, este método también te ayuda a calificarlas
+            y mantenerlas de forma profesional.
+        </p>
 
-      <!-- Discord: invitación real -->
-      <a class="btn btn-outline"
-         href="https://discord.gg/wRKaqqkB7x"
-         target="_blank">
-        Unirme al Discord
-      </a>
+        <p>
+            Primero la disciplina, después los resultados. Sin FOMO, sin chisme, solo plan y ejecución.
+        </p>
 
-      <!-- TikTok (ajusta usuario si es diferente) -->
-      <a class="btn btn-outline"
-         href="https://www.tiktok.com/@plataformabursatil"
-         target="_blank">
-        TikTok Plataforma Bursátil
-      </a>
+        <!-- MAIN BUTTONS -->
+        <a href="https://plataformabursatil.substack.com" class="btn-primary btn">Ver niveles diarios (Substack)</a>
 
-      <!-- YouTube (ajusta usuario si es diferente) -->
-      <a class="btn btn-outline"
-         href="https://www.youtube.com/@plataformabursatil"
-         target="_blank">
-        YouTube Plataforma Bursátil
-      </a>
-    </div>
-  </main>
+        <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20informaci%C3%B3n%20sobre%20Plataforma%20Burs%C3%A1til" 
+           class="btn">Hablar por WhatsApp</a>
 
-  <footer>
-    © <span id="year"></span> Plataforma Bursátil · plataformaBursatil.com
-  </footer>
+        <a href="https://discord.gg/wRKaqqkB7x" class="btn">Unirme al Discord</a>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <a href="https://www.tiktok.com/@plataformabursatil" class="btn">TikTok Plataforma Bursátil</a>
+
+        <a href="https://youtube.com/@PlataformaBursatil" class="btn">YouTube Plataforma Bursátil</a>
+
+        <!-- SOCIAL SECTION -->
+        <a href="https://x.com/SitioBursatil" class="btn">X (Twitter)</a>
+        <a href="https://instagram.com/plataformabursatil" class="btn">Instagram</a>
+        <a href="https://facebook.com/plataformabursatil" class="btn">Facebook</a>
