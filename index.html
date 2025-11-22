@@ -208,6 +208,29 @@
       border-top: 1px solid var(--border);
     }
 
+    /* BOTÓN WHATSAPP FLOTANTE */
+    .whatsapp-float {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      z-index: 20;
+      text-decoration: none;
+    }
+
+    .whatsapp-float span {
+      font-size: 26px;
+      color: #ffffff;
+      line-height: 1;
+    }
+
     @media (min-width: 800px) {
       h1 {
         font-size: 28px;
@@ -234,8 +257,18 @@
     </ul>
   </nav>
 
+  <!-- BOTÓN WHATSAPP FLOTANTE (PC + CELULAR) -->
+  <a
+    href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20desde%20PlataformaBursatil.com%20y%20necesito%20que%20me%20gu%C3%ADes%20para%20empezar."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Hablar por WhatsApp con LGtraderX"
+  >
+    <span>💬</span>
+  </a>
+
   <div class="container" id="inicio">
-    <!-- HERO SIMPLIFICADO -->
+    <!-- HERO -->
     <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
     <p>
       Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves y contexto
@@ -246,7 +279,7 @@
       Primero la disciplina, después los resultados. Sin FOMO, sin ruido innecesario, solo plan y ejecución.
     </p>
 
-    <!-- TRES BOTONES PRINCIPALES (MOBILE-FIRST) -->
+    <!-- 3 BOTONES PRINCIPALES -->
     <a
       href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20desde%20PlataformaBursatil.com%20y%20necesito%20que%20me%20gu%C3%ADes%20para%20empezar."
       class="btn btn-primary"
@@ -300,14 +333,6 @@
         Comprar Paquete completo (Square)
       </a>
 
-      <a
-        href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20hacerte%20unas%20preguntas%20sobre%20el%20Paquete%20completo."
-        class="btn"
-        target="_blank"
-      >
-        Preguntar por WhatsApp antes de comprar
-      </a>
-
       <div class="back-top">
         <a href="#inicio">Volver al inicio</a>
       </div>
@@ -335,14 +360,6 @@
         target="_blank"
       >
         Pagar suscripción anual Suite PB (Square)
-      </a>
-
-      <a
-        href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20activar%20la%20suscripci%C3%B3n%20mensual%20a%20la%20Suite%20PB."
-        class="btn"
-        target="_blank"
-      >
-        Solicitar suscripción mensual Suite PB (WhatsApp)
       </a>
 
       <div class="back-top">
@@ -379,14 +396,6 @@
         Inscribirme al Curso Inicial (Square)
       </a>
 
-      <a
-        href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Curso%20Inicial."
-        class="btn"
-        target="_blank"
-      >
-        Preguntar por WhatsApp sobre el curso
-      </a>
-
       <div class="back-top">
         <a href="#inicio">Volver al inicio</a>
       </div>
@@ -412,14 +421,6 @@
         Ver y contratar Paquete tecnológico (Square)
       </a>
 
-      <a
-        href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20hacerte%20preguntas%20sobre%20el%20Paquete%20tecnol%C3%B3gico."
-        class="btn"
-        target="_blank"
-      >
-        Preguntar por WhatsApp sobre el Paquete tecnológico
-      </a>
-
       <div class="back-top">
         <a href="#inicio">Volver al inicio</a>
       </div>
@@ -429,20 +430,12 @@
     <div class="section" id="contacto">
       <h2>Contacto y redes</h2>
       <p>
-        Si tienes dudas sobre la Suite, el Curso o los Paquetes, puedes escribirnos directo.
+        Si tienes dudas sobre la Suite, el Curso o los Paquetes, puedes escribir por email o WhatsApp.
       </p>
       <p>
         📧 Email: <strong>plataformabursatil@gmail.com</strong><br />
-        📱 WhatsApp: <strong>+1 908 468 0867</strong>
+        📱 WhatsApp: <strong>+1 908 468 0867</strong> (botón verde en la esquina)
       </p>
-
-      <a
-        href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20necesito%20ayuda%20para%20elegir%20la%20mejor%20opci%C3%B3n%20para%20m%C3%AD."
-        class="btn"
-        target="_blank"
-      >
-        Escribirme por WhatsApp
-      </a>
 
       <p>También puedes encontrarnos en:</p>
       <ul class="social-list">
@@ -461,7 +454,8 @@
   </div>
 
   <footer>
-    © 2025 Plataforma Bursátil · plataformaBursatil.com
+    © 2025 Plataforma Bursátil · plataformaBursatil.com<br />
+    Pagos procesados de forma segura por Square a nombre de nuestra entidad legal LG Liberty Enterprise LLC.
   </footer>
 </body>
 </html>
