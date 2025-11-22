@@ -13,7 +13,6 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
     header {
       background: #020617;
       padding: 15px;
@@ -36,11 +35,9 @@
       color: #f59e0b;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: #0f172a;
     }
 
     .hero h1 {
@@ -56,7 +53,7 @@
       color: #cbd5e1;
     }
 
-    .hero .btn-main {
+    .btn-main {
       display: inline-block;
       padding: 14px 22px;
       background: #fbbf24;
@@ -65,14 +62,12 @@
       border-radius: 8px;
       text-decoration: none;
       font-size: 18px;
-      margin-top: 10px;
     }
 
-    .hero .btn-main:hover {
+    .btn-main:hover {
       background: #f59e0b;
     }
 
-    /* CARDS */
     .cards {
       max-width: 1100px;
       margin: 40px auto;
@@ -91,7 +86,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 360px; /* MISMA ALTURA */
+      height: 360px;
     }
 
     .card h3 {
@@ -114,14 +109,13 @@
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      margin-top: auto; /* HACE QUE EL BOTÓN BAJE */
+      margin-top: auto;
     }
 
     .btn-card:hover {
       background: #f59e0b;
     }
 
-    /* SOCIAL + AFFILIATES SECTIONS */
     .section-wrapper {
       max-width: 1100px;
       margin: 20px auto 0;
@@ -140,9 +134,9 @@
 
     .box h2 {
       margin-top: 0;
-      margin-bottom: 10px;
       color: #fbbf24;
       font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .social-list,
@@ -161,8 +155,8 @@
     .social-list a,
     .affiliate-list a {
       color: #fbbf24;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
 
     .social-list a:hover,
@@ -170,7 +164,6 @@
       color: #f59e0b;
     }
 
-    /* WHATSAPP FLOAT */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -185,20 +178,19 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0px 0px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
     }
 
     .whatsapp-float:hover {
       background: #1ebe5d;
     }
 
-    /* FOOTER */
     footer {
       margin-top: 30px;
       text-align: center;
       padding: 20px;
-      color: #94a3b8;
       font-size: 14px;
+      color: #94a3b8;
       border-top: 1px solid #1e293b;
     }
   </style>
@@ -219,7 +211,7 @@
 <section class="hero">
   <h1>Bienvenido a Plataforma Bursátil</h1>
   <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
-  <a href="paquete-completo.html" class="btn-main">Ver Paquete Completo →</a>
+  <a class="btn-main" href="paquete-completo.html">Ver Paquete Completo →</a>
 </section>
 
 <section class="cards">
@@ -254,61 +246,41 @@
 
 </section>
 
-<!-- SECCIÓN REDES + AFFILIATES -->
 <section class="section-wrapper">
-  <!-- Redes sociales -->
+
   <div class="box">
     <h2>Redes sociales oficiales</h2>
     <ul class="social-list">
-      <li>🎵 TikTok:  
-        <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a>
-      </li>
-      <li>▶️ YouTube:  
-        <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a>
-      </li>
-      <li>🐦 X (Twitter):  
-        <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a>
-      </li>
-      <li>📸 Instagram:  
-        <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a>
-      </li>
-      <li>📘 Facebook:  
-        <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a>
-      </li>
-      <li>💬 Discord:  
-        <a href="https://discord.gg/wRKaqqkB7x" target="_blank">Canal Plataforma Bursátil</a>
-      </li>
+      <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
+      <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a></li>
+      <li>🐦 X (Twitter): <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
+      <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
+      <li>💬 Discord: <a href="https://discord.gg/wRKaqqkB7x" target="_blank">Canal Plataforma Bursátil</a></li>
     </ul>
   </div>
 
-  <!-- Afiliados -->
   <div class="box">
     <h2>Cuentas evaluadas recomendadas</h2>
     <p>Estos enlaces son de afiliado. Te dan acceso a promociones especiales y apoyan el trabajo de Plataforma Bursátil.</p>
+
     <ul class="affiliate-list">
       <li>
         ✅ <strong>Apex Trader Funding</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">
-          Ir a Apex con mi enlace →
-        </a>
+        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
       </li>
+
       <li style="margin-top: 12px;">
         ✅ <strong>Take Profit Trader (TPT)</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">
-          Ir a TPT con mi enlace →
-        </a>
+        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
       </li>
     </ul>
-    <p style="font-size: 13px; color:#cbd5e1; margin-top:12px;">
-      (Luego podés reemplazar <em>TU_LINK_DE_AFILIADO...</em> por tus enlaces reales.)
-    </p>
+
   </div>
+
 </section>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/19084680867" class="whatsapp-float" target="_blank">
-  💬 WhatsApp
-</a>
+<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
 
 <footer>
   © 2025 Plataforma Bursátil · plataformabursatil.com  
