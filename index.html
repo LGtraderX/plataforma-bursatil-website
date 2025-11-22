@@ -36,25 +36,30 @@
             display: flex;
             align-items: center;
             padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav img.logo-img {
             height: 55px;
             margin-right: 25px;
+            border-radius: 6px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 20px;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         nav ul li a {
             text-decoration: none;
             color: var(--text-main);
-            font-size: 16px;
+            font-size: 15px;
             transition: 0.3s;
         }
 
@@ -65,35 +70,56 @@
         /* MAIN CONTAINER */
         .container {
             max-width: 900px;
-            margin: 50px auto;
-            text-align: center;
+            margin: 40px auto;
             padding: 0 20px;
+            text-align: center;
         }
 
         .container h1 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 10px;
         }
 
         .container p {
             color: var(--text-soft);
             line-height: 1.7;
-            font-size: 17px;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .section p {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .section strong {
+            color: var(--accent-soft);
         }
 
         /* BUTTONS */
         .btn {
             display: block;
             width: 100%;
-            padding: 15px;
-            margin: 15px 0;
+            max-width: 420px;
+            padding: 14px;
+            margin: 12px auto;
             background: var(--card);
             border: 1px solid var(--accent);
             color: var(--accent);
             text-decoration: none;
             border-radius: 12px;
-            font-size: 17px;
-            transition: 0.3s;
+            font-size: 16px;
+            transition: 0.2s;
         }
 
         .btn:hover {
@@ -117,8 +143,16 @@
             padding: 20px;
             font-size: 14px;
             color: var(--text-soft);
+            border-top: 1px solid var(--border);
         }
 
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
     </style>
 </head>
 
@@ -128,16 +162,16 @@
     <nav>
         <img src="Logo Plataforma Bursatil.jpg" class="logo-img" alt="Plataforma Bursátil" />
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Suite PB</a></li>
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Paquete Tecnológico</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#suite">Suite PB</a></li>
+            <li><a href="#curso">Curso Inicial</a></li>
+            <li><a href="#paquete">Paquete Tecnológico</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <div class="container">
+    <div class="container" id="inicio">
         <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
 
         <p>
@@ -148,22 +182,166 @@
         </p>
 
         <p>
-            Primero la disciplina, después los resultados. Sin FOMO, sin chisme, solo plan y ejecución.
+            Primero la disciplina, después los resultados. Sin FOMO, sin ruido innecesario, solo plan y ejecución.
         </p>
 
-        <!-- MAIN BUTTONS -->
-        <a href="https://plataformabursatil.substack.com" class="btn-primary btn">Ver niveles diarios (Substack)</a>
+        <!-- BOTONES PRINCIPALES -->
+        <a href="https://plataformabursatil.substack.com"
+           class="btn btn-primary"
+           target="_blank">
+           Ver niveles diarios (Substack)
+        </a>
 
-        <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20informaci%C3%B3n%20sobre%20Plataforma%20Burs%C3%A1til" 
-           class="btn">Hablar por WhatsApp</a>
+        <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20quiero%20informaci%C3%B3n%20sobre%20Plataforma%20Burs%C3%A1til"
+           class="btn"
+           target="_blank">
+           Hablar por WhatsApp
+        </a>
 
-        <a href="https://discord.gg/wRKaqqkB7x" class="btn">Unirme al Discord</a>
+        <a href="https://discord.gg/wRKaqqkB7x"
+           class="btn"
+           target="_blank">
+           Unirme al Discord
+        </a>
 
-        <a href="https://www.tiktok.com/@plataformabursatil" class="btn">TikTok Plataforma Bursátil</a>
+        <a href="https://www.tiktok.com/@plataformabursatil"
+           class="btn"
+           target="_blank">
+           TikTok Plataforma Bursátil
+        </a>
 
-        <a href="https://youtube.com/@PlataformaBursatil" class="btn">YouTube Plataforma Bursátil</a>
+        <a href="https://youtube.com/@PlataformaBursatil"
+           class="btn"
+           target="_blank">
+           YouTube Plataforma Bursátil
+        </a>
 
-        <!-- SOCIAL SECTION -->
-        <a href="https://x.com/SitioBursatil" class="btn">X (Twitter)</a>
-        <a href="https://instagram.com/plataformabursatil" class="btn">Instagram</a>
-        <a href="https://facebook.com/plataformabursatil" class="btn">Facebook</a>
+        <a href="https://x.com/SitioBursatil"
+           class="btn"
+           target="_blank">
+           X (Twitter)
+        </a>
+
+        <a href="https://instagram.com/plataformabursatil"
+           class="btn"
+           target="_blank">
+           Instagram
+        </a>
+
+        <a href="https://facebook.com/plataformabursatil"
+           class="btn"
+           target="_blank">
+           Facebook
+        </a>
+
+        <a href="mailto:plataformabursatil@gmail.com"
+           class="btn">
+           Enviar Email
+        </a>
+
+        <!-- SUITE PB -->
+        <div class="section" id="suite">
+            <h2>Suite Plataforma Bursátil</h2>
+            <p>
+                <strong>Suite PB</strong> es tu ecosistema completo: niveles diarios, expected moves,
+                contexto de volatilidad y herramientas LGtraderX en un solo lugar.
+            </p>
+            <p>
+                Pensada para traders que quieren estructura, disciplina y una guía clara durante la semana
+                de trading, sin depender del ruido de las redes.
+            </p>
+            <p>
+                No es señalera ni promesas rápidas, es un marco de trabajo para que tomes decisiones con
+                criterio propio.
+            </p>
+            <a href="https://square.link/u/Wk9LHIbv"
+               class="btn"
+               target="_blank">
+               Ver detalles y opciones de pago de la Suite PB
+            </a>
+        </div>
+
+        <!-- CURSO INICIAL -->
+        <div class="section" id="curso">
+            <h2>Curso Inicial para nuevos traders</h2>
+            <p>
+                Este curso está diseñado para quienes quieren empezar en futuros pero se sienten perdidos
+                con tanta información. Vamos directo a lo esencial: plataforma, conceptos básicos, niveles,
+                expected moves y cómo evitar los errores típicos de los primeros meses.
+            </p>
+            <p>
+                Incluye un <strong>entrenamiento rápido en acciones y opciones</strong>, para que entiendas lo
+                fundamental de cada mercado y tengas contexto completo antes de operar. Futuros, acciones y opciones,
+                explicados de forma clara, práctica y sin tecnicismos innecesarios.
+            </p>
+            <p>
+                Además, incluye un <strong>entrenamiento básico de plataformas</strong>: Thinkorswim, NinjaTrader 8
+                y Robinhood, para que puedas moverte con seguridad desde cero y empieces lo más rápido posible
+                sin confusión.
+            </p>
+            <a href="https://square.link/u/J5O5lHkU"
+               class="btn"
+               target="_blank">
+               Inscribirme al Curso Inicial
+            </a>
+        </div>
+
+        <!-- PAQUETE TECNOLÓGICO -->
+        <div class="section" id="paquete">
+            <h2>Paquete Tecnológico</h2>
+            <p>
+                Para traders que quieren empezar rápido, con un entorno técnico optimizado y sin perder tiempo
+                configurando todo desde cero.
+            </p>
+            <p>
+                Incluye un entorno preparado para trading, con la plataforma instalada y los ajustes básicos
+                listos para que puedas enfocarte en aprender, analizar y ejecutar.
+            </p>
+            <p>
+                No es obligatorio para operar, es una opción para acelerar el inicio si valoras tener todo
+                configurado desde el día uno.
+            </p>
+            <a href="https://square.link/u/i1ltldeO"
+               class="btn"
+               target="_blank">
+               Ver detalles del Paquete Tecnológico
+            </a>
+
+            <h2 style="margin-top:30px;">Paquete completo Plataforma Bursátil</h2>
+            <p>
+                Para quienes quieren tenerlo todo integrado: Suite PB, formación inicial y solución tecnológica
+                en un solo paquete. Pensado para acortar la curva de aprendizaje y empezar con todo alineado
+                desde el principio.
+            </p>
+            <a href="https://square.link/u/JKaweafQ"
+               class="btn"
+               target="_blank">
+               Ver Paquete completo Plataforma Bursátil
+            </a>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="section" id="contacto">
+            <h2>Contacto</h2>
+            <p>
+                Si tienes dudas sobre la Suite PB, el Curso Inicial o los Paquetes, puedes escribirnos directo.
+            </p>
+            <p>
+                Email: <strong>plataformabursatil@gmail.com</strong><br />
+                WhatsApp: <strong>+1 908 468 0867</strong>
+            </p>
+            <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20desde%20PlataformaBursatil.com"
+               class="btn"
+               target="_blank">
+               Escribir por WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 Plataforma Bursátil · plataformabursatil.com
+    </footer>
+
+</body>
+</html>
