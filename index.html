@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Plataforma Bursátil - Niveles Diarios y Expected Moves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050816;
+      color: #f5f5f5;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .sub {
+      font-size: 14px;
+      color: #bbbbbb;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+      color: #dddddd;
+    }
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #ffd369;
+    }
+    .btn-primary {
+      background: #ffd369;
+      color: #000000;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #ffd369;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Plataforma Bursátil</div>
+    <div class="sub">Niveles diarios · Expected Moves · Disciplina</div>
+  </header>
+
+  <main>
+    <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
+    <p>
+      Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves
+      y contexto de volatilidad. Todo pensado para ayudarte a calificar y
+      mantener cuentas de fondeo de manera profesional.
+    </p>
+    <p>
+      Primero la disciplina, después los resultados. Sin FOMO, sin chisme,
+      solo plan y ejecución.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="https://TU-SUBSTACK" target="_blank">
+        Ver niveles diarios (Substack)
+      </a>
+      <a class="btn btn-outline" href="https://api.whatsapp.com/send?phone=+19083434897" target="_blank">
+        Hablar por WhatsApp
+      </a>
+      <a class="btn btn-outline" href="https://discord.gg/TU-INVITE" target="_blank">
+        Unirme al Discord
+      </a>
+      <a class="btn btn-outline" href="https://www.tiktok.com/@TU-USUARIO" target="_blank">
+        TikTok Plataforma Bursátil
+      </a>
+      <a class="btn btn-outline" href="https://www.youtube.com/@TU-CANAL" target="_blank">
+        YouTube Plataforma Bursátil
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Plataforma Bursátil · plataformaBursatil.com
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
