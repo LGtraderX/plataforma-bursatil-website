@@ -25,33 +25,37 @@
       color: #bbbbbb;
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 0 20px 40px;
       text-align: center;
     }
     h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-bottom: 16px;
     }
     p {
       line-height: 1.6;
       font-size: 16px;
       color: #dddddd;
+      margin: 0 0 10px;
     }
     .buttons {
       margin-top: 30px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
     .btn {
-      display: inline-block;
-      padding: 12px 18px;
+      display: block;
+      padding: 14px 20px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
       border: 1px solid #ffd369;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
     }
     .btn-primary {
       background: #ffd369;
@@ -61,8 +65,16 @@
       background: transparent;
       color: #ffd369;
     }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      background: rgba(255, 211, 105, 0.1);
+    }
+    .btn-primary:hover {
+      background: #ffe08f;
+    }
     footer {
-      margin-top: 40px;
+      margin-top: 20px;
       padding: 20px;
       text-align: center;
       font-size: 13px;
@@ -90,19 +102,38 @@
     </p>
 
     <div class="buttons">
-      <a class="btn btn-primary" href="https://TU-SUBSTACK" target="_blank">
+      <!-- 🔗 CAMBIA este enlace de Substack si tu URL es distinta -->
+      <a class="btn btn-primary"
+         href="https://plataformabursatil.substack.com"
+         target="_blank">
         Ver niveles diarios (Substack)
       </a>
-      <a class="btn btn-outline" href="https://api.whatsapp.com/send?phone=+19083434897" target="_blank">
+
+      <!-- WhatsApp: ya con mensaje inicial -->
+      <a class="btn btn-outline"
+         href="https://api.whatsapp.com/send?phone=19083434897&text=Hola%20Luis%2C%20quiero%20informaci%C3%B3n%20sobre%20Plataforma%20Burs%C3%A1til"
+         target="_blank">
         Hablar por WhatsApp
       </a>
-      <a class="btn btn-outline" href="https://discord.gg/TU-INVITE" target="_blank">
+
+      <!-- 🔗 CAMBIA este enlace por tu invitación real de Discord -->
+      <a class="btn btn-outline"
+         href="https://discord.gg/PLATAFORMABURSATIL"
+         target="_blank">
         Unirme al Discord
       </a>
-      <a class="btn btn-outline" href="https://www.tiktok.com/@TU-USUARIO" target="_blank">
+
+      <!-- 🔗 CAMBIA el usuario si es diferente -->
+      <a class="btn btn-outline"
+         href="https://www.tiktok.com/@plataformabursatil"
+         target="_blank">
         TikTok Plataforma Bursátil
       </a>
-      <a class="btn btn-outline" href="https://www.youtube.com/@TU-CANAL" target="_blank">
+
+      <!-- 🔗 CAMBIA el usuario si es diferente -->
+      <a class="btn btn-outline"
+         href="https://www.youtube.com/@plataformabursatil"
+         target="_blank">
         YouTube Plataforma Bursátil
       </a>
     </div>
