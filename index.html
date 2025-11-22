@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma Bursátil – Niveles Diarios · Expected Moves · Trading Disciplinado</title>
-
+  <title>Plataforma Bursátil – Niveles diarios y Paquetes</title>
   <style>
-    /* --- COLOR SYSTEM --- */
     :root {
       --bg: #050816;
-      --card: #0b1020;
-      --gold: #f7d374;
+      --card: #0d1020;
+      --accent: #ffd369;
+      --accent-soft: #ffe08f;
       --text-main: #f5f5f5;
       --text-soft: #bbbbbb;
-      --accent: #ffd369;
+      --border: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -23,97 +26,189 @@
       color: var(--text-main);
     }
 
-    /* --- NAVBAR --- */
-    header {
-      width: 100%;
-      background: var(--card);
-      padding: 15px 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-sizing: border-box;
-      border-bottom: 1px solid #222;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .logo img {
-      height: 40px;
-    }
-
+    /* NAVBAR */
     nav {
+      width: 100%;
+      background: #0a0d18;
+      border-bottom: 1px solid #111;
       display: flex;
-      gap: 15px;
+      align-items: center;
+      padding: 8px 14px;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    nav a {
+    nav a.logo-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
       color: var(--text-main);
-      text-decoration: none;
-      font-size: 15px;
     }
 
-    nav a:hover {
-      color: var(--accent);
+    nav img.logo-img {
+      height: 42px;
+      border-radius: 6px;
     }
 
-    /* --- TITULOS --- */
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      margin-top: 30px;
-      line-height: 35px;
+    nav .brand-text {
+      font-size: 13px;
+      line-height: 1.2;
     }
 
-    p.center {
-      width: 90%;
-      max-width: 700px;
-      margin: 10px auto 25px;
-      text-align: center;
-      color: var(--text-soft);
-      line-height: 1.6em;
-    }
-
-    /* --- BOTONES --- */
-    .btn {
-      width: 90%;
-      max-width: 650px;
-      margin: 10px auto;
-      padding: 16px;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 16px;
-      text-decoration: none;
+    nav .brand-text strong {
       display: block;
-      color: var(--text-main);
-      border: 1px solid var(--gold);
+      font-size: 14px;
     }
 
-    .btn.primary {
-      background: var(--gold);
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-soft);
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    nav ul li a:hover {
+      border-color: var(--accent);
+      color: var(--accent-soft);
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 20px auto 40px;
+      padding: 0 16px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--text-soft);
+      line-height: 1.6;
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 430px;
+      margin: 8px auto;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      background: var(--card);
+      color: var(--accent);
+      font-size: 15px;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn-primary {
+      background: var(--accent);
       color: #000;
       font-weight: bold;
     }
 
-    .btn:hover {
-      opacity: 0.85;
+    .btn-primary:hover {
+      background: var(--accent-soft);
     }
 
-    /* --- FOOTER --- */
-    footer {
-      margin-top: 50px;
-      padding: 30px;
-      text-align: center;
-      color: var(--text-soft);
+    .section {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section p {
       font-size: 14px;
     }
 
-    /* --- BOTÓN WHATSAPP FLOTANTE --- */
+    .section ul {
+      margin: 6px 0 10px 18px;
+      padding: 0;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .section ul li {
+      margin-bottom: 4px;
+    }
+
+    .back-top {
+      margin-top: 10px;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .back-top a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    .back-top a:hover {
+      text-decoration: underline;
+    }
+
+    .social-list {
+      list-style: none;
+      margin: 8px 0 0;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .social-list li {
+      margin-bottom: 4px;
+    }
+
+    .social-list a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    .social-list a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: var(--text-soft);
+      border-top: 1px solid var(--border);
+    }
+
+    /* BOTÓN WHATSAPP FLOTANTE */
     .whatsapp-float {
       position: fixed;
       right: 16px;
@@ -126,116 +221,243 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 30;
+      z-index: 20;
+      text-decoration: none;
     }
 
     .whatsapp-float img {
-      width: 35px;
-      height: 35px;
+      width: 32px;
+      height: 32px;
     }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 23px; }
+    @media (min-width: 800px) {
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
-
 <body>
-
   <!-- NAVBAR -->
-  <header>
-    <div class="logo">
-      <img src="Logo Plataforma Bursatil.jpg" alt="Logo">
-      Plataforma Bursátil
-    </div>
+  <nav>
+    <a href="#inicio" class="logo-link">
+      <img src="Logo Plataforma Bursatil.jpg" class="logo-img" alt="Plataforma Bursátil" />
+      <div class="brand-text">
+        <strong>Plataforma Bursátil</strong>
+        Niveles · Expected Moves
+      </div>
+    </a>
+    <ul>
+      <li><a href="#paquete-completo">Paquete completo</a></li>
+      <li><a href="#suite">Suite PB</a></li>
+      <li><a href="#curso">Curso básico</a></li>
+      <li><a href="#paquete-tec">Paquete tecnológico</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <nav>
-      <a href="#paquete">Paquete Completo</a>
-      <a href="#suite">Suite PB</a>
-      <a href="#curso">Curso</a>
-      <a href="#tecnologico">Paquete Tecnológico</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- TITULO PRINCIPAL -->
-  <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
-
-  <p class="center">
-    Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves y contexto de volatilidad.
-    Pensado para ayudarte a hacer crecer tu propio capital con el menor riesgo posible.
-    Y si operas con cuentas de fondeo, este método también te permite calificarlas y mantenerlas de forma profesional.
-    <br><br>
-    Primero la disciplina, después los resultados. Sin FOMO, sin atajos, sin ruido. Solo plan y ejecución.
-  </p>
-
-  <!-- BOTONES PRINCIPALES -->
-  <a class="btn primary" href="https://plataformabursatil.substack.com" target="_blank">
-    Ver niveles diarios (Substack)
-  </a>
-
-  <a class="btn" href="https://wa.me/19084680867" target="_blank">Hablar por WhatsApp</a>
-  <a class="btn" href="https://discord.gg/wRKaqqkB7x" target="_blank">Unirme al Discord</a>
-  <a class="btn" href="https://tiktok.com/@plataformabursatil" target="_blank">TikTok Plataforma Bursátil</a>
-  <a class="btn" href="https://youtube.com/@plataformabursatil" target="_blank">YouTube Plataforma Bursátil</a>
-  <a class="btn" href="https://twitter.com/SitioBursatil" target="_blank">X (Twitter)</a>
-  <a class="btn" href="https://instagram.com/plataformabursatil" target="_blank">Instagram</a>
-  <a class="btn" href="https://facebook.com/plataformabursatil" target="_blank">Facebook</a>
-
-  <!-- SECCIONES -->
-  <section id="paquete">
-    <h1>Paquete Completo Plataforma Bursátil</h1>
-    <p class="center">
-      El paquete más recomendado para empezar desde cero. Incluye entrenamiento básico de plataformas
-      (TOS, NinjaTrader 8, Robinhood), guía de futuros, acciones y opciones, acceso a Suite PB
-      y acompañamiento inicial.
-    </p>
-    <a class="btn primary" href="https://square.link/u/JKaweafQ" target="_blank">Comprar Paquete Completo</a>
-  </section>
-
-  <section id="suite">
-    <h1>Suite PB – Niveles diarios + Expected Moves</h1>
-    <p class="center">Acceso mensual o anual a la Suite Plataforma Bursátil.</p>
-    <a class="btn primary" href="https://square.link/u/Wk9LHIbv" target="_blank">Suscribirme a la Suite</a>
-  </section>
-
-  <section id="curso">
-    <h1>Curso Intensivo Básico</h1>
-    <p class="center">
-      Para quienes no saben por dónde empezar. Futuros, acciones, opciones,
-      y manejo básico de plataformas para operar desde el primer día.
-    </p>
-    <a class="btn primary" href="https://square.link/u/J5O5lHkU" target="_blank">Comprar Curso Intensivo</a>
-  </section>
-
-  <section id="tecnologico">
-    <h1>Paquete Tecnológico</h1>
-    <p class="center">
-      Laptop configurada, monitor adicional, instalación de programas, indicadores básicos,
-      setup de NinjaTrader 8 + Thinkorswim y soporte técnico 30 días.
-    </p>
-    <a class="btn primary" href="https://square.link/u/i1ltldeO" target="_blank">Comprar Paquete Tecnológico</a>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <h1>Contacto</h1>
-    <p class="center">Escríbenos por WhatsApp para ayudarte directo:</p>
-    <a class="btn primary" href="https://wa.me/19084680867">Contactar ahora</a>
-  </section>
-
-  <!-- WHATSAPP FLOAT -->
+  <!-- BOTÓN WHATSAPP FLOTANTE (PC + CELULAR) -->
   <a
-    href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20necesito%20ayuda%20para%20empezar."
+    href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20desde%20PlataformaBursatil.com%20y%20necesito%20que%20me%20gu%C3%ADes%20para%20empezar."
     class="whatsapp-float"
     target="_blank"
+    aria-label="Hablar por WhatsApp con LGtraderX"
   >
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+    />
   </a>
 
-  <footer>
-    © 2025 Plataforma Bursátil – plataformabursatil.com
-  </footer>
+  <div class="container" id="inicio">
+    <!-- HERO LIMPIO -->
+    <h1>Niveles diarios y Expected Moves para traders de futuros</h1>
+    <p>
+      Análisis disciplinado del ES, NQ y YM, con niveles diarios, expected moves y contexto
+      de volatilidad. Todo pensado para ayudarte a hacer crecer tu propio capital con el menor
+      riesgo posible.
+    </p>
+    <p>
+      Primero la disciplina, después los resultados. Sin FOMO, sin ruido innecesario, solo plan y ejecución.
+    </p>
 
+    <!-- 3 BOTONES PRINCIPALES (HOME CORTA) -->
+    <a
+      href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20desde%20PlataformaBursatil.com%20y%20necesito%20que%20me%20gu%C3%ADes%20para%20empezar."
+      class="btn btn-primary"
+      target="_blank"
+    >
+      Hablar por WhatsApp con LGtraderX
+    </a>
+
+    <a
+      href="#paquete-completo"
+      class="btn"
+    >
+      Ver Paquete completo Plataforma Bursátil
+    </a>
+
+    <a
+      href="https://plataformabursatil.substack.com"
+      class="btn"
+      target="_blank"
+    >
+      Ver niveles diarios (Substack)
+    </a>
+
+    <!-- ========= SECCIÓN: PAQUETE COMPLETO ========= -->
+    <div class="section" id="paquete-completo">
+      <h2>Paquete completo Plataforma Bursátil</h2>
+      <p>
+        El <strong>Paquete completo</strong> está pensado para quienes quieren empezar con todo alineado:
+        formación, tecnología y estructura de trabajo, sin perder tiempo armando cada pieza por separado.
+      </p>
+      <p>Incluye:</p>
+      <ul>
+        <li>✅ Acceso al <strong>Curso Inicial</strong> (futuros, acciones, opciones y plataformas).</li>
+        <li>✅ <strong>Paquete Tecnológico</strong> preparado para trading (entorno listo para operar).</li>
+        <li>✅ Acceso a la <strong>Suite Plataforma Bursátil</strong> según las condiciones vigentes del paquete.</li>
+      </ul>
+      <p>
+        No incluye señales, gestión de cuentas ni promesas de resultados garantizados. Es un marco de trabajo
+        profesional para que puedas tomar tus propias decisiones con criterio.
+      </p>
+      <p>
+        Si pagas desde esta página, te agregamos manualmente como suscriptor de pago en Substack para que
+        recibas todos los niveles y contenido privado directamente en tu correo.
+      </p>
+
+      <a
+        href="https://square.link/u/JKaweafQ"
+        class="btn"
+        target="_blank"
+      >
+        Comprar Paquete completo (Square)
+      </a>
+
+      <div class="back-top">
+        <a href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+
+    <!-- ========= SECCIÓN: SUITE PB ========= -->
+    <div class="section" id="suite">
+      <h2>Suite Plataforma Bursátil (suscripción)</h2>
+      <p>
+        La <strong>Suite PB</strong> es tu ecosistema de trabajo diario: niveles, expected moves, contexto
+        de volatilidad y herramientas LGtraderX en un solo lugar.
+      </p>
+      <p>
+        Ideal para traders que ya operan, pero necesitan una guía clara, estructura y un marco de disciplina
+        para evitar el FOMO y la sobre-operativa.
+      </p>
+      <p>
+        Puedes pagar directamente desde la web y luego te agregamos como suscriptor de pago en Substack
+        de forma manual, para que tengas acceso completo.
+      </p>
+
+      <a
+        href="https://square.link/u/Wk9LHIbv"
+        class="btn"
+        target="_blank"
+      >
+        Pagar suscripción anual Suite PB (Square)
+      </a>
+
+      <div class="back-top">
+        <a href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+
+    <!-- ========= SECCIÓN: CURSO BÁSICO ========= -->
+    <div class="section" id="curso">
+      <h2>Curso básico intensivo para nuevos traders</h2>
+      <p>
+        Diseñado para quienes quieren empezar pero se sienten perdidos con tanta información. Vamos directo
+        a lo esencial para que puedas dar tus primeros pasos con seguridad.
+      </p>
+      <p>
+        Vemos lo fundamental:
+      </p>
+      <ul>
+        <li>✅ Conceptos básicos de futuros, acciones y opciones.</li>
+        <li>✅ Lectura de niveles y expected moves.</li>
+        <li>✅ Errores típicos de los primeros meses y cómo evitarlos.</li>
+        <li>✅ Entrenamiento básico en <strong>Thinkorswim, NinjaTrader 8 y Robinhood</strong>.</li>
+      </ul>
+      <p>
+        La idea es que termines con un marco simple y sólido para empezar desde cero lo más rápido posible,
+        sin confusión.
+      </p>
+
+      <a
+        href="https://square.link/u/J5O5lHkU"
+        class="btn"
+        target="_blank"
+      >
+        Inscribirme al Curso Inicial (Square)
+      </a>
+
+      <div class="back-top">
+        <a href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+
+    <!-- ========= SECCIÓN: PAQUETE TECNOLÓGICO ========= -->
+    <div class="section" id="paquete-tec">
+      <h2>Paquete tecnológico básico</h2>
+      <p>
+        Pensado para quienes prefieren enfocarse en el análisis y la ejecución, no en la parte técnica.
+        Puedes contar con un entorno preparado para trading, con la plataforma instalada y ajustes básicos listos.
+      </p>
+      <p>
+        Es opcional: no es obligatorio para operar, es una forma de acelerar el inicio si valoras tener
+        todo configurado desde el día uno.
+      </p>
+
+      <a
+        href="https://square.link/u/i1ltldeO"
+        class="btn"
+        target="_blank"
+      >
+        Ver y contratar Paquete tecnológico (Square)
+      </a>
+
+      <div class="back-top">
+        <a href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+
+    <!-- ========= SECCIÓN: CONTACTO Y REDES ========= -->
+    <div class="section" id="contacto">
+      <h2>Contacto y redes</h2>
+      <p>
+        Si tienes dudas sobre la Suite, el Curso o los Paquetes, puedes escribir por email o WhatsApp.
+      </p>
+      <p>
+        📧 Email: <strong>plataformabursatil@gmail.com</strong><br />
+        📱 WhatsApp: <strong>+1 908 468 0867</strong> (botón verde en la esquina)
+      </p>
+
+      <p>También puedes encontrarnos en:</p>
+      <ul class="social-list">
+        <li>🎥 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
+        <li>📺 YouTube: <a href="https://youtube.com/@PlataformaBursatil" target="_blank">@PlataformaBursatil</a></li>
+        <li>🐦 X (Twitter): <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
+        <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
+        <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
+        <li>💬 Discord: <a href="https://discord.gg/wRKaqqkB7x" target="_blank">Canal Plataforma Bursátil</a></li>
+      </ul>
+
+      <div class="back-top">
+        <a href="#inicio">Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Plataforma Bursátil · plataformaBursatil.com<br />
+    Pagos procesados de forma segura por Square a nombre de nuestra entidad legal LG Liberty Enterprise LLC.
+  </footer>
 </body>
 </html>
