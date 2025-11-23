@@ -14,6 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plataforma Bursátil</title>
+
   <style>
     body {
       margin: 0;
@@ -23,20 +24,35 @@
       line-height: 1.6;
     }
 
-    /* BANNER */
-    .banner-top {
+    /* ======================= BANNER ======================= */
+    .banner-container {
       width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 16px;
-      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0 8px;
     }
 
-    /* HEADER/MENÚ */
+    .banner-top {
+      width: 100%;
+      max-width: 1000px;
+      height: 230px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .banner-top {
+        height: 180px;
+        max-width: 95%;
+        border-radius: 12px;
+      }
+    }
+
+    /* ======================= MENÚ ======================= */
     header {
       background: #020617;
-      padding: 15px;
+      padding: 12px;
       text-align: center;
       border-bottom: 1px solid #1e293b;
       position: sticky;
@@ -49,27 +65,27 @@
       text-decoration: none;
       margin: 0 10px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     header a:hover {
       color: #f59e0b;
     }
 
-    /* HERO */
+    /* ======================= HERO ======================= */
     .hero {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 40px 20px 25px;
     }
 
     .hero h1 {
-      font-size: 38px;
+      font-size: 32px;
       color: #fbbf24;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 17px;
       max-width: 600px;
       margin: 10px auto 20px;
       color: #cbd5e1;
@@ -90,10 +106,10 @@
       background: #f59e0b;
     }
 
-    /* TARJETAS PRINCIPALES */
+    /* ======================= CARDS ======================= */
     .cards {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 20px auto 0;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
@@ -132,10 +148,10 @@
       background: #f59e0b;
     }
 
-    /* REDES + AFILIADOS */
+    /* ======================= REDES + AFILIADOS ======================= */
     .section-wrapper {
       max-width: 1100px;
-      margin: 20px auto 0;
+      margin: 25px auto 0;
       padding: 0 20px 20px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -181,7 +197,7 @@
       color: #f59e0b;
     }
 
-    /* WHATSAPP FLOTANTE */
+    /* ======================= WHATSAPP ======================= */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -197,13 +213,10 @@
       align-items: center;
       gap: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 9999;
     }
 
-    .whatsapp-float:hover {
-      background: #1ebe5d;
-    }
-
-    /* FOOTER */
+    /* ======================= FOOTER ======================= */
     footer {
       margin-top: 30px;
       text-align: center;
@@ -217,9 +230,12 @@
 
 <body>
 
-<!-- BANNER ARRIBA -->
-<img src="banner-plataforma-bursatil.png" alt="Plataforma Bursátil" class="banner-top">
+<!-- ======================= BANNER ======================= -->
+<div class="banner-container">
+  <img src="banner-plataforma-bursatil.png" alt="Plataforma Bursátil" class="banner-top">
+</div>
 
+<!-- ======================= MENÚ ======================= -->
 <header>
   <a href="index.html">Inicio</a>
   <a href="paquete-completo.html">Paquete completo</a>
@@ -230,13 +246,14 @@
   <a href="contacto.html">Contacto</a>
 </header>
 
+<!-- ======================= HERO ======================= -->
 <section class="hero">
   <h1>Bienvenido a Plataforma Bursátil</h1>
   <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
   <a class="btn-main" href="paquete-completo.html">Descubrir el Paquete Completo →</a>
 </section>
 
-<!-- ==================== TARJETAS PRINCIPALES ==================== -->
+<!-- ======================= CARDS ======================= -->
 <section class="cards">
 
   <div class="card">
@@ -280,9 +297,8 @@
   </div>
 
 </section>
-<!-- ==================== FIN TARJETAS ==================== -->
 
-<!-- ==================== REDES + AFILIADOS ==================== -->
+<!-- ======================= REDES + AFILIADOS ======================= -->
 <section class="section-wrapper">
 
   <div class="box">
@@ -315,10 +331,11 @@
   </div>
 
 </section>
-<!-- ==================== FIN REDES + AFILIADOS ==================== -->
 
+<!-- ======================= WHATSAPP ======================= -->
 <a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
 
+<!-- ======================= FOOTER ======================= -->
 <footer>
   © 2025 Plataforma Bursátil · plataformabursatil.com  
   <br>
