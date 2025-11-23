@@ -16,298 +16,307 @@
   <title>Paquete Completo Plataforma Bursátil</title>
 
   <style>
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #020617;
-      color: #e5e7eb;
+      background: #0f172a;
+      color: #f1f5f9;
       line-height: 1.6;
     }
 
-    a,
-    a:visited {
-      color: #fbbf24;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #f59e0b;
-      text-decoration: underline;
-    }
-
+    /* MENÚ SUPERIOR (MISMO QUE INDEX) */
     header {
       background: #020617;
+      padding: 12px 20px;
+      text-align: center;
       border-bottom: 1px solid #1e293b;
       position: sticky;
       top: 0;
       z-index: 999;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-title {
-      font-weight: 700;
-      color: #fbbf24;
-      font-size: 18px;
-    }
-
-    .nav-links a {
-      margin-left: 18px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #e5e7eb;
-    }
-
-    .nav-links a:hover {
+    header a {
       color: #fbbf24;
       text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 15px;
     }
 
-    main {
+    header a:hover {
+      color: #f59e0b;
+    }
+
+    /* CONTENEDOR GENERAL */
+    .page-wrapper {
       max-width: 1100px;
-      margin: 32px auto 40px;
-      padding: 0 20px 40px;
+      margin: 30px auto 40px;
+      padding: 0 20px;
+    }
+
+    .brand-small {
+      font-size: 16px;
+      color: #fbbf24;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
-      color: #f9fafb;
+      font-size: 32px;
+      margin: 0 0 18px;
     }
 
-    h2 {
-      font-size: 22px;
-      margin: 26px 0 12px;
-      color: #f9fafb;
+    .intro-text {
+      color: #e2e8f0;
+      max-width: 900px;
+      margin-bottom: 25px;
     }
 
-    .card {
-      background: #0b1220;
-      border-radius: 14px;
+    /* CARD PRINCIPAL */
+    .main-card {
+      background: #020617;
+      border-radius: 18px;
       border: 1px solid #1e293b;
-      padding: 18px 20px;
-      margin-bottom: 20px;
+      padding: 24px 24px 26px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
     }
 
-    .pricing-box {
+    .price-block {
       background: #020617;
       border-radius: 16px;
       border: 1px solid #1e293b;
-      padding: 18px 20px 20px;
-      margin: 20px 0 18px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+      padding: 22px 22px 24px;
+      margin-top: 10px;
     }
 
-    .price-label {
-      font-size: 13px;
+    .label {
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #9ca3af;
-      margin-bottom: 4px;
+      letter-spacing: 0.1em;
+      font-size: 12px;
+      color: #cbd5e1;
+      margin-bottom: 6px;
     }
 
-    .price-value {
-      font-size: 26px;
+    .price {
+      font-size: 30px;
       font-weight: 700;
       color: #fbbf24;
       margin-bottom: 6px;
     }
 
     .price-note {
-      font-size: 13px;
-      color: #cbd5f5;
-      margin-bottom: 16px;
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 18px;
     }
 
+    /* BOTONES PRINCIPALES */
     .btn-primary {
       display: inline-block;
-      padding: 12px 22px;
+      padding: 14px 26px;
+      background: #fbbf24;
+      color: #1e293b;
       border-radius: 999px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 15px;
+      font-weight: 700;
+      font-size: 17px;
       text-decoration: none;
-      color: #020617;
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      box-shadow: 0 14px 30px rgba(251, 191, 36, 0.55);
-      border: none;
-      white-space: nowrap;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
     .btn-primary:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-      box-shadow: 0 18px 38px rgba(251, 191, 36, 0.7);
-      text-decoration: none;
+      background: #f59e0b;
     }
 
-    .support-block {
-      margin-top: 10px;
-      padding-top: 10px;
+    .support-row {
+      margin-top: 22px;
+      padding-top: 14px;
       border-top: 1px solid #1e293b;
-      font-size: 13px;
-      color: #cbd5f5;
+      font-size: 14px;
+      color: #cbd5e1;
     }
 
-    .contact-options {
+    .support-label {
+      margin-bottom: 10px;
+    }
+
+    .support-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 8px;
     }
 
-    .contact-option {
+    .btn-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 10px;
+      padding: 10px 16px;
       border-radius: 999px;
-      border: 1px solid #1e293b;
+      border: 1px solid #334155;
       background: #020617;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn-pill span.icon {
+      font-size: 18px;
+    }
+
+    .btn-pill:hover {
+      background: #111827;
+      border-color: #475569;
+    }
+
+    .foot-note {
+      margin-top: 18px;
       font-size: 13px;
+      color: #94a3b8;
     }
 
-    .contact-option-icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-    }
-
-    .contact-option-icon.whatsapp {
-      background: #22c55e;
-    }
-
-    .contact-option-icon.email {
-      background: #0ea5e9;
-    }
-
-    .contact-option span {
-      color: #e5e7eb;
+    /* SECCIONES INFERIORES */
+    h2 {
+      font-size: 22px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: #fbbf24;
     }
 
     ul {
       padding-left: 20px;
-      margin: 8px 0 0;
+      margin-top: 6px;
+      margin-bottom: 16px;
     }
 
-    .footer-note {
-      font-size: 12px;
-      color: #9ca3af;
-      margin-top: 8px;
+    ul li {
+      margin-bottom: 6px;
     }
 
-    @media (max-width: 600px) {
-      .btn-primary {
-        width: 100%;
-        text-align: center;
-        white-space: normal;
+    .sub-card {
+      background: #020617;
+      border-radius: 14px;
+      border: 1px solid #1e293b;
+      padding: 18px 20px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #94a3b8;
+      margin: 40px 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      .main-card {
+        padding: 18px 16px 20px;
       }
-      .contact-option {
-        width: 100%;
-        justify-content: flex-start;
+      .price-block {
+        padding: 18px 16px 20px;
+      }
+      h1 {
+        font-size: 26px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="nav">
-      <div class="nav-title">Plataforma Bursátil</div>
-      <nav class="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="paquete-completo.html">Paquete completo</a>
-        <a href="suite.html">Suite</a>
-        <a href="curso-basico.html">Curso intensivo</a>
-        <a href="paquete-tecnologico.html">Paquete tecnológico</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <h1>Paquete Completo Plataforma Bursátil</h1>
+<!-- MENÚ SUPERIOR -->
+<header>
+  <a href="index.html">Inicio</a>
+  <a href="paquete-completo.html">Paquete completo</a>
+  <a href="suite.html">Suite</a>
+  <a href="curso-basico.html">Curso intensivo</a>
+  <a href="paquete-tecnologico.html">Paquete tecnológico</a>
+  <a href="webinario.html">Webinario</a>
+  <a href="contacto.html">Contacto</a>
+</header>
 
-    <div class="card">
-      <p>
-        El <strong>Paquete Completo</strong> reúne todo lo que necesitás para empezar con una estructura seria:
-        tecnología, Suite anual y entrenamiento intensivo. Llegás al mercado con la computadora lista, indicadores instalados
-        y un plan claro para operar desde el primer día.
-      </p>
+<div class="page-wrapper">
 
-      <div class="pricing-box">
-        <div class="price-label">Inversión</div>
-        <div class="price-value">$1,197 USD</div>
-        <div class="price-note">
-          Pagos procesados de forma segura mediante Square. Acceso completo al ecosistema de Plataforma Bursátil en un solo paquete.
-        </div>
-        <a
-          class="btn-primary"
-          href="https://square.link/u/XXXXXXXX" target="_blank"
-        >
-          Comprar Paquete Completo →
-        </a>
+  <div class="brand-small">Plataforma Bursátil</div>
 
-        <div class="support-block">
-          ¿Tenés dudas antes de confirmar tu compra?
-          <div class="contact-options">
-            <a
-              class="contact-option"
-              href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20tengo%20dudas%20sobre%20el%20Paquete%20Completo"
-              target="_blank"
-            >
-              <div class="contact-option-icon whatsapp">💬</div>
-              <span>Hablar con LGtraderX por WhatsApp</span>
-            </a>
+  <h1>Paquete Completo Plataforma Bursátil</h1>
 
-            <a
-              class="contact-option"
-              href="mailto:plataformabursatil@gmail.com?subject=Consulta%20sobre%20Paquete%20Completo&body=Hola%20Plataforma%20Burs%C3%A1til,%20me%20llamo%20_____%20y%20tengo%20dudas%20sobre%20el%20Paquete%20Completo."
-            >
-              <div class="contact-option-icon email">✉️</div>
-              <span>Enviarnos un email con tu consulta</span>
-            </a>
-          </div>
-        </div>
+  <p class="intro-text">
+    El <strong>Paquete Completo</strong> reúne todo lo que necesitás para empezar con una estructura seria:
+    tecnología, Suite anual y entrenamiento intensivo. Llegás al mercado con la computadora lista, indicadores
+    instalados y un plan claro para operar desde el primer día.
+  </p>
+
+  <div class="main-card">
+
+    <div class="price-block">
+      <div class="label">Inversión</div>
+      <div class="price">$1,197 USD</div>
+      <div class="price-note">
+        Pagos procesados de forma segura mediante Square. Acceso completo al ecosistema de Plataforma Bursátil
+        en un solo paquete.
       </div>
 
-      <div class="footer-note">
-        También podés <a href="contacto.html">ir a la página de contacto →</a> si preferís dejarnos tus datos allí.
+      <a class="btn-primary" href="TU_LINK_DE_PAGO_SQUARE_AQUI" target="_blank">
+        Comprar Paquete Completo →
+      </a>
+
+      <div class="support-row">
+        <div class="support-label">¿Tenés dudas antes de confirmar tu compra?</div>
+        <div class="support-buttons">
+          <a class="btn-pill" href="https://wa.me/19084680867" target="_blank">
+            <span class="icon">💬</span>
+            <span>Hablar con LGtraderX por WhatsApp</span>
+          </a>
+          <a class="btn-pill" href="mailto:tuemail@plataformabursatil.com">
+            <span class="icon">✉️</span>
+            <span>Enviarnos un email con tu consulta</span>
+          </a>
+        </div>
+
+        <div class="foot-note">
+          También podés ir a la <a href="contacto.html" style="color:#fbbf24; text-decoration:none;">página de contacto</a> si preferís dejarnos tus datos allí.
+        </div>
       </div>
     </div>
 
-    <h2>¿Qué incluye el Paquete Completo?</h2>
+  </div>
 
-    <div class="card">
-      <ul>
-        <li>Laptop configurada para trading, lista para usar.</li>
-        <li>Monitor adicional (según disponibilidad).</li>
-        <li>Instalación y optimización de programas clave para trading.</li>
-        <li>Indicadores exclusivos de Plataforma Bursátil preinstalados.</li>
-        <li>Suite Plataforma Bursátil por <strong>1 año</strong>.</li>
-        <li>Entrenamiento intensivo en futuros, stocks y opciones.</li>
-        <li>Soporte técnico gratuito por 30 días tras la entrega.</li>
-        <li>Acompañamiento inicial para que no empieces solo.</li>
-      </ul>
+  <h2>¿Qué incluye el Paquete Completo?</h2>
+  <ul>
+    <li>Laptop configurada para trading, lista para usar.</li>
+    <li>Monitor adicional (según disponibilidad).</li>
+    <li>Instalación y optimización de programas clave para trading.</li>
+    <li>Indicadores exclusivos de Plataforma Bursátil preinstalados.</li>
+    <li>Suite Plataforma Bursátil por <strong>1 año</strong>.</li>
+    <li>Entrenamiento intensivo en futuros, stocks y opciones.</li>
+    <li>Soporte técnico gratuito por 30 días tras la entrega.</li>
+  </ul>
 
-      <p class="footer-note">
-        Nota: este paquete <strong>no incluye</strong> la membresía mensual de niveles diarios de <strong>$29.99</strong>.
-        Esa suscripción se paga por separado como servicio recurrente.
-      </p>
-    </div>
-  </main>
+  <h2>¿Para quién es este paquete?</h2>
+  <div class="sub-card">
+    <ul>
+      <li>Traders que quieren empezar con estructura desde el primer día.</li>
+      <li>Personas que no quieren perder tiempo con la parte técnica.</li>
+      <li>Quienes necesitan acompañamiento cercano para sus primeras operaciones.</li>
+    </ul>
+  </div>
+
+  <h2>Condiciones generales</h2>
+  <div class="sub-card">
+    <ul>
+      <li>El equipo se entrega configurado para trading (no para gaming).</li>
+      <li>El acceso a la Suite anual se activa a partir de la fecha de entrega.</li>
+      <li>Los pagos se procesan a través de Square con la mayor seguridad disponible.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Plataforma Bursátil · plataformabursatil.com<br>
+  Pagos procesados de forma segura mediante Square.
+</footer>
+
 </body>
 </html>
