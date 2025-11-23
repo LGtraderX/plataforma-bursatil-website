@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentoría Privada | Plataforma Bursátil</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,13 +18,11 @@
     body {
       margin: 0;
       background-color: #0b1120;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, sans-serif;
       color: #fff;
       line-height: 1.6;
     }
 
-    /* ====== NAVBAR ====== */
     nav {
       background-color: #020617;
       padding: 12px 0;
@@ -32,34 +30,22 @@
       border-bottom: 1px solid #1e293b;
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 99;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    nav ul li a {
+    nav a {
       color: #fbbf24;
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 14px;
       font-weight: 600;
+      font-size: 14px;
     }
 
-    nav ul li a:hover {
-      color: #f59e0b;
-    }
+    nav a:hover { color: #f59e0b; }
 
-    /* ====== CONTENEDOR GENERAL ====== */
     .container {
       max-width: 1060px;
-      margin: 28px auto 40px;
+      margin: 28px auto;
       padding: 0 20px;
     }
 
@@ -67,13 +53,12 @@
       font-size: 13px;
       color: #94a3b8;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
       margin-bottom: 6px;
     }
 
     h1 {
       font-size: 30px;
-      margin: 0 0 6px 0;
+      margin: 0 0 6px;
       color: #fbbf24;
     }
 
@@ -81,205 +66,113 @@
       font-size: 16px;
       color: #cbd5e1;
       max-width: 720px;
-      margin: 0 0 20px 0;
     }
 
-    .intro-note {
-      font-size: 13px;
-      color: #9ca3af;
-      margin-bottom: 24px;
-    }
-
-    /* ====== TARJETA DE OFERTA ====== */
     .offer-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 18px;
-      align-items: flex-start;
-      margin-bottom: 10px;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 22px;
+      margin-top: 24px;
     }
 
-    @media (max-width: 900px) {
-      .offer-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    @media(max-width: 900px) {
+      .offer-layout { grid-template-columns: 1fr; }
     }
 
-    .offer-box {
-      background-color: #111827;
+    .offer-box, .contact-box {
+      background: #111827;
       padding: 22px;
       border-radius: 18px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.40);
       border: 1px solid #1f2937;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
     .offer-pill {
       display: inline-block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      background: rgba(251,191,36,0.1);
       padding: 4px 10px;
-      border-radius: 999px;
-      background-color: rgba(251,191,36,0.08);
+      font-size: 11px;
+      border-radius: 20px;
       color: #fbbf24;
       margin-bottom: 6px;
     }
 
-    .offer-title {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 0 0 6px 0;
-    }
-
-    .offer-price {
-      font-size: 26px;
-      font-weight: 800;
-      color: #fefce8;
-      margin-bottom: 8px;
-    }
-
-    .offer-price span {
-      font-size: 14px;
-      font-weight: 500;
-      color: #e5e7eb;
-      margin-left: 4px;
-    }
-
-    .offer-text {
-      font-size: 14px;
-      color: #d1d5db;
-      margin-bottom: 18px;
-    }
+    .offer-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .offer-price { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
 
     .btn-primary {
       display: inline-block;
+      background: #fbbf24;
       padding: 12px 20px;
-      background-color: #fbbf24;
-      color: #1f2937;
-      text-decoration: none;
+      color: #111827;
       font-weight: 700;
-      font-size: 15px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .btn-primary:hover {
-      background-color: #f59e0b;
-    }
-
-    .offer-small-note {
-      font-size: 12px;
-      color: #9ca3af;
-      margin-top: 4px;
-    }
-
-    .contact-box {
-      background-color: #020617;
-      padding: 18px 18px;
-      border-radius: 16px;
-      border: 1px solid #1f2937;
-      font-size: 14px;
-      color: #e5e7eb;
-    }
-
-    .contact-box strong {
-      color: #fbbf24;
-    }
-
-    .btn-secondary-row {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      background-color: #111827;
-      color: #e5e7eb;
-      padding: 8px 14px;
+      border-radius: 40px;
       text-decoration: none;
-      border-radius: 999px;
-      font-size: 13px;
-      border: 1px solid #1f2937;
+      text-align: center;
+      margin-top: 6px;
     }
 
-    .btn-secondary:hover {
-      background-color: #1f2937;
+    .btn-primary:hover { background: #f59e0b; }
+
+    /* ===== BOTONES EXACTOS QUE USÁS ===== */
+    .contact-buttons {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    /* ===== BLOQUE OPTIMIZADO DE TIPS ===== */
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid #334155;
+      font-size: 14px;
+      color: #e2e8f0;
+      text-decoration: none;
+      background: #0f172a;
+    }
+
+    .contact-btn:hover {
+      background: #1e293b;
+    }
+
+    /* ===== TIPS ===== */
     .mentoria-tips {
-      margin: 26px auto 56px;
+      margin: 36px auto 60px;
       max-width: 960px;
       padding: 0 20px;
     }
 
     .mentoria-tips-inner {
-      background-color: #020617;
-      border-radius: 20px;
-      padding: 22px 22px 22px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+      background: #020617;
+      padding: 22px;
+      border-radius: 18px;
       border: 1px solid #1f2937;
     }
 
     .mentoria-tips-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       color: #fbbf24;
-      margin: 0 0 6px 0;
-    }
-
-    .mentoria-tips-subtitle {
-      font-size: 14px;
-      color: #e5e7eb;
-      margin: 0 0 16px 0;
     }
 
     .mentoria-tips-list {
-      list-style: disc;
+      margin-top: 12px;
       padding-left: 20px;
-      margin: 0;
     }
 
     .mentoria-tips-list li {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #d1d5db;
       margin-bottom: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        margin-top: 20px;
-      }
-
-      .offer-box {
-        padding: 18px;
-      }
-
-      .mentoria-tips-inner {
-        padding: 18px;
-        border-radius: 16px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .intro-text {
-        font-size: 15px;
-      }
+      color: #cbd5e1;
+      font-size: 14px;
     }
 
     footer {
       text-align: center;
-      font-size: 12px;
-      color: #6b7280;
-      padding: 18px 10px 26px;
-      border-top: 1px solid #111827;
-      margin-top: 10px;
+      padding: 20px;
+      color: #64748b;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -288,111 +181,93 @@
 
   <!-- NAVBAR -->
   <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="paquete-completo.html">Paquete completo</a></li>
-      <li><a href="suite.html">Suite</a></li>
-      <li><a href="curso-basico.html">Curso intensivo</a></li>
-      <li><a href="paquete-tecnologico.html">Paquete tecnológico</a></li>
-      <li><a href="mentoria-privada.html">Mentoría privada</a></li>
-      <li><a href="webinario.html">Webinario</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+    <a href="index.html">Inicio</a>
+    <a href="paquete-completo.html">Paquete completo</a>
+    <a href="suite.html">Suite</a>
+    <a href="curso-basico.html">Curso intensivo</a>
+    <a href="paquete-tecnologico.html">Paquete tecnológico</a>
+    <a href="mentoria-privada.html">Mentoría privada</a>
+    <a href="webinario.html">Webinario</a>
+    <a href="contacto.html">Contacto</a>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <div class="container">
-    <div class="page-tag">Mentoría 1 a 1</div>
 
+    <div class="page-tag">Mentoría 1 a 1</div>
     <h1>Mentoría Privada con LGtraderX</h1>
 
     <p class="intro-text">
-      90 minutos de mentoría privada para revisar tu realidad como trader, detectar errores críticos
-      y construir un plan de acción claro para los próximos días de mercado: niveles, expected moves,
-      riesgo y disciplina.
+      90 minutos intensivos para revisar tu situación real como trader, corregir errores críticos,
+      mejorar ejecución y definir un plan claro para los próximos días usando niveles, expected moves, riesgo y disciplina.
     </p>
 
-    <p class="intro-note">
-      Recomendado para traders que ya operan Futuros, Stocks u Opciones y quieren alinear su método
-      con la estructura de Plataforma Bursátil.
-    </p>
-
-    <!-- BLOQUE OFERTA + CONTACTO -->
     <div class="offer-layout">
 
       <!-- OFERTA -->
       <div class="offer-box">
         <div class="offer-pill">Solo 10 lugares</div>
+
         <h2 class="offer-title">Sesión privada de 90 minutos</h2>
 
-        <div class="offer-price">
-          $149.99 USD <span>precio especial lanzamiento</span>
-        </div>
+        <div class="offer-price">$149.99 USD</div>
 
-        <p class="offer-text">
-          Mentoría 1 a 1 en vivo conmigo (LGtraderX). Compartimos pantalla, revisamos tus trades,
-          niveles y expected moves, ajustamos tu gestión de riesgo y trabajamos en tu disciplina
-          para que dejes de improvisar trade a trade.
+        <p>
+          Mentoría 1 a 1 en vivo con pantalla compartida, análisis de tus trades, expected moves,
+          corrección de errores y plan de acción personalizado para los próximos días.
         </p>
 
-        <a class="btn-primary" href="https://square.link/u/clRVrN0P" target="_blank" rel="noopener">
+        <a class="btn-primary" target="_blank" href="https://square.link/u/clRVrN0P">
           Reservar mi Mentoría Privada →
         </a>
 
-        <div class="offer-small-note">
-          Pagos procesados de forma segura mediante Square. Recibirás confirmación por email después del pago.
-        </div>
+        <p style="font-size:12px; color:#9ca3af; margin-top:12px;">
+          Pagos procesados de forma segura mediante Square. Recibirás confirmación por email.
+        </p>
       </div>
 
-      <!-- CONTACTO RÁPIDO -->
+      <!-- CONTACTO RAPIDO -->
       <div class="contact-box">
-        <p>
-          <strong>¿Tenés dudas antes de reservar?</strong><br>
-          Podés escribirme directamente para confirmar si esta mentoría es lo ideal para tu situación.
-        </p>
+        <p><strong>¿Tenés dudas antes de confirmar?</strong></p>
 
-        <div class="btn-secondary-row">
-          <a class="btn-secondary" href="https://wa.me/19084680867" target="_blank" rel="noopener">
-            💬 WhatsApp directo
+        <div class="contact-buttons">
+
+          <!-- WHATSAPP – BRANDING EXACTO -->
+          <a href="https://wa.me/19084680867" class="contact-btn">
+            💬 Hablar con LGtraderX por WhatsApp
           </a>
-          <a class="btn-secondary" href="mailto:plataformabursatil@gmail.com">
-            ✉️ Escribir a plataformabursatil@gmail.com
+
+          <!-- EMAIL CORREGIDO -->
+          <a href="mailto:plataformabursatil@gmail.com" class="contact-btn">
+            ✉️ Enviar email con consulta
           </a>
+
         </div>
 
-        <p style="font-size:12px; color:#9ca3af; margin-top:10px;">
-          Si no respondo de inmediato es porque estoy en sesión o en vivo. Siempre respondo lo antes posible.
+        <p style="font-size:12px; color:#9ca3af; margin-top:14px;">
+          También podés usar la <a href="contacto.html" style="color:#fbbf24;">página de contacto</a>.
         </p>
       </div>
 
     </div>
   </div>
 
-  <!-- TIPS PARA APROVECHAR LA SESIÓN -->
+  <!-- TIPS -->
   <section class="mentoria-tips">
     <div class="mentoria-tips-inner">
-      <h2 class="mentoria-tips-title">
-        Tips para aprovechar al máximo la sesión
-      </h2>
-
-      <p class="mentoria-tips-subtitle">
-        Mientras más claro llegues a la mentoría, más rápido vamos a encontrar
-        errores y oportunidades concretas para los próximos días de mercado.
-      </p>
+      <h2 class="mentoria-tips-title">Tips para aprovechar al máximo la sesión</h2>
 
       <ul class="mentoria-tips-list">
-        <li>Traé tus últimos trades (ganadores y perdedores) con capturas de pantalla o anotaciones.</li>
-        <li>Anotá todas tus dudas específicas sobre niveles, expected moves, VIX y disciplina.</li>
-        <li>Tené listo el detalle de tus cuentas (Apex, TPT o reales) para ajustar riesgo.</li>
-        <li>Buscá un lugar tranquilo y con buena conexión durante los 90 minutos.</li>
-        <li>Aplicá el plan mínimo de 5–10 días que armemos juntos antes de cambiar estrategias.</li>
+        <li>Traé tus últimos trades (ganadores y perdedores) con capturas o notas.</li>
+        <li>Anotá dudas sobre niveles, expected moves, VIX y disciplina.</li>
+        <li>Tené listo el detalle de tus cuentas (Apex, TPT o reales).</li>
+        <li>Conexión estable y lugar tranquilo durante 90 minutos.</li>
+        <li>Aplicá el plan mínimo de 5–10 días antes de cambiar estrategias.</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    © 2025 Plataforma Bursátil · plataformabursatil.com<br/>
-    Pagos procesados de forma segura mediante Square.
+    © 2025 Plataforma Bursátil · plataformabursatil.com  
   </footer>
 
 </body>
