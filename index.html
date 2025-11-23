@@ -1,306 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5DDE1SRNKP');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma Bursátil</title>
+  <title>Plataforma Bursátil – Niveles y Expected Moves</title>
+
   <style>
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #0f172a;
       color: #f1f5f9;
       line-height: 1.6;
     }
 
-    /* HEADER */
     header {
       background: #020617;
-      padding: 15px;
+      padding: 10px 0 25px;
       text-align: center;
       border-bottom: 1px solid #1e293b;
+    }
+
+    nav {
+      background: #020617;
+      padding: 12px 0;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 999;
+      border-bottom: 1px solid #1e293b;
     }
 
-    header a {
+    nav a {
       color: #fbbf24;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 15px;
       font-weight: 600;
       font-size: 16px;
     }
-
-    header a:hover {
-      color: #f59e0b;
+    nav a:hover {
+      color: #facc15;
     }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      color: #fbbf24;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 10px auto 20px;
-      color: #cbd5e1;
-    }
-
-    .btn-main {
-      display: inline-block;
-      padding: 14px 22px;
-      background: #fbbf24;
-      color: #1e293b;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .btn-main:hover {
-      background: #f59e0b;
-    }
-
-    /* TARJETAS PRINCIPALES */
-    .cards {
-      max-width: 1100px;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: #1e293b;
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
       padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #334155;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #fbbf24;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 360px;
-    }
-
-    .card h3 {
-      color: #fbbf24;
       margin-bottom: 10px;
     }
 
-    .btn-card {
-      display: inline-block;
-      background: #fbbf24;
-      color: #1e293b;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-top: auto;
+    p {
+      color: #e2e8f0;
+      font-size: 16px;
+      text-align: center;
     }
 
-    .btn-card:hover {
-      background: #f59e0b;
-    }
-
-    /* REDES + AFILIADOS */
-    .section-wrapper {
-      max-width: 1100px;
-      margin: 20px auto 0;
-      padding: 0 20px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .box {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #334155;
-    }
-
-    .box h2 {
-      margin-top: 0;
-      color: #fbbf24;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .social-list,
-    .affiliate-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .social-list li,
-    .affiliate-list li {
-      margin-bottom: 8px;
-    }
-
-    .social-list a,
-    .affiliate-list a {
-      color: #fbbf24;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .social-list a:hover,
-    .affiliate-list a:hover {
-      color: #f59e0b;
-    }
-
-    /* WHATSAPP FLOTANTE */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    }
-
-    .whatsapp-float:hover {
-      background: #1ebe5d;
-    }
-
-    /* FOOTER */
     footer {
-      margin-top: 30px;
-      text-align: center;
+      margin-top: 50px;
       padding: 20px;
-      font-size: 14px;
+      text-align: center;
       color: #94a3b8;
       border-top: 1px solid #1e293b;
     }
+
+    .btn-wsp {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #25D366;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .btn-wsp:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <a href="index.html">Inicio</a>
-  <a href="paquete-completo.html">Paquete completo</a>
-  <a href="suite.html">Suite</a>
-  <a href="curso-basico.html">Curso intensivo</a>
-  <a href="paquete-tecnologico.html">Paquete tecnológico</a>
-  <a href="webinario.html">Webinario</a>
-  <a href="contacto.html">Contacto</a>
-</header>
+  <!-- BANNER -->
+  <header>
+    <img src="banner-plataforma-bursatil.png"
+         alt="Plataforma Bursátil Banner"
+         style="max-width: 95%; border-radius: 16px;">
+  </header>
 
-<section class="hero">
-  <h1>Bienvenido a Plataforma Bursátil</h1>
-  <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
-  <a class="btn-main" href="paquete-completo.html">Descubrir el Paquete Completo →</a>
-</section>
+  <!-- MENÚ -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="paquete-completo.html">Paquete completo</a>
+    <a href="suite.html">Suite</a>
+    <a href="curso-basico.html">Curso intensivo</a>
+    <a href="paquete-tecnologico.html">Paquete tecnológico</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 
-<!-- ==================== TARJETAS PRINCIPALES ==================== -->
-<section class="cards">
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container">
+    <h1>Bienvenido a Plataforma Bursátil</h1>
+    <p>Niveles – Expected Moves – Disciplina – Trading Profesional en Español</p>
 
-  <div class="card">
-    <h3>Paquete Completo</h3>
-    <p>
-      Computadora configurada, monitor, instalación completa, suite anual
-      e intenso entrenamiento para que empieces a operar con estructura
-      desde el primer día.
-    </p>
-    <a class="btn-card" href="paquete-completo.html">Ver detalle →</a>
+    <a class="btn-wsp"
+       href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20quiero%20más%20información%20sobre%20Plataforma%20Bursátil"
+       target="_blank">
+       📞 WhatsApp directo con LGtraderX
+    </a>
   </div>
 
-  <div class="card">
-    <h3>Suite Plataforma Bursátil</h3>
-    <p>
-      Indicadores exclusivos, análisis diario, expected moves,
-      contexto profesional y acompañamiento estratégico para
-      dejar de improvisar trade a trade.
-    </p>
-    <a class="btn-card" href="suite.html">Ver detalle →</a>
-  </div>
-
-  <div class="card">
-    <h3>Curso Intensivo</h3>
-    <p>
-      Entrenamiento concentrado en Futuros, Stocks y Opciones:
-      estructura, riesgo, ejecución y ejemplos reales explicados
-      en español sencillo.
-    </p>
-    <a class="btn-card" href="curso-basico.html">Ver detalle →</a>
-  </div>
-
-  <div class="card">
-    <h3>Paquete Tecnológico</h3>
-    <p>
-      Laptop optimizada para trading, monitor adicional, instalación
-      de plataformas y soporte técnico para que la parte técnica no
-      sea un problema.
-    </p>
-    <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
-  </div>
-
-</section>
-<!-- ==================== FIN TARJETAS ==================== -->
-
-<!-- ==================== REDES + AFILIADOS ==================== -->
-<section class="section-wrapper">
-
-  <div class="box">
-    <h2>Redes sociales oficiales</h2>
-    <ul class="social-list">
-      <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
-      <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a></li>
-      <li>🐦 X (Twitter): <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
-      <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
-      <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
-      <li>💬 Discord: <a href="https://discord.gg/wRKaqqkB7x" target="_blank">Canal Plataforma Bursátil</a></li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Cuentas evaluadas recomendadas</h2>
-    <p>Estos enlaces son de afiliado. Te dan acceso a promociones especiales y apoyan el trabajo de Plataforma Bursátil.</p>
-
-    <ul class="affiliate-list">
-      <li>
-        ✅ <strong>Apex Trader Funding</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
-      </li>
-
-      <li style="margin-top: 12px;">
-        ✅ <strong>Take Profit Trader (TPT)</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
-      </li>
-    </ul>
-  </div>
-
-</section>
-<!-- ==================== FIN REDES + AFILIADOS ==================== -->
-
-<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
-
-<footer>
-  © 2025 Plataforma Bursátil · plataformabursatil.com  
-  <br>
-  Pagos procesados de forma segura mediante Square.
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Plataforma Bursátil – Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
