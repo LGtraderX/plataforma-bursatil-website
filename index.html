@@ -100,25 +100,6 @@
       background: #f59e0b;
     }
 
-    /* ======= NEW CRYPTO BUTTON ======= */
-    .btn-crypto-global {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 14px 22px;
-      background: #fbbf24;
-      color: #1e293b;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      border: 2px solid #fbbf24;
-    }
-
-    .btn-crypto-global:hover {
-      background: #f59e0b;
-      border-color: #f59e0b;
-    }
-
     /* ======================= CARDS ======================= */
     .cards {
       max-width: 1100px;
@@ -191,7 +172,57 @@
       margin-bottom: 10px;
     }
 
-    /* ======================= WHATSAPP FLOAT ======================= */
+    .social-list,
+    .affiliate-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .social-list li,
+    .affiliate-list li {
+      margin-bottom: 8px;
+    }
+
+    /* ENLACES SIEMPRE AMARILLOS (VISITADOS TAMBIÉN) */
+    .social-list a,
+    .social-list a:link,
+    .social-list a:visited,
+    .affiliate-list a,
+    .affiliate-list a:link,
+    .affiliate-list a:visited {
+      color: #fbbf24;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .social-list a:hover,
+    .affiliate-list a:hover {
+      color: #f59e0b;
+    }
+
+    /* ======================= BOTÓN CRYPTO/ZELLE ======================= */
+    .btn-crypto-global {
+      position: fixed;
+      bottom: 80px; /* justo encima del WhatsApp */
+      right: 20px;
+      padding: 12px 18px;
+      background: #fbbf24;
+      color: #1e293b;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 9998;
+    }
+
+    .btn-crypto-global:hover {
+      background: #f59e0b;
+    }
+
+    /* ======================= WHATSAPP ======================= */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -210,6 +241,7 @@
       z-index: 9999;
     }
 
+    /* ======================= FOOTER ======================= */
     footer {
       margin-top: 30px;
       text-align: center;
@@ -243,50 +275,42 @@
 <!-- ======================= HERO ======================= -->
 <section class="hero">
   <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
-  
-  <!-- MAIN PACKAGE BUTTON -->
   <a class="btn-main" href="paquete-completo.html">Descubrir el Paquete Completo →</a>
-
-  <!-- NEW CRYPTO BUTTON -->
-  <br>
-  <a class="btn-crypto-global"
-     href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20quiero%20pagar%20con%20Crypto%20o%20Zelle"
-     target="_blank">
-     Pagar con Crypto o Zelle
-  </a>
 </section>
 
 <!-- ======================= CARDS ======================= -->
 <section class="cards">
+
   <div class="card">
     <h3>Paquete Completo</h3>
-    <p>Computadora configurada, monitor, instalación completa, suite anual y entrenamiento intensivo.</p>
+    <p>Computadora configurada, monitor, instalación completa, suite anual e intenso entrenamiento para que empieces a operar con estructura desde el primer día.</p>
     <a class="btn-card" href="paquete-completo.html">Ver detalle →</a>
   </div>
 
   <div class="card">
     <h3>Suite Plataforma Bursátil</h3>
-    <p>Indicadores exclusivos, análisis diario, expected moves y acompañamiento disciplinado.</p>
+    <p>Indicadores exclusivos, análisis diario, expected moves, contexto profesional y acompañamiento estratégico para dejar de improvisar trade a trade.</p>
     <a class="btn-card" href="suite.html">Ver detalle →</a>
   </div>
 
   <div class="card">
     <h3>Curso Intensivo</h3>
-    <p>Entrenamiento rápido en futuros, stocks y opciones con ejemplos reales.</p>
+    <p>Entrenamiento concentrado en Futuros, Stocks y Opciones: estructura, riesgo, ejecución y ejemplos reales explicados en español sencillo.</p>
     <a class="btn-card" href="curso-basico.html">Ver detalle →</a>
   </div>
 
   <div class="card">
     <h3>Paquete Tecnológico</h3>
-    <p>Laptop ajustada para trading, monitor adicional, instalación completa y soporte.</p>
+    <p>Laptop optimizada para trading, monitor adicional, instalación de plataformas y soporte técnico para que la parte técnica no sea un problema.</p>
     <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
   </div>
 
   <div class="card">
     <h3>Mentoría Privada</h3>
-    <p>Sesión 1 a 1 de 90 minutos conmigo para revisar tu situación real y mejorar tu ejecución.</p>
+    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores, mejorar tu ejecución y armar un plan claro para los próximos días.</p>
     <a class="btn-card" href="mentoria-privada.html">Ver detalle →</a>
   </div>
+
 </section>
 
 <!-- ======================= REDES + AFILIADOS ======================= -->
@@ -306,23 +330,34 @@
 
   <div class="box">
     <h2>Cuentas evaluadas recomendadas</h2>
-    <p>Acceso a promociones especiales apoyando el trabajo de Plataforma Bursátil.</p>
+    <p>Estos enlaces son de afiliado. Te dan acceso a promociones especiales y apoyan el trabajo de Plataforma Bursátil.</p>
+
     <ul class="affiliate-list">
       <li>
         ✅ <strong>Apex Trader Funding</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex →</a>
+        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
       </li>
-      <li style="margin-top:12px;">
+
+      <li style="margin-top: 12px;">
         ✅ <strong>Take Profit Trader (TPT)</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT →</a>
+        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
       </li>
     </ul>
   </div>
+
 </section>
 
-<!-- ======================= WHATSAPP FLOAT ======================= -->
+<!-- ======================= BOTÓN CRYPTO/ZELLE ======================= -->
+<a class="btn-crypto-global"
+   href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20quiero%20pagar%20con%20Crypto%20o%20Zelle"
+   target="_blank">
+   Pagar con Crypto o Zelle
+</a>
+
+<!-- ======================= WHATSAPP ======================= -->
 <a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
 
+<!-- ======================= FOOTER ======================= -->
 <footer>
   © 2025 Plataforma Bursátil · plataformabursatil.com  
   <br>
