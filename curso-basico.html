@@ -2,154 +2,308 @@
 <html lang="es">
 <head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5DDE1SRNKP');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5DDE1SRNKP');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso intensivo en futuros, stocks y opciones</title>
+  <title>Curso intensivo Plataforma Bursátil</title>
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
       line-height: 1.6;
     }
+
+    a,
+    a:visited {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #f59e0b;
+      text-decoration: underline;
+    }
+
     header {
       background: #020617;
-      padding: 15px;
-      text-align: center;
       border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    header a {
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-title {
+      font-weight: 700;
+      color: #fbbf24;
+      font-size: 18px;
+    }
+
+    .nav-links a {
+      margin-left: 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .nav-links a:hover {
       color: #fbbf24;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
     }
+
     main {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1100px;
+      margin: 32px auto 40px;
+      padding: 0 20px 40px;
     }
+
     h1 {
-      color: #fbbf24;
       font-size: 28px;
+      margin-bottom: 12px;
+      color: #f9fafb;
     }
+
     h2 {
-      margin-top: 25px;
-      margin-bottom: 10px;
+      font-size: 22px;
+      margin: 26px 0 12px;
+      color: #f9fafb;
     }
-    .box {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #334155;
+
+    .card {
+      background: #0b1220;
+      border-radius: 14px;
+      border: 1px solid #1e293b;
+      padding: 18px 20px;
       margin-bottom: 20px;
     }
-    .btn {
+
+    .pricing-box {
+      background: #020617;
+      border-radius: 16px;
+      border: 1px solid #1e293b;
+      padding: 18px 20px 20px;
+      margin: 20px 0 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    .price-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .price-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fbbf24;
+      margin-bottom: 6px;
+    }
+
+    .price-note {
+      font-size: 13px;
+      color: #cbd5f5;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
       display: inline-block;
-      padding: 12px 20px;
-      background: #fbbf24;
-      color: #1e293b;
-      font-weight: bold;
-      border-radius: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
       text-decoration: none;
+      color: #020617;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      box-shadow: 0 14px 30px rgba(251, 191, 36, 0.55);
+      border: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 38px rgba(251, 191, 36, 0.7);
+      text-decoration: none;
+    }
+
+    .support-block {
       margin-top: 10px;
-    }
-    .btn:hover {
-      background: #f59e0b;
-    }
-    .note {
-      font-size: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #1e293b;
+      font-size: 13px;
       color: #cbd5f5;
     }
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #94a3b8;
-      padding: 20px;
+
+    .contact-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .contact-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      font-size: 13px;
+    }
+
+    .contact-option-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .contact-option-icon.whatsapp {
+      background: #22c55e;
+    }
+
+    .contact-option-icon.email {
+      background: #0ea5e9;
+    }
+
+    .contact-option span {
+      color: #e5e7eb;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 8px 0 0;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .btn-primary {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+      }
+      .contact-option {
+        width: 100%;
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">Plataforma Bursátil</div>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="paquete-completo.html">Paquete completo</a>
+        <a href="suite.html">Suite</a>
+        <a href="curso-basico.html">Curso intensivo</a>
+        <a href="paquete-tecnologico.html">Paquete tecnológico</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <a href="index.html">Inicio</a>
-  <a href="paquete-completo.html">Paquete completo</a>
-  <a href="suite.html">Suite</a>
-  <a href="curso-basico.html">Curso intensivo</a>
-  <a href="paquete-tecnologico.html">Paquete tecnológico</a>
-  <a href="contacto.html">Contacto</a>
-</header>
+  <main>
+    <h1>Curso intensivo Plataforma Bursátil</h1>
 
-<main>
-  <h1>Curso intensivo en Futuros, Stocks y Opciones</h1>
+    <div class="card">
+      <p>
+        El <strong>Curso intensivo Plataforma Bursátil</strong> está pensado para hispanos que quieren entrar al mundo
+        del trading de futuros con una ruta clara: plataforma, niveles, expected moves, riesgo y ejecución disciplinada.
+        Vamos desde cero hasta tener tu primer plan serio de trabajo sobre el mercado.
+      </p>
 
-  <div class="box">
-    <p>
-      El <strong>Curso Intensivo</strong> está diseñado para enseñarte a operar
-      Futuros, Stocks y Opciones desde cero. Veremos estructura completa de
-      análisis, ejecución, manejo de riesgo y estrategias probadas para que
-      dejes de improvisar.
-    </p>
-  </div>
+      <div class="pricing-box">
+        <div class="price-label">Inversión</div>
+        <div class="price-value">$199 USD</div>
+        <div class="price-note">
+          Acceso completo al curso intensivo, grabaciones y materiales de soporte.  
+          Pagos procesados de forma segura mediante Square.
+        </div>
 
-  <h2>¿Qué vas a aprender?</h2>
-  <div class="box">
-    <ul>
-      <li>Conceptos clave: futuros, margen, riesgo, drawdown.</li>
-      <li>Cómo funcionan las cuentas evaluadas (Apex, TPT, etc.).</li>
-      <li>Estructura para análisis y ejecución de operaciones.</li>
-      <li>Estrategias probadas con ejemplos reales.</li>
-      <li>Ejercicios guiados para buscar resultados consistentes.</li>
-    </ul>
-  </div>
+        <a
+          class="btn-primary"
+          href="https://square.link/u/ZZZZZZZZ"
+          target="_blank"
+        >
+          Reservar mi lugar en el Curso intensivo →
+        </a>
 
-  <h2>Modalidad</h2>
-  <div class="box">
-    <ul>
-      <li>Entrenamiento intensivo en vivo por Zoom en fechas programadas.</li>
-      <li>Acceso al material del curso.</li>
-      <li>Soporte por 7 días para dudas técnicas después del curso.</li>
-    </ul>
-    <p class="note">
-      Nota: este curso <strong>NO incluye</strong> la Suite ni la membresía mensual
-      de niveles diarios de <strong>$29.99</strong>. Esas suscripciones se pagan
-      por separado.
-    </p>
-  </div>
+        <div class="support-block">
+          ¿Tenés dudas antes de confirmar tu compra?
+          <div class="contact-options">
+            <a
+              class="contact-option"
+              href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20tengo%20dudas%20sobre%20el%20Curso%20intensivo"
+              target="_blank"
+            >
+              <div class="contact-option-icon whatsapp">💬</div>
+              <span>Hablar con LGtraderX por WhatsApp</span>
+            </a>
 
-  <h2>Inversión</h2>
-  <div class="box">
-    <p><strong>$199 USD – pago único</strong></p>
-    <p>Pagos procesados de forma segura mediante Square.</p>
-    <a class="btn" href="https://square.link/u/J5O5lHkU" target="_blank">
-      Reservar mi lugar →
-    </a>
-  </div>
+            <a
+              class="contact-option"
+              href="mailto:plataformabursatil@gmail.com?subject=Consulta%20sobre%20el%20Curso%20intensivo&body=Hola%20Plataforma%20Burs%C3%A1til,%20me%20llamo%20_____%20y%20tengo%20dudas%20sobre%20el%20Curso%20intensivo."
+            >
+              <div class="contact-option-icon email">✉️</div>
+              <span>Enviarnos un email con tu consulta</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <h2>¿Tenés dudas antes de pagar?</h2>
-  <div class="box">
-    <p>
-      Si necesitás aclarar horarios, requisitos o nivel mínimo recomendado, escribime primero.
-    </p>
-    <p><strong>WhatsApp:</strong> +1 908 468 0867</p>
-    <p><a href="contacto.html">Ir a la página de contacto →</a></p>
-  </div>
-</main>
+      <div class="footer-note">
+        También podés <a href="contacto.html">ir a la página de contacto →</a> si preferís dejarnos tus datos allí.
+      </div>
+    </div>
 
-<footer>
-  © 2025 Plataforma Bursátil · plataformabursatil.com
-</footer>
+    <h2>¿Qué vas a aprender en el Curso intensivo?</h2>
 
+    <div class="card">
+      <ul>
+        <li>Instalar y configurar NinjaTrader 8 y cuentas de fondeo (Apex, TPT, etc.).</li>
+        <li>Rutina básica de premarket y lectura de niveles clave.</li>
+        <li>Uso práctico de expected moves y volatilidad en tu plan diario.</li>
+        <li>Entradas, salidas y gestión de riesgo en tiempo real.</li>
+        <li>Cómo integrar la Suite y Substack en tu proceso de trading.</li>
+        <li>Errores comunes de los traders hispanos y cómo evitarlos.</li>
+      </ul>
+    </div>
+  </main>
 </body>
 </html>
