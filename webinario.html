@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
   <script>
@@ -15,9 +16,7 @@
   <title>Webinar – Entrenamiento directo con LGtraderX</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -33,14 +32,21 @@
     }
 
     .page {
-      max-width: 700px;
+      max-width: 900px;
       width: 100%;
       background: #020617;
       border-radius: 16px;
-      padding: 24px 20px 28px;
+      padding: 28px 28px 34px;
       border: 1px solid #1e293b;
       box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.8);
-      text-align: center;
+      display: flex;
+      flex-direction: row;
+      gap: 28px;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 900px) {
+      .page { flex-direction: column; }
     }
 
     .badge {
@@ -59,7 +65,7 @@
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       margin: 6px 0 10px;
     }
 
@@ -70,29 +76,27 @@
     }
 
     .highlight {
-      font-weight: 600;
+      font-weight: 700;
       color: #fbbf24;
     }
 
     .info-box {
       background: #020617;
       border-radius: 12px;
-      padding: 14px 14px;
+      padding: 14px;
       border: 1px solid #1e293b;
       margin-bottom: 16px;
-      text-align: left;
       font-size: 14px;
     }
 
-    .info-row {
-      margin-bottom: 6px;
-    }
+    .info-row { margin-bottom: 10px; }
 
     .info-label {
       color: #9ca3af;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      margin-bottom: 2px;
     }
 
     .info-value {
@@ -108,22 +112,10 @@
       color: #e5e7eb;
     }
 
-    ul li {
-      margin-bottom: 4px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
     .btn-primary {
       display: inline-block;
       padding: 10px 16px;
       border-radius: 999px;
-      border: none;
       cursor: pointer;
       font-weight: 600;
       font-size: 15px;
@@ -131,7 +123,8 @@
       color: #020617;
       background: linear-gradient(135deg, #fbbf24, #f59e0b);
       box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
-      transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+      transition: 0.1s ease;
+      margin-bottom: 8px;
     }
 
     .btn-primary:hover {
@@ -157,99 +150,110 @@
       font-size: 12px;
       color: #9ca3af;
     }
-
-    @media (min-width: 640px) {
-      .page {
-        padding: 28px 32px 30px;
-      }
-      h1 {
-        font-size: 30px;
-      }
-      .subtitle {
-        font-size: 16px;
-      }
-    }
   </style>
 </head>
+
 <body>
-<div class="info-box" style="margin-top: 20px;">
-  <div class="info-row">
-    <div class="info-label">Schedule Actual – TikTok LIVE</div>
-    <div class="info-value">
-      <strong>Todos los días 8:00 PM (EST)</strong><br />
-      Análisis del mercado, niveles, expected moves y sesión interactiva.
-    </div>
-  </div>
-
-  <div class="info-row" style="margin-top: 12px;">
-    <div class="info-label">Premarket</div>
-    <div class="info-value">
-      <strong>Lunes a Viernes – 9:00 AM (EST)</strong><br />
-      Revisión de apertura, zonas claves, volatilidad y riesgo para el día.
-    </div>
-  </div>
-
-  <div class="info-row" style="margin-top: 12px;">
-    <div class="info-label">Cierre del Mercado</div>
-    <div class="info-value">
-      <strong>3:30 PM (EST)</strong><br />
-      Comentario del cierre, niveles cumplidos, desbalances y preparación para el día siguiente.
-    </div>
-  </div>
-</div>
   <div class="page">
-    <div class="badge">
-      Webinar en vivo
+
+    <!-- COLUMNA IZQUIERDA: HORARIOS TIKTOK -->
+    <div style="flex:1;">
+      <div class="info-box" style="margin-bottom: 24px;">
+
+        <div style="
+            font-size: 15px;
+            color:#fbbf24;
+            letter-spacing:0.1em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;">
+          🔥 Horarios Oficiales – TikTok LIVE con LGtraderX
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Todos los días</div>
+          <div class="info-value">
+            <strong>8:00 PM (EST)</strong><br />
+            Análisis del mercado, niveles, expected moves y sesión interactiva.
+          </div>
+        </div>
+
+        <div class="info-row" style="margin-top: 14px;">
+          <div class="info-label">Premarket – Lunes a Viernes</div>
+          <div class="info-value">
+            <strong>9:00 AM (EST)</strong><br />
+            Revisión de apertura, zonas claves, volatilidad y riesgo del día.
+          </div>
+        </div>
+
+        <div class="info-row" style="margin-top: 14px;">
+          <div class="info-label">Cierre del Mercado</div>
+          <div class="info-value">
+            <strong>3:30 PM (EST)</strong><br />
+            Comentario del cierre, niveles cumplidos, desbalances y preparación del próximo día.
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <h1>Webinar coming soon</h1>
-    <p class="subtitle">
-      <span class="highlight">Entrenamiento directo con LGtraderX</span><br />
-      Futuro, niveles, expected moves y disciplina para traders serios en español.
-    </p>
+    <!-- COLUMNA DERECHA: WEBINAR -->
+    <div style="flex:1;">
+      <div class="badge">Webinar en vivo</div>
 
-    <div class="info-box">
-      <div class="info-row">
-        <div class="info-label">Estado</div>
-        <div class="info-value">Próximamente – preparando la sala en vivo</div>
-      </div>
-      <div class="info-row">
-        <div class="info-label">Formato</div>
-        <div class="info-value">Sesión en vivo + preguntas y respuestas</div>
-      </div>
-      <div class="info-row">
-        <div class="info-label">Plataforma</div>
-        <div class="info-value">Transmisión online para miembros de Plataforma Bursátil</div>
-      </div>
-    </div>
+      <h1>Webinar coming soon</h1>
 
-    <p style="font-size: 14px; margin-bottom: 6px;">
-      En este entrenamiento vas a ver cómo trabajo el mercado en tiempo real:
-    </p>
-    <ul>
-      <li>Cómo uso niveles, expected moves y volatilidad para planear el día.</li>
-      <li>Gestión de riesgo y disciplina para cuentas de fondeo.</li>
-      <li>Cómo integrar mis niveles con tus propias decisiones de ejecución.</li>
-    </ul>
+      <p class="subtitle">
+        <span class="highlight">Entrenamiento directo con LGtraderX</span><br />
+        Futuro, niveles, expected moves y disciplina para traders serios en español.
+      </p>
 
-    <div class="cta-buttons">
+      <div class="info-box">
+        <div class="info-row">
+          <div class="info-label">Estado</div>
+          <div class="info-value">Próximamente – preparando la sala en vivo</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Formato</div>
+          <div class="info-value">Sesión en vivo + preguntas y respuestas</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Plataforma</div>
+          <div class="info-value">Transmisión online para miembros de Plataforma Bursátil</div>
+        </div>
+      </div>
+
+      <p style="font-size: 14px; margin-bottom: 6px;">
+        En este entrenamiento vamos a ver cómo trabajo el mercado en tiempo real:
+      </p>
+
+      <ul>
+        <li>Cómo uso niveles, expected moves y volatilidad para planear el día.</li>
+        <li>Gestión de riesgo y disciplina para cuentas de fondeo.</li>
+        <li>Cómo integrar mis niveles con tus decisiones de ejecución.</li>
+      </ul>
+
       <a
         class="btn-primary"
         href="https://wa.me/19083434897?text=Quiero%20información%20del%20webinar%20en%20vivo%20con%20LGtraderX"
         target="_blank"
-        rel="noopener noreferrer"
       >
         Avisame por WhatsApp cuando se abra la fecha
       </a>
 
+      <br />
+
       <a class="btn-secondary" href="index.html">
         Volver al inicio de Plataforma Bursátil
       </a>
+
+      <p class="small-note">
+        *Este webinar tendrá cupos limitados. Los primeros en WhatsApp tendrán prioridad en la inscripción.
+      </p>
     </div>
 
-    <p class="small-note">
-      *Este webinar tendrá cupos limitados. Los primeros en la lista de WhatsApp recibirán prioridad cuando abramos la inscripción.
-    </p>
   </div>
 </body>
 </html>
