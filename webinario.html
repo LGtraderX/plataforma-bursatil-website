@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,247 +13,208 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webinar – Entrenamiento directo con LGtraderX</title>
+  <title>Webinario Plataforma Bursátil</title>
 
   <style>
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
       background: #0f172a;
-      color: #f9fafb;
+      color: #f1f5f9;
       line-height: 1.6;
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
+    }
+
+    /* ======================= MENÚ PREMIUM ======================= */
+    header {
+      background: #020617;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    header a:hover {
+      color: #f59e0b;
+    }
+
+    /* ======================= CONTENEDOR ======================= */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
       padding: 20px;
     }
 
-    .page {
-      max-width: 900px;
-      width: 100%;
-      background: #020617;
+    .section-box {
+      background: #1e293b;
+      border: 1px solid #334155;
       border-radius: 16px;
-      padding: 28px 28px 34px;
-      border: 1px solid #1e293b;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.8);
-      display: flex;
-      flex-direction: row;
-      gap: 28px;
-      justify-content: space-between;
-    }
-
-    @media (max-width: 900px) {
-      .page { flex-direction: column; }
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(251, 191, 36, 0.1);
-      color: #fbbf24;
-      border: 1px solid rgba(251, 191, 36, 0.4);
-      margin-bottom: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 28px;
-      margin: 6px 0 10px;
-    }
-
-    .subtitle {
-      font-size: 15px;
-      color: #e5e7eb;
-      margin-bottom: 18px;
-    }
-
-    .highlight {
-      font-weight: 700;
+      font-size: 32px;
       color: #fbbf24;
+      margin-bottom: 10px;
     }
 
-    .info-box {
-      background: #020617;
-      border-radius: 12px;
-      padding: 14px;
-      border: 1px solid #1e293b;
-      margin-bottom: 16px;
-      font-size: 14px;
+    h2 {
+      color: #fbbf24;
+      margin-top: 0;
+      font-size: 20px;
     }
 
-    .info-row { margin-bottom: 10px; }
-
-    .info-label {
-      color: #9ca3af;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 2px;
+    p {
+      color: #e2e8f0;
     }
 
-    .info-value {
-      font-weight: 500;
-      color: #f9fafb;
-    }
-
-    ul {
-      text-align: left;
-      padding-left: 18px;
-      margin: 10px 0 18px;
-      font-size: 14px;
-      color: #e5e7eb;
-    }
-
-    .btn-primary {
+    /* BADGES */
+    .badge {
       display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 600;
+      background: #fbbf24;
+      color: #1e293b;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    /* GRID DOS COLUMNAS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    /* BOTÓN */
+    .btn-main {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      background: #fbbf24;
+      color: #1e293b;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-main:hover {
+      background: #f59e0b;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #334155;
+      color: #f1f5f9;
+      border-radius: 6px;
+      text-decoration: none;
       font-size: 15px;
-      text-decoration: none;
-      color: #020617;
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
-      transition: 0.1s ease;
-      margin-bottom: 8px;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(251, 191, 36, 0.5);
-      filter: brightness(1.05);
+    .btn-back:hover {
+      background: #475569;
     }
 
-    .btn-secondary {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid #1e293b;
-      color: #e5e7eb;
-      font-size: 13px;
-      text-decoration: none;
-      background: #020617;
-      cursor: pointer;
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #94a3b8;
+      padding-bottom: 40px;
     }
 
-    .small-note {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #9ca3af;
-    }
   </style>
 </head>
 
 <body>
-  <div class="page">
 
-    <!-- COLUMNA IZQUIERDA: HORARIOS TIKTOK -->
-    <div style="flex:1;">
-      <div class="info-box" style="margin-bottom: 24px;">
+<!-- ======================= MENÚ PREMIUM ======================= -->
+<header>
+  <a href="index.html">Inicio</a>
+  <a href="paquete-completo.html">Paquete completo</a>
+  <a href="suite.html">Suite</a>
+  <a href="curso-basico.html">Curso intensivo</a>
+  <a href="paquete-tecnologico.html">Paquete tecnológico</a>
+  <a href="webinario.html">Webinario</a>
+  <a href="contacto.html">Contacto</a>
+</header>
 
-        <div style="
-            font-size: 15px;
-            color:#fbbf24;
-            letter-spacing:0.1em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-transform: uppercase;">
-          🔥 Horarios Oficiales – TikTok LIVE con LGtraderX
-        </div>
+<!-- ======================= CONTENIDO ======================= -->
+<div class="container">
 
-        <div class="info-row">
-          <div class="info-label">Todos los días</div>
-          <div class="info-value">
-            <strong>8:00 PM (EST)</strong><br />
-            Análisis del mercado, niveles, expected moves y sesión interactiva.
-          </div>
-        </div>
+  <div class="section-box">
+    <span class="badge">🔥 HORARIOS OFICIALES – TIKTOK LIVE CON LGTRADERX</span>
 
-        <div class="info-row" style="margin-top: 14px;">
-          <div class="info-label">Premarket – Lunes a Viernes</div>
-          <div class="info-value">
-            <strong>9:00 AM (EST)</strong><br />
-            Revisión de apertura, zonas claves, volatilidad y riesgo del día.
-          </div>
-        </div>
+    <h2>Todos los días</h2>
+    <p><strong>8:00 PM (EST)</strong><br>
+    Análisis del mercado, niveles, expected moves y sesión interactiva.</p>
 
-        <div class="info-row" style="margin-top: 14px;">
-          <div class="info-label">Cierre del Mercado</div>
-          <div class="info-value">
-            <strong>3:30 PM (EST)</strong><br />
-            Comentario del cierre, niveles cumplidos, desbalances y preparación del próximo día.
-          </div>
-        </div>
+    <h2>Premarket – Lunes a Viernes</h2>
+    <p><strong>9:00 AM (EST)</strong><br>
+    Revisión de apertura, zonas claves, volatilidad y riesgo del día.</p>
 
-      </div>
-    </div>
-
-    <!-- COLUMNA DERECHA: WEBINAR -->
-    <div style="flex:1;">
-      <div class="badge">Webinar en vivo</div>
-
-      <h1>Webinar coming soon</h1>
-
-      <p class="subtitle">
-        <span class="highlight">Entrenamiento directo con LGtraderX</span><br />
-        Futuro, niveles, expected moves y disciplina para traders serios en español.
-      </p>
-
-      <div class="info-box">
-        <div class="info-row">
-          <div class="info-label">Estado</div>
-          <div class="info-value">Próximamente – preparando la sala en vivo</div>
-        </div>
-
-        <div class="info-row">
-          <div class="info-label">Formato</div>
-          <div class="info-value">Sesión en vivo + preguntas y respuestas</div>
-        </div>
-
-        <div class="info-row">
-          <div class="info-label">Plataforma</div>
-          <div class="info-value">Transmisión online para miembros de Plataforma Bursátil</div>
-        </div>
-      </div>
-
-      <p style="font-size: 14px; margin-bottom: 6px;">
-        En este entrenamiento vamos a ver cómo trabajo el mercado en tiempo real:
-      </p>
-
-      <ul>
-        <li>Cómo uso niveles, expected moves y volatilidad para planear el día.</li>
-        <li>Gestión de riesgo y disciplina para cuentas de fondeo.</li>
-        <li>Cómo integrar mis niveles con tus decisiones de ejecución.</li>
-      </ul>
-
-      <a
-        class="btn-primary"
-        href="https://wa.me/19083434897?text=Quiero%20reservar%20mi%20espacio%20para%20el%20webinar%20de%20LGtraderX"
-        target="_blank"
-      >
-        Reserva tu espacio si estás interesado – Envíame un mensaje por WhatsApp
-      </a>
-
-      <br />
-
-      <a class="btn-secondary" href="index.html">
-        Volver al inicio de Plataforma Bursátil
-      </a>
-
-      <p class="small-note">
-        *Este webinar tendrá cupos limitados. Los primeros en WhatsApp tendrán prioridad en la inscripción.
-      </p>
-    </div>
-
+    <h2>Cierre del mercado</h2>
+    <p><strong>3:30 PM (EST)</strong><br>
+    Comentario del cierre, niveles cumplidos, desbalances y preparación del próximo día.</p>
   </div>
+
+  <div class="section-box">
+    <span class="badge" style="background:#fbbf24;">WEBINAR EN VIVO</span>
+
+    <h1>Webinar coming soon</h1>
+
+    <p>Entrenamiento directo con LGtraderX<br>
+    Futuro, niveles, expected moves y disciplina para traders serios en español.</p>
+
+    <div class="grid-2">
+      <div class="subbox">
+        <h2>Estado</h2>
+        <p>Próximamente – preparando la sala en vivo</p>
+
+        <h2>Formato</h2>
+        <p>Sesión en vivo + preguntas y respuestas</p>
+
+        <h2>Plataforma</h2>
+        <p>Transmisión online para miembros de Plataforma Bursátil</p>
+      </div>
+
+      <div class="subbox">
+        <p>En este entrenamiento vamos a ver cómo trabajo el mercado en tiempo real:</p>
+
+        <ul>
+          <li>Cómo uso niveles, expected moves y volatilidad para planear el día.</li>
+          <li>Gestión de riesgo y disciplina para cuentas de fondeo.</li>
+          <li>Cómo integrar mis niveles con tus decisiones de ejecución.</li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="btn-main" href="https://wa.me/19084680867" target="_blank">
+      Reserva tu espacio – Envíame un mensaje por WhatsApp
+    </a>
+
+    <br>
+    <a class="btn-back" href="index.html">Volver al inicio de Plataforma Bursátil</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Plataforma Bursátil – Todos los derechos reservados.
+</footer>
+
 </body>
 </html>
