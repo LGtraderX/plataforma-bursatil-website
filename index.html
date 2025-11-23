@@ -75,7 +75,7 @@
     /* ======================= HERO ======================= */
     .hero {
       text-align: center;
-      padding: 22px 20px 8px;
+      padding: 22px 20px 8px; /* menos espacio abajo para subir las cards */
     }
 
     .hero p {
@@ -103,28 +103,11 @@
     /* ======================= CARDS ======================= */
     .cards {
       max-width: 1100px;
-      margin: 12px auto 0;
+      margin: 12px auto 0; /* sube el bloque de cards */
       display: grid;
-
-      /* 🔥 5 columnas perfectas en desktop */
-      grid-template-columns: repeat(5, 1fr);
-
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       padding: 0 20px;
-    }
-
-    /* 📱 Tablet: 2 columnas */
-    @media (max-width: 1024px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* 📱 Celular: 1 columna */
-    @media (max-width: 640px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
     }
 
     .card {
@@ -136,7 +119,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      height: 320px;
+      height: 320px; /* un poco más baja para subir el botón */
     }
 
     .card h3 {
@@ -146,8 +129,7 @@
     }
 
     .card p {
-      margin-bottom: 14px;
-      color: #cbd5e1;
+      margin-bottom: 14px; /* menos espacio debajo del texto */
     }
 
     .btn-card {
@@ -159,7 +141,7 @@
       border-radius: 6px;
       font-weight: bold;
       margin-top: auto;
-      margin-bottom: 10px;
+      margin-bottom: 10px; /* sube visualmente el botón dentro de la tarjeta */
     }
 
     .btn-card:hover {
@@ -190,6 +172,31 @@
       margin-bottom: 10px;
     }
 
+    .social-list,
+    .affiliate-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .social-list li,
+    .affiliate-list li {
+      margin-bottom: 8px;
+    }
+
+    .social-list a,
+    .affiliate-list a {
+      color: #fbbf24;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .social-list a:hover,
+    .affiliate-list a:hover {
+      color: #f59e0b;
+    }
+
     /* ======================= WHATSAPP ======================= */
     .whatsapp-float {
       position: fixed;
@@ -216,7 +223,6 @@
       padding: 20px;
       font-size: 14px;
       color: #94a3b8;
-      border-top: 1e293b;
       border-top: 1px solid #1e293b;
     }
   </style>
@@ -276,7 +282,7 @@
 
   <div class="card">
     <h3>Mentoría Privada</h3>
-    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores y armar un plan claro para los próximos días.</p>
+    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores, mejorar tu ejecución y armar un plan claro para los próximos días.</p>
     <a class="btn-card" href="mentoria-privada.html">Ver detalle →</a>
   </div>
 
@@ -304,12 +310,12 @@
     <ul class="affiliate-list">
       <li>
         ✅ <strong>Apex Trader Funding</strong><br>
-        <a href="#" target="_blank">Ir a Apex con mi enlace →</a>
+        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
       </li>
 
       <li style="margin-top: 12px;">
         ✅ <strong>Take Profit Trader (TPT)</strong><br>
-        <a href="#" target="_blank">Ir a TPT con mi enlace →</a>
+        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
       </li>
     </ul>
   </div>
