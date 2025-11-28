@@ -103,6 +103,14 @@
       color: #cbd5e1;
     }
 
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
     .btn-main {
       display: inline-block;
       padding: 14px 22px;
@@ -203,12 +211,9 @@
       margin-bottom: 8px;
     }
 
-    /* ENLACES SIEMPRE AMARILLOS (VISITADOS TAMBIÉN) */
     .social-list a,
-    .social-list a:link,
     .social-list a:visited,
     .affiliate-list a,
-    .affiliate-list a:link,
     .affiliate-list a:visited {
       color: #fbbf24;
       font-weight: 600;
@@ -223,7 +228,7 @@
     /* ======================= BOTÓN CRYPTO/ZELLE ======================= */
     .btn-crypto-global {
       position: fixed;
-      bottom: 80px; /* justo encima del WhatsApp */
+      bottom: 80px;
       right: 20px;
       padding: 12px 18px;
       background: #fbbf24;
@@ -294,7 +299,15 @@
 <!-- ======================= HERO ======================= -->
 <section class="hero">
   <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
-  <a class="btn-main" href="paquete-completo.html">Descubrir el Paquete Completo →</a>
+
+  <div class="hero-buttons">
+    <a class="btn-main" href="https://discord.gg/hVbMbusS2v" target="_blank" rel="noopener">
+      Unete al Discord
+    </a>
+    <a class="btn-main" href="paquete-completo.html">
+      Descubrir el Paquete Completo →
+    </a>
+  </div>
 </section>
 
 <!-- ======================= CARDS ======================= -->
@@ -319,15 +332,22 @@
   </div>
 
   <div class="card">
-    <h3>Paquete Tecnológico</h3>
-    <p>Laptop optimizada para trading, monitor adicional, instalación de plataformas y soporte técnico para que la parte técnica no sea un problema.</p>
-    <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
+    <h3>Curso Presencial New Jersey</h3>
+    <p>Clase presencial en New Jersey para principiantes que quieren aprender a leer el mercado de forma práctica y clara.</p>
+    <a class="btn-card" href="curso-presencial.html">Ver detalle →</a>
+  </div>
+
+  <!-- FILA 2 (orden correcto: Mentoria → Paquete Tecnologico) -->
+  <div class="card">
+    <h3>Mentoría Privada</h3>
+    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores y armar un plan claro para los próximos días.</p>
+    <a class="btn-card" href="mentoria-privada.html">Ver detalle →</a>
   </div>
 
   <div class="card">
-    <h3>Mentoría Privada</h3>
-    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores, mejorar tu ejecución y armar un plan claro para los próximos días.</p>
-    <a class="btn-card" href="mentoria-privada.html">Ver detalle →</a>
+    <h3>Paquete Tecnológico</h3>
+    <p>Laptop optimizada para trading, monitor adicional, instalación de plataformas y soporte técnico para que la parte técnica no sea un problema.</p>
+    <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
   </div>
 
 </section>
@@ -340,7 +360,7 @@
     <ul class="social-list">
       <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
       <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a></li>
-      <li>🐦 X (Twitter): <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
+      <li>🐦 X: <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
       <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
       <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
       <li>💬 Discord: <a href="https://discord.gg/hVbMbusS2v" target="_blank">Canal Plataforma Bursátil</a></li>
