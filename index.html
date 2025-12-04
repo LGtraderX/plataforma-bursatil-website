@@ -20,226 +20,351 @@
 </noscript>
 <!-- End Meta Pixel Code -->
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5DDE1SRNKP');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5DDE1SRNKP');
+  </script>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Plataforma Bursátil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Bursátil</title>
 
-<style>
-  body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #0f172a;
-    color: #f1f5f9;
-    line-height: 1.6;
-  }
-
-  .banner-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 12px 0 5px;
-  }
-
-  .banner-top {
-    width: 100%;
-    max-width: 1000px;
-    height: 320px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 14px;
-  }
-
-  @media (max-width: 768px) {
-    .banner-top {
-      height: 220px;
-      max-width: 95%;
-      border-radius: 12px;
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
     }
-  }
 
-  header {
-    background: #020617;
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #1e293b;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
+    /* ======================= BANNER ======================= */
+    .banner-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0 5px;
+    }
 
-  header a {
-    color: #fbbf24;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 600;
-    font-size: 15px;
-  }
+    .banner-top {
+      width: 100%;
+      max-width: 1000px;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+    }
 
-  header a:hover {
-    color: #f59e0b;
-  }
+    @media (max-width: 768px) {
+      .banner-top {
+        height: 220px;
+        max-width: 95%;
+        border-radius: 12px;
+      }
+    }
 
-  .hero {
-    text-align: center;
-    padding: 22px 20px 8px;
-  }
+    /* ======================= MENÚ ======================= */
+    header {
+      background: #020617;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-  .hero p {
-    font-size: 17px;
-    max-width: 600px;
-    margin: 0 auto 16px;
-    color: #cbd5e1;
-  }
+    header a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 15px;
+    }
 
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-  }
+    header a:hover {
+      color: #f59e0b;
+    }
 
-  .btn-main {
-    display: inline-block;
-    padding: 14px 22px;
-    background: #fbbf24;
-    color: #1e293b;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-  }
+    /* ======================= HERO ======================= */
+    .hero {
+      text-align: center;
+      padding: 22px 20px 8px;
+    }
 
-  .btn-main:hover {
-    background: #f59e0b;
-  }
+    .hero p {
+      font-size: 17px;
+      max-width: 600px;
+      margin: 0 auto 16px;
+      color: #cbd5e1;
+    }
 
-  .cards {
-    max-width: 1100px;
-    margin: 12px auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-  }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
 
-  .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    height: 320px;
-  }
+    .btn-main {
+      display: inline-block;
+      padding: 14px 22px;
+      background: #fbbf24;
+      color: #1e293b;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-  .card h3 {
-    color: #fbbf24;
-    margin-bottom: 6px;
-    margin-top: 5px;
-    line-height: 1.25;
-  }
+    .btn-main:hover {
+      background: #f59e0b;
+    }
 
-  .card p {
-    margin-bottom: 14px;
-  }
+    /* ======================= CARDS ======================= */
+    .cards {
+      max-width: 1100px;
+      margin: 12px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
 
-  .btn-card {
-    display: inline-block;
-    background: #fbbf24;
-    color: #1e293b;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: auto;
-    margin-bottom: 10px;
-  }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 320px;
+    }
 
-  .btn-card:hover {
-    background: #f59e0b;
-  }
+    .card h3 {
+      color: #fbbf24;
+      margin-bottom: 6px;
+      margin-top: 5px;
+      line-height: 1.25;
+    }
 
-  .popup-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-  }
+    .card h3 .line2 {
+      display: block;
+      margin-top: 3px;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
 
-  .popup-box {
-    background: #0b1220;
-    color: #f9fafb;
-    padding: 32px 24px;
-    max-width: 360px;
-    width: 90%;
-    text-align: center;
-    border-radius: 14px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.6);
-    position: relative;
-  }
+    .card p {
+      margin-bottom: 14px;
+    }
 
-  .popup-box h2 {
-    margin-bottom: 12px;
-    font-size: 22px;
-    color: #fbbf24;
-  }
+    .btn-card {
+      display: inline-block;
+      background: #fbbf24;
+      color: #1e293b;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: auto;
+      margin-bottom: 10px;
+    }
 
-  .popup-btn {
-    display: block;
-    background: #25D366;
-    color: #000;
-    padding: 14px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    margin: 12px 0;
-  }
+    .btn-card:hover {
+      background: #f59e0b;
+    }
 
-  .popup-close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    cursor: pointer;
-    font-size: 22px;
-  }
+    /* ======================= REDES + AFILIADOS ======================= */
+    .section-wrapper {
+      max-width: 1100px;
+      margin: 25px auto 0;
+      padding: 0 20px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
 
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 9999;
-  }
-</style>
+    .box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #fbbf24;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .social-list,
+    .affiliate-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .social-list li,
+    .affiliate-list li {
+      margin-bottom: 8px;
+    }
+
+    .social-list a,
+    .affiliate-list a,
+    .social-list a:visited,
+    .affiliate-list a:visited {
+      color: #fbbf24;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .social-list a:hover,
+    .affiliate-list a:hover {
+      color: #f59e0b;
+    }
+
+    /* ======================= BOTÓN CRYPTO/ZELLE ======================= */
+    .btn-crypto-global {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      padding: 12px 18px;
+      background: #fbbf24;
+      color: #1e293b;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 9998;
+    }
+
+    .btn-crypto-global:hover {
+      background: #f59e0b;
+    }
+
+    /* ======================= WHATSAPP ======================= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 9999;
+    }
+
+    /* ======================= FOOTER ======================= */
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+
+    /* ======================= POPUP WEBINAR ======================= */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    .popup-box {
+      background: #0b1220;
+      color: #f9fafb;
+      padding: 32px 24px;
+      max-width: 360px;
+      width: 90%;
+      text-align: center;
+      border-radius: 14px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    .popup-box h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+      color: #fbbf24;
+    }
+
+    .popup-box p {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      color: #cbd5e1;
+    }
+
+    .popup-btn {
+      display: block;
+      background: #25D366;
+      color: #000;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 0 auto 14px;
+      font-size: 16px;
+    }
+
+    .popup-btn:hover {
+      background: #22c55e;
+    }
+
+    .popup-box small {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      color: #64748b;
+    }
+
+    .popup-close:hover {
+      color: #e5e7eb;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- ======================= BANNER ======================= -->
 <div class="banner-container">
   <img src="banner-plataforma-bursatil.png" alt="Plataforma Bursátil" class="banner-top">
 </div>
 
+<!-- ======================= MENÚ ======================= -->
 <header>
   <a href="index.html">Inicio</a>
   <a href="paquete-completo.html">Paquete Completo</a>
@@ -252,15 +377,112 @@
   <a href="contacto.html">Contacto</a>
 </header>
 
+<!-- ======================= HERO ======================= -->
 <section class="hero">
   <p>Educación, tecnología y acompañamiento profesional para traders que quieren resultados reales.</p>
+
+  <div class="hero-buttons">
+    <a class="btn-main" href="https://discord.gg/hVbMbusS2v" target="_blank" rel="noopener">
+      Unete al Discord
+    </a>
+    <a class="btn-main" href="paquete-completo.html">
+      Descubrir el Paquete Completo →
+    </a>
+  </div>
 </section>
 
+<!-- ======================= CARDS ======================= -->
+<section class="cards">
+
+  <div class="card">
+    <h3>Paquete Completo</h3>
+    <p>Computadora configurada, monitor, instalación completa, suite anual e intenso entrenamiento para que empieces a operar con estructura desde el primer día.</p>
+    <a class="btn-card" href="paquete-completo.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Suite Plataforma Bursátil</h3>
+    <p>Indicadores exclusivos, análisis diario, expected moves, contexto profesional y acompañamiento estratégico para dejar de improvisar trade a trade.</p>
+    <a class="btn-card" href="suite.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Curso Online</h3>
+    <p>Entrenamiento concentrado en Futuros, Stocks y Opciones: estructura, riesgo, ejecución y ejemplos reales explicados en español sencillo.</p>
+    <a class="btn-card" href="curso-online.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Curso Presencial<span class="line2">New Jersey</span></h3>
+    <p>Clase presencial en New Jersey para principiantes que quieren aprender a leer el mercado de forma práctica y clara.</p>
+    <a class="btn-card" href="curso-presencial.html">Ver detalle →</a>
+  </div>
+
+  <!-- FILA 2 ORDEN CORRECTO -->
+  <div class="card">
+    <h3>Mentoría Privada</h3>
+    <p>Sesión 1 a 1 de 90 minutos conmigo (LGtraderX) para revisar tu situación real, corregir errores y armar un plan claro para los próximos días.</p>
+    <a class="btn-card" href="mentoria-privada.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Paquete Tecnológico</h3>
+    <p>Laptop optimizada para trading, monitor adicional, instalación de plataformas y soporte técnico para que la parte técnica no sea un problema.</p>
+    <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
+  </div>
+
+</section>
+
+<!-- ======================= REDES + AFILIADOS ======================= -->
+<section class="section-wrapper">
+
+  <div class="box">
+    <h2>Redes sociales oficiales</h2>
+    <ul class="social-list">
+      <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
+      <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a></li>
+      <li>🐦 X: <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
+      <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
+      <li>💬 Discord: <a href="https://discord.gg/hVbMbusS2v" target="_blank">Canal Plataforma Bursátil</a></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Cuentas evaluadas recomendadas</h2>
+    <p>Estos enlaces son de afiliado. Te dan acceso a promociones especiales y apoyan el trabajo de Plataforma Bursátil.</p>
+
+    <ul class="affiliate-list">
+      <li>
+        ✅ <strong>Apex Trader Funding</strong><br>
+        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
+      </li>
+
+      <li style="margin-top: 12px;">
+        ✳️ <strong>Take Profit Trader (TPT)</strong><br>
+        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ======================= BOTÓN CRYPTO/ZELLE ======================= -->
+<a class="btn-crypto-global"
+   href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20quiero%20pagar%20con%20Crypto%20o%20Zelle"
+   target="_blank">
+   Pagar con Crypto o Zelle
+</a>
+
+<!-- ======================= WHATSAPP ======================= -->
+<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
+
+<!-- ======================= POPUP WEBINAR ======================= -->
 <div id="popup-webinar" class="popup-overlay">
   <div class="popup-box">
     <span class="popup-close" onclick="closePopupWebinar()">×</span>
     <h2>Aprende Trading Desde Cero</h2>
-    <p>Clase gratuita donde te explico cómo empezar paso a paso.</p>
+    <p>Clase gratuita donde te explico cómo empezar paso a paso, sin experiencia y con ejemplos reales.</p>
     <a class="popup-btn"
        href="https://wa.me/19084680867?text=Hola%20quiero%20inscribirme%20al%20webinar%20gratuito"
        target="_blank">
@@ -270,28 +492,39 @@
   </div>
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  © 2025 Plataforma Bursátil · plataformabursatil.com  
+  <br>
+  Pagos procesados de forma segura mediante Square.
+</footer>
 
 <script>
-function mostrarPopupWebinar() {
-  document.getElementById('popup-webinar').style.display = 'flex';
-}
-
-function closePopupWebinar() {
-  document.getElementById('popup-webinar').style.display = 'none';
-}
-
-// ✅ Mostrar después de 5 segundos
-setTimeout(function() {
-  mostrarPopupWebinar();
-}, 5000);
-
-// ✅ Intento de salida
-document.addEventListener('mouseout', function(e) {
-  if (e.clientY <= 0) {
-    mostrarPopupWebinar();
+  function mostrarPopupWebinar() {
+    var popup = document.getElementById('popup-webinar');
+    if (popup && popup.style.display !== 'flex') {
+      popup.style.display = 'flex';
+    }
   }
-});
+
+  function closePopupWebinar() {
+    var popup = document.getElementById('popup-webinar');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  }
+
+  // Mostrar después de 5 segundos
+  setTimeout(function() {
+    mostrarPopupWebinar();
+  }, 5000);
+
+  // Intento de salida (ratón hacia arriba fuera de la ventana)
+  document.addEventListener('mouseout', function(e) {
+    if (e.clientY <= 0) {
+      mostrarPopupWebinar();
+    }
+  });
 </script>
 
 </body>
