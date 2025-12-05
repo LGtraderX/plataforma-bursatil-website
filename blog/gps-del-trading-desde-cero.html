@@ -7,16 +7,22 @@
   <!-- ===================== -->
   <script>
     !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    {if(f.fbq)return;n=f.fbq=function(){
+    n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n.loaded=!0;
+    n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
     fbq('init', '261269777921639');
     fbq('track', 'PageView');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=261269777921639&ev=PageView&noscript=1"/>
@@ -36,7 +42,7 @@
   <!-- META BÁSICO -->
   <meta charset="UTF-8">
   <title>El GPS del trading: mapa desde cero hasta trader rentable | Plataforma Bursátil</title>
-  <meta name="description" content="Descubre el GPS del trading: el mapa real de 6 etapas para pasar de cero conocimiento a trader rentable, con acompañamiento, niveles profesionales y disciplina.">
+  <meta name="description" content="Descubre el GPS del trading: el mapa real de 6 etapas para pasar de cero conocimiento a trader rentable.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ESTILOS -->
@@ -44,13 +50,12 @@
     body {
       margin: 0;
       padding: 24px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
     }
 
-    /* MENÚ SUPERIOR */
     header {
       background: #020617;
       padding: 12px;
@@ -66,8 +71,6 @@
       color: #fbbf24;
       text-decoration: none;
       margin: 0 14px;
-      padding: 6px 4px;
-      display: inline-block;
       font-weight: 600;
       font-size: 15px;
     }
@@ -78,68 +81,39 @@
 
     h1 {
       color: #facc15;
-      font-size: 1.9rem;
-      margin-bottom: 0.75rem;
     }
 
     h2 {
       margin-top: 2rem;
-      color: #e5e7eb;
-      font-size: 1.3rem;
-    }
-
-    p {
-      font-size: 1rem;
     }
 
     strong {
       color: #fef9c3;
     }
 
-    ul, ol {
-      padding-left: 1.3rem;
+    ul {
+      padding-left: 1.2rem;
     }
 
-    li {
-      margin-bottom: 0.35rem;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* BLOQUE RESALTADO / NOTA SUAVE */
     .nota {
-      margin: 18px 0;
-      padding: 14px 16px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.85);
+      margin: 20px 0;
+      padding: 14px;
+      background: rgba(15,23,42,.85);
       border: 1px solid #1f2937;
-      font-size: 0.96rem;
+      border-radius: 12px;
     }
 
-    .nota span {
-      color: #facc15;
-      font-weight: 600;
-    }
-
-    /* CTA FINAL */
     .cta-wrapper {
       margin-top: 40px;
       text-align: center;
     }
 
     .cta-wrapper p {
-      margin-bottom: 14px;
       font-size: 18px;
+      margin-bottom: 14px;
     }
 
-    /* ✅ BOTÓN VERDE CORRECTO */
+    /* ✅ BOTÓN VERDE DEFINITIVO */
     .cta-button {
       display: inline-block;
       background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -157,68 +131,56 @@
       transform: scale(1.05);
       box-shadow: 0 14px 32px rgba(34,197,94,0.5);
     }
-
-    /* PEQUEÑO SUBTÍTULO INICIAL */
-    .subtitulo {
-      color: #cbd5f5;
-      font-size: 0.98rem;
-      margin-bottom: 1.2rem;
-    }
-
-    /* LISTA HORIZONTAL RESUMEN ETAPAS (VERSIÓN SIMPLE) */
-    .pasos-resumen {
-      margin: 24px 0;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid #1f2937;
-      font-size: 0.95rem;
-    }
-
-    .pasos-resumen strong {
-      color: #facc15;
-    }
   </style>
 
 </head>
 
 <body>
 
-  <!-- MENÚ NAVEGACIÓN (desde /blog) -->
-  <header>
-    <a href="../index.html">Inicio</a>
-    <a href="../paquete-completo.html">Paquete Completo</a>
-    <a href="../suite.html">Suite Plataforma Bursátil</a>
-    <a href="../curso-online.html">Curso Online</a>
-    <a href="../curso-presencial.html">Curso Presencial</a>
-    <a href="../paquete-tecnologico.html">Paquete Tecnológico</a>
-    <a href="../mentoria-privada.html">Mentoría Privada</a>
-    <a href="../webinario.html">Webinario</a>
-    <a href="index.html">Blog</a>
-    <a href="../contacto.html">Contacto</a>
-  </header>
+<header>
+  <a href="../index.html">Inicio</a>
+  <a href="../paquete-completo.html">Paquete Completo</a>
+  <a href="../suite.html">Suite</a>
+  <a href="../curso-online.html">Curso</a>
+  <a href="../mentoria-privada.html">Mentoría</a>
+  <a href="index.html">Blog</a>
+</header>
 
-  <h1>El GPS del trading: de cero a trader rentable</h1>
+<h1>El GPS del trading: de cero a trader rentable</h1>
 
-  <p class="subtitulo">
-    El mapa real de 6 etapas para pasar de cero conocimiento a un proceso ordenado, con disciplina,
-    acompañamiento y objetivos claros.
-  </p>
+<p>Este es el mapa real para no perderte en el trading.</p>
 
-  <!-- TODO EL CONTENIDO QUEDA IGUAL AL TUYO -->
-  <!-- (no lo repito aquí porque ya está perfecto) -->
+<h2>Etapa 1 — Cero conocimiento</h2>
+<p>La persona no sabe nada de trading.</p>
 
-  <!-- CTA FINAL -->
-  <div class="cta-wrapper">
-    <p>📲 <strong>¿Querés un mapa claro, en español, y acompañamiento real en este proceso?</strong></p>
-    <a
-      class="cta-button"
-      href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20art%C3%ADculo%20%22GPS%20del%20trading%22%20y%20quiero%20saber%20c%C3%B3mo%20avanzar%20a%20la%20pr%C3%B3xima%20etapa."
-      target="_blank"
-    >
-      Hablar por WhatsApp con LGtraderX
-    </a>
-  </div>
+<div class="nota">
+  <strong>Primer obstáculo mental:</strong> el mercado no te paga por día ni por semana,
+  te paga cuando hacés bien las cosas.
+</div>
+
+<h2>Etapa 2 — Herramientas básicas</h2>
+<p>Computadora, plataforma y curso.</p>
+
+<h2>Etapa 3 — Niveles</h2>
+<p>Soportes, resistencias y estructura.</p>
+
+<h2>Etapa 4 — Premium</h2>
+<p>Niveles profesionales y mentoría.</p>
+
+<h2>Etapa 5 — Primeras ganancias</h2>
+<p>Confianza y consistencia.</p>
+
+<h2>Etapa 6 — Crecimiento</h2>
+<p>Carrera sostenible.</p>
+
+<div class="cta-wrapper">
+  <p>📲 <strong>¿Querés avanzar a la próxima etapa?</strong></p>
+  <a class="cta-button"
+     href="https://wa.me/19084680867"
+     target="_blank">
+     Hablar por WhatsApp con LGtraderX
+  </a>
+</div>
 
 </body>
 </html>
