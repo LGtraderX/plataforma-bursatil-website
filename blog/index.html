@@ -9,7 +9,10 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    if(!f._f
+bq)n=f._fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    n.push=n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -49,6 +52,30 @@
       background: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
+    }
+
+    /* ===== MENÚ (MISMO ESTILO QUE LA HOME) ===== */
+    header {
+      background: #020617;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      margin: -24px -24px 24px -24px; /* para que el header ocupe todo el ancho */
+    }
+
+    header a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 10 px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    header a:hover {
+      color: #f59e0b;
     }
 
     h1 {
@@ -156,6 +183,20 @@
 
 <body>
 
+  <!-- ===== MENÚ CON RUTAS CORRECTAS DESDE /blog ===== -->
+  <header>
+    <a href="../index.html">Inicio</a>
+    <a href="../paquete-completo.html">Paquete Completo</a>
+    <a href="../suite.html">Suite Plataforma Bursatil</a>
+    <a href../curso-online.html">Curso Online</a>
+    <a href="../curso-presencial.html">Curso Presencial</a>
+    <a href="../paquete-tecnologico.html">Paquete Tecnologico</a>
+    <a href="../mentoria-privada.html">Mentoria Privada</a>
+    <a href="../webinario.html">Webinario</a>
+    <a href="index.html">Blog</a>
+    <a href="../contacto.html">Contacto</a>
+  </header>
+
   <h1>Blog Plataforma Bursátil | LGtraderX</h1>
 
   <p>
@@ -180,7 +221,7 @@
   </p>
 
   <p>
-    👉 <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20del%20blog%20de%20Plataforma%20Burs%C3%A1til%20y%20quiero%20empezar%20en%20trading%20desde%20cero." target="_blank">
+    👉 <a href="https://wa.me/19084680867?text=Hola%20LGtraderX%2C%20vengo%20del%20blog%20de%20Plataforma%20Burs%C3%Atil%20y%20quiero%20empezar%20en%20trading%20desde%20cero." target="_blank">
       Hablar por WhatsApp con LGtraderX
     </a>
   </p>
