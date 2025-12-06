@@ -44,7 +44,7 @@
     body {
       margin: 0;
       padding: 24px;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
@@ -76,13 +76,38 @@
       color: #f59e0b;
     }
 
+    /* CAJITA CENTRAL TIPO BLOG */
+    .post-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
     h1 {
       color: #facc15;
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
     }
 
     h2 {
       margin-top: 2rem;
       color: #e5e7eb;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    strong {
+      color: #fef9c3;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
     }
 
     a {
@@ -105,6 +130,7 @@
       font-size: 18px;
     }
 
+    /* BOTÓN VERDE */
     .cta-button {
       display: inline-block;
       background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -128,7 +154,7 @@
 
 <body>
 
-  <!-- MENÚ NAVEGACIÓN (desde /blog) -->
+  <!-- MENÚ NAVEGACIÓN -->
   <header>
     <a href="../index.html">Inicio</a>
     <a href="../paquete-completo.html">Paquete Completo</a>
@@ -142,89 +168,94 @@
     <a href="../contacto.html">Contacto</a>
   </header>
 
-  <h1>¿Qué es el trading y cómo empezar desde cero?</h1>
+  <!-- CONTENIDO CENTRADO -->
+  <div class="post-container">
 
-  <p>
-    El trading consiste en comprar y vender activos financieros con el objetivo de obtener ganancias a partir de los
-    movimientos del precio en el mercado. A diferencia de la inversión clásica de largo plazo, el trading busca
-    oportunidades en el corto y mediano plazo, incluso dentro del mismo día.
-  </p>
+    <h1>¿Qué es el trading y cómo empezar desde cero?</h1>
 
-  <h2>¿Qué se puede operar en trading?</h2>
-  <p>Los mercados más comunes son:</p>
-  <ul>
-    <li>✅ Futuros (ES, NQ, YM, oro, petróleo, etc.)</li>
-    <li>✅ Acciones</li>
-    <li>✅ Opciones</li>
-    <li>✅ Forex</li>
-    <li>✅ Criptomonedas</li>
-  </ul>
-  <p>
-    En Plataforma Bursátil nos enfocamos principalmente en <strong>Futuros, Acciones y Opciones</strong> por su liquidez
-    y por las oportunidades reales que ofrecen para el trader disciplinado.
-  </p>
+    <p>
+      El trading consiste en comprar y vender activos financieros con el objetivo de obtener ganancias a partir de los
+      movimientos del precio en el mercado. A diferencia de la inversión clásica de largo plazo, el trading busca
+      oportunidades en el corto y mediano plazo, incluso dentro del mismo día.
+    </p>
 
-  <h2>¿Se puede empezar desde cero?</h2>
-  <p>
-    Sí, se puede. Pero no improvisando. La mayoría de las personas que fracasan lo hacen porque:
-  </p>
-  <ul>
-    <li>Operan sin educación ni estructura.</li>
-    <li>No tienen un plan claro.</li>
-    <li>No saben manejar el riesgo.</li>
-    <li>Operan guiados por emociones y no por un sistema.</li>
-  </ul>
-  <p>
-    Por eso siempre repetimos: <strong>primero estructura, después dinero</strong>. El capital sin un sistema solo
-    acelera los errores.
-  </p>
+    <h2>¿Qué se puede operar en trading?</h2>
+    <p>Los mercados más comunes son:</p>
+    <ul>
+      <li>Futuros (ES, NQ, YM, oro, petróleo, etc.)</li>
+      <li>Acciones</li>
+      <li>Opciones</li>
+      <li>Forex</li>
+      <li>Criptomonedas</li>
+    </ul>
+    <p>
+      En Plataforma Bursátil nos enfocamos principalmente en <strong>Futuros, Acciones y Opciones</strong> por su liquidez
+      y por las oportunidades reales que ofrecen para el trader disciplinado.
+    </p>
 
-  <h2>Pasos básicos para empezar correctamente</h2>
-  <ol>
-    <li><strong>Educación antes de operar</strong><br>
-      Entender cómo funciona el mercado, qué es una vela, soportes y resistencias, gestión de riesgo y ejecución.</li>
-    <li><strong>Computadora adecuada</strong><br>
-      El trading es una actividad técnica. Operar seriamente desde el celular es una desventaja enorme.</li>
-    <li><strong>Plataforma de trading real</strong><br>
-      Usar plataformas como NinjaTrader o Thinkorswim para ver el mercado con herramientas profesionales.</li>
-    <li><strong>Plan de riesgo</strong><br>
-      Definir cuánto estás dispuesto a arriesgar por operación y por día antes de tocar el mercado.</li>
-    <li><strong>Acompañamiento</strong><br>
-      Operar solo al principio suele ser el camino más caro. El acompañamiento acorta el proceso y evita errores graves.</li>
-  </ol>
+    <h2>¿Se puede empezar desde cero?</h2>
+    <p>
+      Sí, se puede. Pero no improvisando. La mayoría de las personas que fracasan lo hacen porque:
+    </p>
+    <ul>
+      <li>Operan sin educación ni estructura.</li>
+      <li>No tienen un plan claro.</li>
+      <li>No saben manejar el riesgo.</li>
+      <li>Operan guiados por emociones y no por un sistema.</li>
+    </ul>
+    <p>
+      Por eso siempre repetimos: <strong>primero estructura, después dinero</strong>. El capital sin un sistema solo
+      acelera los errores.
+    </p>
 
-  <h2>¿Cuánto dinero necesito para empezar?</h2>
-  <p>
-    Depende del mercado que elijas, pero el punto clave es que <strong>el capital no es lo más importante al inicio</strong>.
-    Lo fundamental es:
-  </p>
-  <ul>
-    <li>Saber operar.</li>
-    <li>Controlar el riesgo.</li>
-    <li>Tener disciplina y un sistema repetible.</li>
-  </ul>
-  <p>
-    Muchos traders comienzan con <strong>cuentas pequeñas o cuentas evaluadas</strong> y luego escalan a medida que
-    demuestran consistencia.
-  </p>
+    <h2>Pasos básicos para empezar correctamente</h2>
+    <ol>
+      <li><strong>Educación antes de operar</strong><br>
+        Entender cómo funciona el mercado, qué es una vela, soportes y resistencias, gestión de riesgo y ejecución.</li>
+      <li><strong>Computadora adecuada</strong><br>
+        El trading es una actividad técnica. Operar seriamente desde el celular es una desventaja enorme.</li>
+      <li><strong>Plataforma de trading real</strong><br>
+        Usar plataformas como NinjaTrader o Thinkorswim para ver el mercado con herramientas profesionales.</li>
+      <li><strong>Plan de riesgo</strong><br>
+        Definir cuánto estás dispuesto a arriesgar por operación y por día antes de tocar el mercado.</li>
+      <li><strong>Acompañamiento</strong><br>
+        Operar solo al principio suele ser el camino más caro. El acompañamiento acorta el proceso y evita errores graves.</li>
+    </ol>
 
-  <h2>Conclusión</h2>
-  <p>
-    El trading es una oportunidad real, pero sólo para quienes respetan el proceso: se educan, practican, controlan el
-    riesgo y dejan de perseguir “dinero rápido”. Si tratás el trading como un negocio, puede convertirse en una herramienta
-    poderosa en tu vida financiera.
-  </p>
+    <h2>¿Cuánto dinero necesito para empezar?</h2>
+    <p>
+      Depende del mercado que elijas, pero el punto clave es que <strong>el capital no es lo más importante al inicio</strong>.
+      Lo fundamental es:
+    </p>
+    <ul>
+      <li>Saber operar.</li>
+      <li>Controlar el riesgo.</li>
+      <li>Tener disciplina y un sistema repetible.</li>
+    </ul>
+    <p>
+      Muchos traders comienzan con <strong>cuentas pequeñas o cuentas evaluadas</strong> y luego escalan a medida que
+      demuestran consistencia.
+    </p>
 
-  <!-- CTA FINAL BONITO -->
-  <div class="cta-wrapper">
-    <p>📲 <strong>¿Querés empezar bien desde el principio y evitar los errores típicos?</strong></p>
-    <a
-      class="cta-button"
-      href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20art%C3%ADculo%20%22Qu%C3%A9%20es%20el%20trading%22%20y%20quiero%20empezar%20desde%20cero%20de%20la%20manera%20correcta."
-      target="_blank"
-    >
-      Hablar por WhatsApp con LGtraderX
-    </a>
+    <h2>Conclusión</h2>
+    <p>
+      El trading es una oportunidad real, pero sólo para quienes respetan el proceso: se educan, practican, controlan el
+      riesgo y dejan de perseguir dinero rápido. Si tratás el trading como un negocio, puede convertirse en una herramienta
+      poderosa en tu vida financiera.
+    </p>
+
+    <!-- CTA FINAL -->
+    <div class="cta-wrapper">
+      <p><strong>¿Querés empezar bien desde el principio y evitar los errores típicos?</strong></p>
+      <a
+        class="cta-button"
+        href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20art%C3%ADculo%20%22Qu%C3%A9%20es%20el%20trading%22%20y%20quiero%20empezar%20desde%20cero%20de%20la%20manera%20correcta."
+        target="_blank"
+      >
+        Hablar por WhatsApp con LGtraderX
+      </a>
+    </div>
+
   </div>
 
 </body>
