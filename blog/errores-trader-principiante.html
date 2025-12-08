@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<script>
+function loadScript(a){
+  var b = document.getElementsByTagName("head")[0],
+      c = document.createElement("script");
+  c.type = "text/javascript",
+  c.src  = "https://tracker.metricool.com/resources/be.js",
+  c.onreadystatechange = a,
+  c.onload = a,
+  b.appendChild(c)
+}
+loadScript(function(){
+  beTracker.t({hash:"d4e95ba12e0accbcad04a9342f62bf85"})
+});
+</script>
+
+  <!-- ===================== -->
+  <!-- META PIXEL -->
+  <!-- ===================== -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '261269777921639');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=261269777921639&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- ===================== -->
+  <!-- GOOGLE ANALYTICS GA4 -->
+  <!-- ===================== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5DDE1SRNKP');
+  </script>
+
+  <!-- META BÁSICO -->
+  <meta charset="UTF-8">
+  <title>Los errores más comunes del trader principiante | Plataforma Bursátil</title>
+  <meta name="description" content="Conoce los errores más comunes del trader principiante y cómo evitarlos: operar sin plan, arriesgar de más, seguir señales sin entender y mucho más. Guía clara en español.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ESTILOS -->
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    /* MENÚ SUPERIOR */
+    header {
+      background: #020617;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      margin: -24px -24px 24px -24px;
+    }
+
+    header a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 14px;
+      padding: 6px 4px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    header a:hover {
+      color: #f59e0b;
+    }
+
+    /* CAJITA CENTRAL TIPO BLOG */
+    .post-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #facc15;
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #e5e7eb;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    strong {
+      color: #fef9c3;
+    }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* BLOQUE RESALTADO / NOTA SUAVE */
+    .nota {
+      margin: 18px 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #1f2937;
+      font-size: 0.96rem;
+    }
+
+    .nota span {
+      color: #facc15;
+      font-weight: 600;
+    }
+
+    /* PEQUEÑO SUBTÍTULO INICIAL */
+    .subtitulo {
+      color: #cbd5f5;
+      font-size: 0.98rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* BLOQUE RESUMEN LISTA */
+    .pasos-resumen {
+      margin: 24px 0;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #1f2937;
+      font-size: 0.95rem;
+    }
+
+    .pasos-resumen strong {
+      color: #facc15;
+    }
+
+    /* CTA FINAL */
+    .cta-wrapper {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta-wrapper p {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+
+    /* BOTÓN VERDE */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 32px rgba(34,197,94,0.5);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- MENÚ NAVEGACIÓN -->
+  <header>
+    <a href="../index.html">Inicio</a>
+    <a href="../paquete-completo.html">Paquete Completo</a>
+    <a href="../suite.html">Suite Plataforma Bursátil</a>
+    <a href="../curso-online.html">Curso Online</a>
+    <a href="../curso-presencial.html">Curso Presencial</a>
+    <a href="../paquete-tecnologico.html">Paquete Tecnológico</a>
+    <a href="../mentoria-privada.html">Mentoría Privada</a>
+    <a href="../webinario.html">Webinario</a>
+    <a href="index.html">Blog</a>
+    <a href="../contacto.html">Contacto</a>
+  </header>
+
+  <!-- CONTENIDO CENTRADO -->
+  <div class="post-container">
+
+    <h1>Los errores más comunes del trader principiante</h1>
+
+    <p class="subtitulo">
+      Si estás empezando en el mundo del trading, probablemente ya cometiste alguno de estos errores.
+      La buena noticia: se pueden corregir si los ves a tiempo.
+    </p>
+
+    <p>
+      La mayoría de los traders principiantes no pierde por “no saber hacer análisis técnico”, sino por
+      repetir una y otra vez los mismos <strong>errores de comportamiento, gestión y enfoque</strong>.
+      En este artículo vamos a ponerlos sobre la mesa, sin maquillaje, para que puedas identificar en
+      cuál o cuáles estás cayendo hoy.
+    </p>
+
+    <div class="pasos-resumen">
+      <p><strong>Errores más frecuentes:</strong></p>
+      <ol>
+        <li>Operar sin un plan claro.</li>
+        <li>Arriesgar demasiado capital en una sola operación.</li>
+        <li>No usar stop loss o moverlo constantemente.</li>
+        <li>Operar por emoción: miedo, euforia o venganza.</li>
+        <li>Saltar de estrategia en estrategia cada semana.</li>
+        <li>Seguir señales sin entender qué hay detrás.</li>
+        <li>No llevar registro ni revisar las operaciones.</li>
+      </ol>
+    </div>
+
+    <h2>1. Operar sin un plan</h2>
+    <p>
+      Este es el error número uno. Muchos entran al mercado solo porque “parece que va a subir” o
+      “se está cayendo fuerte”. Es decir, operan por sensación, no por estructura.
+    </p>
+    <p>
+      Un plan de trading básico debería incluir:
+    </p>
+    <ul>
+      <li><strong>Condición de entrada:</strong> ¿qué tiene que pasar para que abras una operación?</li>
+      <li><strong>Nivel de salida con pérdida:</strong> tu stop loss definido antes de entrar.</li>
+      <li><strong>Objetivo de ganancia:</strong> ¿dónde tomás parcial o total?</li>
+      <li><strong>Riesgo por operación:</strong> porcentaje máximo de la cuenta.</li>
+    </ul>
+    <p>
+      Sin esto, no estás haciendo trading: estás apostando. Y el mercado, tarde o temprano,
+      termina cobrando caro la improvisación.
+    </p>
+
+    <h2>2. Arriesgar demasiado en una sola operación</h2>
+    <p>
+      El principiante suele pensar: “Si pongo más, gano más rápido”. El problema es que también
+      puede <strong>perder más rápido</strong>. Una sola mala operación con demasiado tamaño
+      puede borrar varias semanas de progreso.
+    </p>
+    <p>
+      Una regla sana para empezar es arriesgar solo una pequeña parte de la cuenta por operación.
+      El objetivo no es ganar todo en un día, sino <strong>sobrevivir el tiempo suficiente</strong>
+      para aprender y mejorar.
+    </p>
+
+    <div class="nota">
+      <span>Recordatorio clave:</span> un buen trader no piensa “¿cuánto puedo ganar en esta
+      operación?”, sino “¿cuánto estoy dispuesto a perder si sale mal?”. Primero se protege,
+      después busca oportunidades.
+    </div>
+
+    <h2>3. No usar stop loss (o moverlo siempre “un poquito más”)</h2>
+    <p>
+      Muchos novatos entran con la idea de que el mercado “va a volver” eventualmente. A veces
+      vuelve, pero muchas veces <strong>no</strong>. Y una pérdida pequeña que se pudo cortar
+      rápido se convierte en un agujero difícil de tapar.
+    </p>
+    <p>
+      Otro error típico es colocar un stop, pero cada vez que el precio se acerca, moverlo
+      “un poco más abajo”. Eso no es gestión, es miedo a aceptar la realidad.
+    </p>
+
+    <h2>4. Operar por emoción: miedo, euforia o venganza</h2>
+    <p>
+      El mercado mueve emociones fuertes:
+    </p>
+    <ul>
+      <li><strong>Miedo:</strong> salir antes de tiempo o no entrar cuando tu sistema lo indica.</li>
+      <li><strong>Euforia:</strong> creer que “ya dominaste el mercado” después de unos buenos días.</li>
+      <li><strong>Venganza:</strong> seguir operando solo para recuperar una pérdida.</li>
+    </ul>
+    <p>
+      Cuando las emociones manejan el timón, las reglas dejan de existir. El resultado es casi
+      siempre el mismo: sobreoperar, romper límites de riesgo y terminar agotado mentalmente.
+    </p>
+
+    <h2>5. Cambiar de estrategia cada semana</h2>
+    <p>
+      YouTube, redes sociales y grupos de trading hacen que sea muy fácil saltar de una idea a otra:
+    </p>
+    <ul>
+      <li>Un día usás un indicador nuevo.</li>
+      <li>Al otro probás una estrategia distinta.</li>
+      <li>Después seguís señales ajenas.</li>
+    </ul>
+    <p>
+      El problema es que <strong>nunca le das tiempo</strong> a ningún método para entenderlo
+      de verdad, medirlo y mejorarlo. Sin estadística y sin repetición, todo parece “que no funciona”.
+    </p>
+
+    <h2>6. Seguir señales sin entender el por qué</h2>
+    <p>
+      Otro error muy común es depender completamente de:
+    </p>
+    <ul>
+      <li>Grupos de señales.</li>
+      <li>Personas en redes sociales.</li>
+      <li>Alertas que no explican nada.</li>
+    </ul>
+    <p>
+      El problema no es recibir ideas, sino no saber <strong>por qué</strong> se toma una entrada.
+      Si no entendés la lógica detrás, no podés:
+    </p>
+    <ul>
+      <li>Adaptarla a tu cuenta.</li>
+      <li>Manejar el riesgo.</li>
+      <li>Aprender de los errores.</li>
+    </ul>
+
+    <h2>7. No llevar registro ni revisar las operaciones</h2>
+    <p>
+      Muchos traders principiantes no tienen ni idea de cuántas operaciones hacen al mes,
+      cuál es su porcentaje de acierto o en qué tipo de escenarios pierden más.
+    </p>
+    <p>
+      Llevar un registro básico (un diario de trading) permite:
+    </p>
+    <ul>
+      <li>Detectar patrones de error.</li>
+      <li>Ver en qué horarios te va mejor.</li>
+      <li>Identificar qué setups funcionan realmente.</li>
+    </ul>
+    <p>
+      Sin datos, es muy difícil mejorar. Sentís que “algo anda mal”, pero no sabés exactamente qué.
+    </p>
+
+    <h2>Cómo empezar a corregir estos errores</h2>
+    <p>
+      No necesitas ser perfecto para ser rentable. Lo que sí necesitas es ir eliminando poco a poco
+      los errores más graves:
+    </p>
+    <ul>
+      <li>Escribir un plan sencillo y respetarlo.</li>
+      <li>Bajar el tamaño de tus posiciones.</li>
+      <li>Aceptar las pérdidas como parte del juego.</li>
+      <li>Elegir una sola metodología y trabajarla en serio.</li>
+      <li>Registrar tus operaciones y revisarlas cada semana.</li>
+    </ul>
+    <p>
+      El trading deja de ser un caos cuando hay <strong>estructura, límites y proceso</strong>.
+      Los errores no desaparecen del todo, pero dejan de ser mortales.
+    </p>
+
+    <h2>Conclusión: el error más caro es no aprender de los errores</h2>
+    <p>
+      Todos los traders, incluso los profesionales, se equivocan. La diferencia está en cómo
+      responden a esos errores:
+    </p>
+    <ul>
+      <li>El principiante los ignora y los repite.</li>
+      <li>El trader en desarrollo los observa, los anota y los corrige.</li>
+    </ul>
+    <p>
+      Si estás leyendo esto, ya estás un paso adelante: estás mirando tus fallas de frente.
+      El siguiente paso es tomar decisiones concretas para reducirlas y construir un estilo de
+      trading más profesional.
+    </p>
+
+    <!-- CTA FINAL -->
+    <div class="cta-wrapper">
+      <p>📲 <strong>¿Querés ayuda para corregir estos errores y ordenar tu proceso de trading?</strong></p>
+      <a
+        class="cta-button"
+        href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20le%C3%AD%20el%20art%C3%ADculo%20de%20errores%20del%20trader%20principiante%20y%20quiero%20mejorar%20mi%20proceso."
+        target="_blank"
+      >
+        Hablar por WhatsApp con LGtraderX
+      </a>
+    </div>
+
+  </div> <!-- fin post-container -->
+
+</body>
+</html>
