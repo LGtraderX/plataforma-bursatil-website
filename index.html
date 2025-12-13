@@ -299,7 +299,7 @@ loadScript(function(){
     border-top: 1px solid #1e293b;
   }
 
-  /* ======================= POPUP WEBINAR ======================= */
+  /* ======================= POPUP DISCORD ======================= */
   .popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -339,23 +339,25 @@ loadScript(function(){
 
   .popup-btn {
     display: block;
-    background: #25D366;
+    background: #fbbf24;
     color: #000;
     padding: 14px;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     margin: 0 auto 14px;
     font-size: 16px;
   }
 
   .popup-btn:hover {
-    background: #22c55e;
+    background: #f59e0b;
   }
 
   .popup-box small {
     font-size: 12px;
     color: #94a3b8;
+    display: block;
+    line-height: 1.35;
   }
 
   .popup-close {
@@ -402,8 +404,8 @@ loadScript(function(){
     <a class="btn-main" href="https://discord.gg/hVbMbusS2v" target="_blank" rel="noopener">
       Unete al Discord
     </a>
-    <a class="btn-main" href="https://wa.me/19084680867" target="_blank">
-      Unete por WhatsApp →
+    <a class="btn-main" href="https://wa.me/19084680867" target="_blank" rel="noopener">
+      WhatsApp
     </a>
   </div>
 </section>
@@ -459,12 +461,12 @@ loadScript(function(){
   <div class="box">
     <h2>Redes sociales oficiales</h2>
     <ul class="social-list">
-      <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank">@plataformabursatil</a></li>
-      <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank">@PlataformaBursatil</a></li>
-      <li>🐦 X: <a href="https://x.com/SitioBursatil" target="_blank">@SitioBursatil</a></li>
-      <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank">@plataformabursatil</a></li>
-      <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank">Plataforma Bursátil</a></li>
-      <li>💬 Discord: <a href="https://discord.gg/hVbMbusS2v" target="_blank">Canal Plataforma Bursátil</a></li>
+      <li>🎵 TikTok: <a href="https://www.tiktok.com/@plataformabursatil" target="_blank" rel="noopener">@plataformabursatil</a></li>
+      <li>▶️ YouTube: <a href="https://youtube.com/@plataformabursatil" target="_blank" rel="noopener">@PlataformaBursatil</a></li>
+      <li>🐦 X: <a href="https://x.com/SitioBursatil" target="_blank" rel="noopener">@SitioBursatil</a></li>
+      <li>📸 Instagram: <a href="https://instagram.com/plataformabursatil" target="_blank" rel="noopener">@plataformabursatil</a></li>
+      <li>📘 Facebook: <a href="https://facebook.com/plataformabursatil" target="_blank" rel="noopener">Plataforma Bursátil</a></li>
+      <li>💬 Discord: <a href="https://discord.gg/hVbMbusS2v" target="_blank" rel="noopener">Canal Plataforma Bursátil</a></li>
     </ul>
   </div>
 
@@ -475,12 +477,12 @@ loadScript(function(){
     <ul class="affiliate-list">
       <li>
         ✅ <strong>Apex Trader Funding</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank">Ir a Apex con mi enlace →</a>
+        <a href="TU_LINK_DE_AFILIADO_APEX_AQUI" target="_blank" rel="noopener">Ir a Apex con mi enlace →</a>
       </li>
 
       <li style="margin-top: 12px;">
         ✳️ <strong>Take Profit Trader (TPT)</strong><br>
-        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank">Ir a TPT con mi enlace →</a>
+        <a href="TU_LINK_DE_AFILIADO_TPT_AQUI" target="_blank" rel="noopener">Ir a TPT con mi enlace →</a>
       </li>
     </ul>
   </div>
@@ -490,62 +492,96 @@ loadScript(function(){
 <!-- ======================= BOTÓN CRYPTO/ZELLE ======================= -->
 <a class="btn-crypto-global"
    href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20quiero%20pagar%20con%20Crypto%20o%20Zelle"
-   target="_blank">
+   target="_blank" rel="noopener">
    Pagar con Crypto o Zelle
 </a>
 
 <!-- ======================= WHATSAPP ======================= -->
-<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank">💬 WhatsApp</a>
+<a class="whatsapp-float" href="https://wa.me/19084680867" target="_blank" rel="noopener">💬 WhatsApp</a>
 
-<!-- ======================= POPUP WEBINAR ======================= -->
-<div id="popup-webinar" class="popup-overlay">
-  <div class="popup-box">
-    <span class="popup-close" onclick="closePopupWebinar()">×</span>
-    <h2>Aprende Trading Desde Cero</h2>
-    <p>Clase gratuita donde te explico cómo empezar paso a paso, sin experiencia y con ejemplos reales.</p>
+<!-- ======================= POPUP DISCORD ======================= -->
+<div id="popup-discord" class="popup-overlay" aria-hidden="true">
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <span class="popup-close" onclick="closePopupDiscord()" aria-label="Cerrar">×</span>
+    <h2 id="popupTitle">Trading en vivo en Discord</h2>
+    <p>Únete al Discord para operar y aprender en vivo con nuestra comunidad: niveles, contexto y ejecución en tiempo real.</p>
+
     <a class="popup-btn"
-       href="https://wa.me/19084680867?text=Hola%20quiero%20inscribirme%20al%20webinar%20gratuito"
-       target="_blank">
-       📲 Recibir acceso por WhatsApp
+       href="https://discord.gg/hVbMbusS2v"
+       target="_blank" rel="noopener"
+       onclick="trackPopupDiscordClick()">
+       ✅ Unirme al Discord
     </a>
-    <small>Cupos limitados cada semana.</small>
+
+    <small>
+      Enfoque educativo. Trading conlleva riesgo. No se garantizan resultados.
+    </small>
   </div>
 </div>
 
 <!-- ======================= FOOTER ======================= -->
 <footer>
-  © 2025 Plataforma Bursátil · plataformabursatil.com  
+  © 2025 Plataforma Bursátil · plataformabursatil.com
   <br>
   Pagos procesados de forma segura mediante Square.
 </footer>
 
 <script>
-  function mostrarPopupWebinar() {
-    var popup = document.getElementById('popup-webinar');
-    if (popup && popup.style.display !== 'flex') {
-      popup.style.display = 'flex';
+  // =======================
+  // POPUP 1 vez cada 24h
+  // =======================
+  const POPUP_KEY = 'pb_popup_last_shown_ts';
+  const POPUP_COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 horas
+  const POPUP_DELAY_MS = 25000; // 25 segundos (como lo tenías)
+
+  function shouldShowPopup() {
+    try {
+      const last = parseInt(localStorage.getItem(POPUP_KEY) || '0', 10);
+      const now = Date.now();
+      return (now - last) > POPUP_COOLDOWN_MS;
+    } catch (e) {
+      // Si localStorage falla, mostramos una vez por visita (mejor que spamear)
+      return true;
     }
   }
 
-  function closePopupWebinar() {
-    var popup = document.getElementById('popup-webinar');
-    if (popup) {
-      popup.style.display = 'none';
-    }
+  function markPopupShownNow() {
+    try {
+      localStorage.setItem(POPUP_KEY, String(Date.now()));
+    } catch (e) {}
   }
 
-  // Mostrar después de 5 segundos
-  setTimeout(function() {
-  mostrarPopupWebinar();
-  }, 25000);
+  function showPopupDiscord() {
+    const popup = document.getElementById('popup-discord');
+    if (!popup) return;
 
+    popup.style.display = 'flex';
+    popup.setAttribute('aria-hidden', 'false');
+    markPopupShownNow();
+  }
 
-  // Intento de salida (ratón hacia arriba fuera de la ventana)
-  document.addEventListener('mouseout', function(e) {
-    if (e.clientY <= 0) {
-      mostrarPopupWebinar();
-    }
+  function closePopupDiscord() {
+    const popup = document.getElementById('popup-discord');
+    if (!popup) return;
+
+    popup.style.display = 'none';
+    popup.setAttribute('aria-hidden', 'true');
+  }
+
+  // Tracking opcional (no rompe si no tienes fbq/gtag)
+  function trackPopupDiscordClick() {
+    try { if (typeof fbq === 'function') fbq('trackCustom', 'popup_discord_click'); } catch(e) {}
+    try { if (typeof gtag === 'function') gtag('event', 'popup_discord_click'); } catch(e) {}
+  }
+
+  // Mostrar después del delay (solo si pasaron 24h desde la última vez)
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (shouldShowPopup()) showPopupDiscord();
+    }, POPUP_DELAY_MS);
   });
+
+  // NOTA: Se eliminó el "exit-intent" para evitar doble pop-up.
 </script>
 
 </body>
