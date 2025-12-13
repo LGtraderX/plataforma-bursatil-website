@@ -17,206 +17,340 @@ loadScript(function(){
 });
 </script>
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '261269777921639');
-fbq('track', 'PageView');
-</script>
+  <!-- ===================== -->
+  <!-- META PIXEL -->
+  <!-- ===================== -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '261269777921639');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=261269777921639&ev=PageView&noscript=1"/>
+  </noscript>
 
-<!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-5DDE1SRNKP');
-</script>
+  <!-- ===================== -->
+  <!-- GOOGLE ANALYTICS GA4 -->
+  <!-- ===================== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5DDE1SRNKP');
+  </script>
 
-<meta charset="UTF-8">
-<title>LGtraderX Mission | Plataforma Bursátil</title>
-<meta name="description" content="La misión de LGtraderX: ser el puente entre no saber nada y entender el mercado con estructura, disciplina y criterio propio.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- META BÁSICO -->
+  <meta charset="UTF-8">
+  <title>LGtraderX: Mi misión | Plataforma Bursátil</title>
+  <meta name="description" content="No estoy aquí para vender sueños. Estoy aquí para construir puentes. La misión de LGtraderX: ser el puente entre no saber nada y operar con estructura, disciplina y criterio real.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  padding: 24px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
+  <!-- ESTILOS -->
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-header {
-  background: #020617;
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #1e293b;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  margin: -24px -24px 24px -24px;
-}
+    /* MENÚ SUPERIOR */
+    header {
+      background: #020617;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      margin: -24px -24px 24px -24px;
+    }
 
-header a {
-  color: #fbbf24;
-  text-decoration: none;
-  margin: 0 14px;
-  font-weight: 600;
-  font-size: 15px;
-}
+    header a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 14px;
+      padding: 6px 4px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 15px;
+    }
 
-.post-container {
-  max-width: 850px;
-  margin: 0 auto;
-}
+    header a:hover {
+      color: #f59e0b;
+    }
 
-h1 {
-  color: #facc15;
-  font-size: 1.9rem;
-  margin-bottom: 0.75rem;
-}
+    /* CAJITA CENTRAL TIPO BLOG */
+    .post-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
 
-h2 {
-  margin-top: 2rem;
-  color: #e5e7eb;
-  font-size: 1.3rem;
-}
+    h1 {
+      color: #facc15;
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+    }
 
-.subtitulo {
-  color: #cbd5f5;
-  font-size: 0.98rem;
-  margin-bottom: 1.2rem;
-}
+    h2 {
+      margin-top: 2rem;
+      color: #e5e7eb;
+      font-size: 1.3rem;
+    }
 
-.nota {
-  margin: 18px 0;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid #1f2937;
-  font-size: 0.96rem;
-}
+    p {
+      font-size: 1rem;
+    }
 
-.nota span {
-  color: #facc15;
-  font-weight: 600;
-}
+    strong {
+      color: #fef9c3;
+    }
 
-.cta-wrapper {
-  margin-top: 40px;
-  text-align: center;
-}
+    ul, ol {
+      padding-left: 1.3rem;
+    }
 
-.cta-wrapper p {
-  margin-bottom: 14px;
-  font-size: 18px;
-}
+    li {
+      margin-bottom: 0.35rem;
+    }
 
-.cta-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #022c22;
-  padding: 16px 28px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 17px;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
-}
-</style>
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* BLOQUE RESALTADO / NOTA SUAVE */
+    .nota {
+      margin: 18px 0;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #1f2937;
+      font-size: 0.96rem;
+    }
+
+    .nota span {
+      color: #facc15;
+      font-weight: 600;
+    }
+
+    /* PEQUEÑO SUBTÍTULO INICIAL */
+    .subtitulo {
+      color: #cbd5f5;
+      font-size: 0.98rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* BLOQUE RESUMEN LISTA */
+    .pasos-resumen {
+      margin: 24px 0;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #1f2937;
+      font-size: 0.95rem;
+    }
+
+    .pasos-resumen strong {
+      color: #facc15;
+    }
+
+    /* CTA FINAL */
+    .cta-wrapper {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .cta-wrapper p {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+
+    /* BOTÓN VERDE */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 32px rgba(34,197,94,0.5);
+    }
+  </style>
+
 </head>
 
 <body>
 
-<header>
-  <a href="../index.html">Inicio</a>
-  <a href="index.html">Blog</a>
-  <a href="../contacto.html">Contacto</a>
-</header>
+  <!-- MENÚ NAVEGACIÓN -->
+  <header>
+    <a href="../index.html">Inicio</a>
+    <a href="../paquete-completo.html">Paquete Completo</a>
+    <a href="../suite.html">Suite Plataforma Bursátil</a>
+    <a href="../curso-online.html">Curso Online</a>
+    <a href="../curso-presencial.html">Curso Presencial</a>
+    <a href="../paquete-tecnologico.html">Paquete Tecnológico</a>
+    <a href="../mentoria-privada.html">Mentoría Privada</a>
+    <a href="../webinario.html">Webinario</a>
+    <a href="index.html">Blog</a>
+    <a href="../contacto.html">Contacto</a>
+  </header>
 
-<div class="post-container">
+  <!-- CONTENIDO CENTRADO -->
+  <div class="post-container">
 
-<h1>LGtraderX: mi misión en el trading</h1>
+    <h1>LGtraderX: Mi misión</h1>
 
-<p class="subtitulo">
-No es una promesa. No es un curso milagro.  
-Es una forma de entender el mercado con criterio real.
-</p>
+    <p class="subtitulo">
+      No estoy aquí para vender sueños. Estoy aquí para construir puentes.
+      Un puente entre no saber nada y operar con estructura real.
+    </p>
 
-<p>
-Mi nombre es <strong>LGtraderX</strong> y mi misión es clara:
-</p>
+    <p>
+      Durante años, el mundo del trading estuvo bloqueado detrás de <strong>lenguaje complejo</strong>,
+      <strong>educación cara</strong>, <strong>sistemas confusos</strong> y <strong>promesas vacías</strong>.
+      Millones de personas — especialmente en la comunidad latina — quedaron afuera creyendo que el mercado
+      era solo para instituciones.
+    </p>
 
-<div class="nota">
-<span>Misión:</span> Ser el puente entre no saber nada y entender el mercado con estructura, disciplina y responsabilidad.
-</div>
+    <div class="nota">
+      <span>Eso termina aquí:</span> esta comunidad existe para abrir acceso al conocimiento con un método claro,
+      sin humo y sin fantasías.
+    </div>
 
-<h2>El problema real del trading</h2>
-<p>
-La mayoría de las personas no pierde dinero porque el mercado sea imposible,
-sino porque entra sin contexto, sin reglas y sin proceso.
-</p>
+    <h2>Mi misión</h2>
+    <p>
+      <strong>Soy el puente entre no saber nada y tener conocimiento.</strong>
+      No un gurú. No un vendedor de señales. No un apostador. Un puente.
+    </p>
 
-<p>
-Indicadores, señales, grupos pagos y promesas rápidas crean la ilusión
-de que el trading es fácil. No lo es.
-</p>
+    <div class="pasos-resumen">
+      <p><strong>De un lado del puente:</strong></p>
+      <ul>
+        <li>Confusión</li>
+        <li>Miedo</li>
+        <li>Apuesta disfrazada de “trading”</li>
+        <li>Decisiones al azar</li>
+        <li>Operativa emocional</li>
+      </ul>
+      <p style="margin-top:14px;"><strong>Del otro lado del puente:</strong></p>
+      <ul>
+        <li>Claridad</li>
+        <li>Estructura</li>
+        <li>Disciplina</li>
+        <li>Datos</li>
+        <li>Ejecución profesional</li>
+      </ul>
+    </div>
 
-<h2>Mi enfoque</h2>
-<ul>
-  <li><strong>Contexto:</strong> entender dónde está el precio y quién tiene el control.</li>
-  <li><strong>Estructura:</strong> niveles claros, rangos y expectativas reales.</li>
-  <li><strong>Disciplina:</strong> cuándo operar y cuándo no.</li>
-</ul>
+    <h2>LGtraderX no es una persona. Es un sistema.</h2>
+    <p>
+      LGtraderX representa un proceso de transformación:
+      pasar de improvisar a operar con reglas. Pasar de emociones a estructura.
+      Pasar de “esperanza” a <strong>ejecución</strong>.
+    </p>
 
-<p>
-Sin improvisar. Sin adivinar. Sin depender de terceros.
-</p>
+    <div class="nota">
+      <span>Lo que defendemos:</span>
+      educación en tu idioma · estructura en lugar de apuesta · mentalidad de negocio en lugar de emoción ·
+      reglas en lugar de opiniones · proceso en lugar de presión · consistencia en lugar de suerte.
+    </div>
 
-<h2>Por qué trading en vivo</h2>
-<p>
-El trading no se aprende leyendo resultados pasados.
-Se aprende observando decisiones en tiempo real.
-</p>
+    <h2>Trading no es tener razón todos los días</h2>
+    <p>
+      El trading no se trata de adivinar. Se trata de ejecutar bien.
+      <strong>No es ser “perfecto”. Es ser consistente.</strong>
+    </p>
 
-<p>
-Por eso el núcleo de Plataforma Bursátil es el
-<strong>trading en vivo educativo</strong>.
-</p>
+    <p>
+      Un trader profesional no pregunta: “¿Cuánto puedo ganar rápido?”  
+      Pregunta: “¿Cómo protejo el capital y ejecuto mi plan?”
+    </p>
 
-<h2>Una comunidad, no seguidores</h2>
-<p>
-Aquí no se copian trades.  
-Aquí se aprende a pensar el mercado.
-</p>
+    <h2>Esta misión es para gente real</h2>
+    <p>
+      Esta misión es para trabajadores, estudiantes, padres, emprendedores, soñadores y traders disciplinados.
+      Para personas que quieren hacer esto de forma seria, sin atajos y sin marketing falso.
+    </p>
 
-<div class="nota">
-<span>Aviso:</span> El trading conlleva riesgo. No se garantizan resultados.
-La educación reduce errores, no elimina el riesgo.
-</div>
+    <div class="nota">
+      <span>No hay:</span> atajos · fantasías de ganancias · promesas falsas.  
+      <br>
+      <span>Sí hay:</span> educación · sistemas · disciplina · lógica real de mercado.
+    </div>
 
-<!-- CTA FINAL -->
-<div class="cta-wrapper">
-  <p>💬 <strong>¿Querés ver cómo se analiza y opera el mercado en vivo?</strong></p>
-  <a
-    class="cta-button"
-    href="https://discord.gg/hVbMbusS2v"
-    target="_blank"
-    rel="noopener"
-  >
-    Unirme al Discord
-  </a>
-</div>
+    <h2>Visión global: sin fronteras</h2>
+    <p>
+      Gracias a la tecnología moderna, este puente ya alcanza muchos rincones del mundo.
+      Y pronto llegará aún más lejos.
+    </p>
+    <p>
+      Estamos atentos a la nueva generación de conectividad global — incluyendo futuros dispositivos
+      conectados por satélite a través de redes como <strong>Starlink</strong>.
+      Cuando ese momento llegue, el acceso al conocimiento ya no dependerá de la geografía.
+    </p>
 
-</div>
+    <ul>
+      <li>Un trabajador en una zona remota de Latinoamérica</li>
+      <li>Un estudiante en las montañas de Europa</li>
+      <li>Un emprendedor en áreas rurales de África</li>
+      <li>Un soñador en regiones aisladas de Estados Unidos</li>
+      <li>Lugares que hoy tienen poco o casi ningún acceso</li>
+    </ul>
+
+    <p>
+      El mercado dejará de pertenecer solo a las ciudades.
+      Pertenecerá a cualquiera con <strong>disciplina</strong> y <strong>conexión</strong>.
+    </p>
+
+    <h2>Un puente no elige quién lo cruza</h2>
+    <p>
+      Un puente no promete resultados. No presiona. No manipula.  
+      Solo se mantiene firme para que otros crucen con seguridad.
+    </p>
+
+    <div class="nota">
+      <span>Aviso importante:</span> el trading conlleva riesgo. No se garantizan resultados.
+      Cada persona es responsable de su operativa. La educación reduce errores, no elimina el riesgo.
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="cta-wrapper">
+      <p>💬 <strong>¿Querés ver cómo se aplica esta filosofía en el mercado real, en vivo y sin promesas?</strong></p>
+      <a
+        class="cta-button"
+        href="https://discord.gg/hVbMbusS2v"
+        target="_blank"
+        rel="noopener"
+      >
+        Unirme al Discord
+      </a>
+    </div>
+
+  </div> <!-- fin post-container -->
+
 </body>
 </html>
