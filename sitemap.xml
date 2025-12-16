@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://plataformabursatil.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/mentoria-privada.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/curso-online.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/curso-presencial.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/paquete-completo.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/paquete-tecnologico.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/suite.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://plataformabursatil.com/webinario.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
