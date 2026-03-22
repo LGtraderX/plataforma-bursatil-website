@@ -385,12 +385,12 @@ loadScript(function(){
 <!-- ======================= MENÚ ======================= -->
 <header>
   <a href="index.html">Inicio</a>
-  <a href="paquete-completo.html">Paquete Completo</a>
-  <a href="suite.html">Suite Plataforma Bursatil</a>
-  <a href="curso-online.html">Curso Online</a>
-  <a href="curso-presencial.html">Curso Presencial</a>
-  <a href="paquete-tecnologico.html">Paquete Tecnologico</a>
+  <a href="curso-presencial.html">Programa Presencial</a>
+  <a href="curso-online.html">Programa Remoto</a>
   <a href="mentoria-privada.html">Mentoria Privada</a>
+  <a href="suite.html">Suite</a>
+  <a href="paquete-tecnologico.html">Paquete Tecnologico</a>
+  <a href="paquete-completo.html">Paquete Completo</a>
   <a href="webinario.html">Webinario</a>
   <a href="blog/index.html">Blog</a>
   <a href="contacto.html">Contacto</a>
@@ -414,9 +414,24 @@ loadScript(function(){
 <section class="cards">
 
   <div class="card">
-    <h3>Paquete Completo</h3>
-    <p>Computadora configurada, monitor, instalación completa y entrenamiento básico para que empieces a operar con estructura desde el primer día.</p>
-    <a class="btn-card" href="paquete-completo.html">Ver detalle →</a>
+    <h3>Programa New Jersey</h3>
+    <p>Clase presencial en New Jersey para principiantes que quieren aprender a leer el mercado de forma práctica y clara.</p>
+    <a class="btn-card" href="curso-presencial.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Programa LGX Remoto</h3>
+    <p>Entrenamiento concentrado en Futuros, Stocks y Opciones: estructura, riesgo, ejecución y ejemplos reales explicados en español sencillo.</p>
+    <a class="btn-card" href="curso-online.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Mentoría Privada<span class="line2">LGX</span></h3>
+    <p>
+      Acompañamiento personalizado para llevarte de cero a trader independiente,
+      con enfoque práctico, niveles y disciplina real de mercado.
+    </p>
+    <a class="btn-card" href="mentoria-privada.html">Ver programa →</a>
   </div>
 
   <div class="card">
@@ -426,30 +441,15 @@ loadScript(function(){
   </div>
 
   <div class="card">
-    <h3>Curso Online</h3>
-    <p>Entrenamiento concentrado en Futuros, Stocks y Opciones: estructura, riesgo, ejecución y ejemplos reales explicados en español sencillo.</p>
-    <a class="btn-card" href="curso-online.html">Ver detalle →</a>
-  </div>
-
-  <div class="card">
-    <h3>Curso Presencial<span class="line2">New Jersey</span></h3>
-    <p>Clase presencial en New Jersey para principiantes que quieren aprender a leer el mercado de forma práctica y clara.</p>
-    <a class="btn-card" href="curso-presencial.html">Ver detalle →</a>
-  </div>
-
-  <div class="card">
-    <h3>Mentoría Privada<span class="line2">con LGtraderX</span></h3>
-    <p>
-      Acompañamiento personalizado para llevarte de cero a trader independiente,
-      con enfoque práctico, niveles y disciplina real de mercado.
-    </p>
-    <a class="btn-card" href="mentoria-privada.html">Ver programa →</a>
-  </div>
-
-  <div class="card">
     <h3>Paquete Tecnológico</h3>
     <p>Laptop optimizada para trading, monitor adicional, instalación de plataformas y soporte técnico para que la parte técnica no sea un problema.</p>
     <a class="btn-card" href="paquete-tecnologico.html">Ver detalle →</a>
+  </div>
+
+  <div class="card">
+    <h3>Paquete Completo</h3>
+    <p>Computadora configurada, monitor, instalación completa y entrenamiento básico para que empieces a operar con estructura desde el primer día.</p>
+    <a class="btn-card" href="paquete-completo.html">Ver detalle →</a>
   </div>
 
 </section>
@@ -526,15 +526,10 @@ loadScript(function(){
 </footer>
 
 <script>
-  // =======================
-  // POPUP 1 vez cada 24h
-  // + 25s OR exit-intent (solo si no se mostró antes)
-  // =======================
   const POPUP_KEY = 'pb_popup_last_shown_ts';
-  const POPUP_COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 horas
-  const POPUP_DELAY_MS = 25000; // 25 segundos
+  const POPUP_COOLDOWN_MS = 24 * 60 * 60 * 1000;
+  const POPUP_DELAY_MS = 25000;
 
-  // Control interno para evitar dobles disparos en la misma visita
   let popupAlreadyShownThisVisit = false;
 
   function shouldShowPopupNow() {
@@ -545,7 +540,6 @@ loadScript(function(){
       const now = Date.now();
       return (now - last) > POPUP_COOLDOWN_MS;
     } catch (e) {
-      // si localStorage falla, al menos evitamos duplicar en la visita
       return true;
     }
   }
@@ -572,25 +566,20 @@ loadScript(function(){
 
     popup.style.display = 'none';
     popup.setAttribute('aria-hidden', 'true');
-    // NO borramos POPUP_KEY: si lo cerró, igual queda bloqueado 24h
   }
 
-  // Tracking opcional (no rompe si no tienes fbq/gtag)
   function trackPopupDiscordClick() {
     try { if (typeof fbq === 'function') fbq('trackCustom', 'popup_discord_click'); } catch(e) {}
     try { if (typeof gtag === 'function') gtag('event', 'popup_discord_click'); } catch(e) {}
   }
 
-  // 1) Timer de 25s
   window.addEventListener('load', function() {
     setTimeout(function() {
       showPopupDiscord();
     }, POPUP_DELAY_MS);
   });
 
-  // 2) Exit-intent: SOLO si aún no se mostró y solo si pasan las 24h
   document.addEventListener('mouseout', function(e) {
-    // Cuando el mouse sale por arriba (intento de cerrar pestaña/ventana)
     if (e.clientY <= 0) {
       showPopupDiscord();
     }
