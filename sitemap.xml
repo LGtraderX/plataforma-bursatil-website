@@ -41,4 +41,10 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- 🔥 TU ARTÍCULO -->
+  <url>
+    <loc>https://plataformabursatil.com/blog/university/por-que-el-mercado-no-se-mueve-por-noticias.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
