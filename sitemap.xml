@@ -2,48 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://plataformabursatil.com/</loc>
+    <loc>https://www.plataformabursatil.com/</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/mentoria-privada.html</loc>
+    <loc>https://www.plataformabursatil.com/mentoria-privada.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/curso-online.html</loc>
+    <loc>https://www.plataformabursatil.com/curso-online.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/curso-presencial.html</loc>
+    <loc>https://www.plataformabursatil.com/curso-presencial.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/paquete-completo.html</loc>
+    <loc>https://www.plataformabursatil.com/paquete-completo.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/paquete-tecnologico.html</loc>
+    <loc>https://www.plataformabursatil.com/paquete-tecnologico.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/suite.html</loc>
+    <loc>https://www.plataformabursatil.com/suite.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://plataformabursatil.com/webinario.html</loc>
+    <loc>https://www.plataformabursatil.com/webinario.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- 🔥 TU ARTÍCULO -->
+  <!-- 🔥 ARTÍCULOS BLOG -->
   <url>
-    <loc>https://plataformabursatil.com/blog/university/por-que-el-mercado-no-se-mueve-por-noticias.html</loc>
+    <loc>https://www.plataformabursatil.com/blog/university/por-que-el-mercado-no-se-mueve-por-noticias.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.plataformabursatil.com/blog/university/el-error-de-querer-predecir-el-precio.html</loc>
+    <lastmod>2026-03-24</lastmod>
     <priority>0.7</priority>
   </url>
 
