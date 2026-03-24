@@ -138,6 +138,49 @@ h2 {
   font-weight: bold;
   color: #facc15;
 }
+
+/* POPUP */
+#exitPopupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#exitPopupBox {
+  background: #020617;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  padding: 28px 24px 22px;
+  border: 1px solid #1f2937;
+  text-align: center;
+  position: relative;
+}
+
+#exitPopupClose {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#exitPopupButton {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 700;
+  text-decoration: none;
+}
 </style>
 
 </head>
@@ -172,6 +215,14 @@ Piensan que una noticia provoca el movimiento.
 
 <p>
 La realidad es otra.
+</p>
+
+<p>
+Si todavía estás intentando predecir lo que el mercado va a hacer, estás cayendo en uno de los errores más comunes del trading.<br><br>
+
+👉 <a href="el-error-de-querer-predecir-el-precio.html" style="color:#38bdf8; font-weight:bold;">
+El error de querer predecir el precio
+</a>
 </p>
 
 <div class="nota">
@@ -262,6 +313,42 @@ Discord
 </div>
 
 </div>
+
+<!-- POPUP -->
+<div id="exitPopupOverlay">
+  <div id="exitPopupBox">
+    <button id="exitPopupClose">✕</button>
+    <h3>¿Este artículo te hizo ver el mercado diferente?</h3>
+    <p>Entonces estás listo para el siguiente nivel.</p>
+    <a id="exitPopupButton" href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20art%C3%ADculo%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank">
+      📲 Hablar por WhatsApp
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var overlay = document.getElementById('exitPopupOverlay');
+  var closeBtn = document.getElementById('exitPopupClose');
+  var shown = false;
+
+  function show(){
+    if(shown) return;
+    shown = true;
+    overlay.style.display = 'flex';
+  }
+
+  document.addEventListener('mouseleave', function(e){
+    if(e.clientY <= 0) show();
+  });
+
+  setTimeout(show, 10000);
+
+  closeBtn.onclick = function(){
+    overlay.style.display='none';
+  };
+})();
+</script>
 
 </body>
 </html>
