@@ -177,11 +177,12 @@ h2 {
   display: inline-block;
   padding: 12px 18px;
   border-radius: 999px;
-  background: #22c55e;
-  color: #022c22;
+  background: #facc15;
+  color: #111;
   font-weight: 700;
   text-decoration: none;
 }
+
 </style>
 
 </head>
@@ -438,39 +439,38 @@ target="_blank">Discord</a>
 
 </div>
 
+<!-- ======================= POPUP LGX UNIVERSITY ======================= -->
 <div id="exitPopupOverlay">
   <div id="exitPopupBox">
     <button id="exitPopupClose">✕</button>
-    <h3>¿Este artículo te hizo ver el mercado diferente?</h3>
-    <p>Entonces estás listo para el siguiente nivel.</p>
-    <a id="exitPopupButton" href="https://wa.me/19084680867" target="_blank">
-      📲 Hablar con LGtraderX
+    <h3>Accede gratis a LGX University</h3>
+    <p>Aprende a leer el mercado con niveles reales.</p>
+    <a id="exitPopupButton" href="https://plataformabursatil.com/university/">
+      👉 Entrar gratis
     </a>
   </div>
 </div>
 
 <script>
-(function(){
-  var overlay = document.getElementById('exitPopupOverlay');
-  var closeBtn = document.getElementById('exitPopupClose');
-  var shown = false;
+document.addEventListener("DOMContentLoaded", function () {
 
-  function show(){
-    if(shown) return;
-    shown = true;
-    overlay.style.display = 'flex';
+  var popup = document.getElementById("exitPopupOverlay");
+  var close = document.getElementById("exitPopupClose");
+
+  if (!localStorage.getItem("lgx_popup_shown")) {
+    setTimeout(function () {
+      popup.style.display = "flex";
+      localStorage.setItem("lgx_popup_shown", "true");
+    }, 3000);
   }
 
-  document.addEventListener('mouseleave', function(e){
-    if(e.clientY <= 0) show();
-  });
+  if (close) {
+    close.onclick = function () {
+      popup.style.display = "none";
+    };
+  }
 
-  setTimeout(show, 10000);
-
-  closeBtn.onclick = function(){
-    overlay.style.display='none';
-  };
-})();
+});
 </script>
 
 </body>
