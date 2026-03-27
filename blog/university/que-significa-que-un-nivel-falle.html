@@ -301,28 +301,25 @@ target="_blank">Discord</a>
 </div>
 
 <script>
-(function(){
+document.addEventListener("DOMContentLoaded", function () {
 
   var popup = document.getElementById("exitPopupOverlay");
   var close = document.getElementById("exitPopupClose");
 
-  function showPopup(){
-    popup.style.display = "flex";
+  if (!localStorage.getItem("lgx_popup_shown")) {
+    setTimeout(function () {
+      popup.style.display = "flex";
+      localStorage.setItem("lgx_popup_shown", "true");
+    }, 3000);
   }
 
-  setTimeout(showPopup, 8000);
-
-  document.addEventListener("mouseout", function(e){
-    if(e.clientY <= 0){
-      showPopup();
-    }
-  });
-
-  close.onclick = function(){
-    popup.style.display = "none";
+  if (close) {
+    close.onclick = function () {
+      popup.style.display = "none";
+    };
   }
 
-})();
+});
 </script>
 
 </body>
