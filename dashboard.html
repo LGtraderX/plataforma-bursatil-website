@@ -77,18 +77,17 @@ De Cero a Trader
 
 <script>
 document.getElementById("buyBtn").addEventListener("click", async () => {
-  const memberstack = window.$memberstackDom;
-
-  if (!memberstack) {
+  if (!window.$memberstackDom) {
     alert("Memberstack no cargó");
     return;
   }
 
-  await memberstack.openCheckout({
+  await window.$memberstackDom.openCheckout({
     priceId: "prc_ebook-1-acceso-o71a0sj1"
   });
 });
 </script>
+
 
   </div>
 
