@@ -29,6 +29,10 @@ body {
   text-decoration:none;
   cursor:pointer;
 }
+
+.btn:hover {
+  background:#ffcc00;
+}
 </style>
 
 </head>
@@ -57,14 +61,14 @@ De Cero a Trader
   Volumen 1
   </p>
 
-  <!-- ACCESO -->
+  <!-- SI TIENE ACCESO -->
   <div data-ms-content="ebook-1-access">
     <a href="ebook/ebook1/index.html" target="_blank" class="btn">
       Acceder ahora
     </a>
   </div>
 
-  <!-- COMPRA -->
+  <!-- SI NO TIENE ACCESO -->
   <div data-ms-content="!ebook-1-access">
     <a href="javascript:void(0);" class="btn" id="buyBtn">
       Comprar Ebook #1 ($4.99)
@@ -76,7 +80,7 @@ De Cero a Trader
 <!-- MEMBERSTACK -->
 <script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
 
-<!-- FIX FORZADO -->
+<!-- CHECKOUT FIX -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("buyBtn");
@@ -84,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.addEventListener("click", async function () {
     try {
       await window.$memberstack.purchasePlansWithCheckout({
-        priceId: "prc_ebook-1-acceso-u100a2s"
+        priceId: "prc_ebook-1-acceso-ul100a2s"
       });
     } catch (err) {
       console.error(err);
