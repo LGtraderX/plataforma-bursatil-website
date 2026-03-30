@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
-
-<!-- MEMBERSTACK (OBLIGATORIO) -->
-<script src="https://static.memberstack.com/scripts/v2/memberstack.js"
-data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"></script>
 
 <style>
 body {
@@ -15,29 +10,37 @@ body {
   background: #0b0b0b;
   color: white;
   text-align: center;
-  padding: 40px;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 25px;
-  margin: 20px auto;
+  padding: 20px;
+  margin: 20px;
   border-radius: 10px;
-  max-width: 400px;
 }
 
-.btn {
+.locked {
+  opacity: 0.4;
+}
+
+button {
   padding: 12px 24px;
   background: #FFD700;
+  color: black;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  font-weight: bold;
 }
 
-h1 {
-  color: #FFD700;
+button:hover {
+  background: #ffcc00;
+}
+
+.locked button {
+  background: #555;
+  color: #bbb;
+  cursor: not-allowed;
 }
 </style>
 
@@ -45,37 +48,62 @@ h1 {
 
 <body>
 
-<h1>LGX Dashboard</h1>
+<h1>LGX Trading System</h1>
+
+<p style="color:#FFD700; font-weight:bold;">
+De Cero a Trader
+</p>
+
+<button data-ms-action="login">Login</button>
+<button data-ms-action="signup">Crear cuenta / Comprar</button>
 
 <div class="card">
-  <h2>Ebook LGX</h2>
-  <p>Acceso completo al contenido</p>
+  <h2>Ebook #1</h2>
+  <p>
+  Aprende a Invertir en la Bolsa de Valores de EEUU desde Cero<br>
+  Guía Inicial: Fundamentos para entender el mercado y dar tu primer paso<br>
+  Volumen 1
+</p>
+  <p style="color:#aaa; font-size:14px;">
+  Acceso inmediato • Contenido actualizado constantemente
+  </p>
 
-  <!-- BOTÓN MEMBERSTACK -->
+  <a href="ebook/ebook1/index.html" target="_blank">
+    <button>Acceder ahora</button>
+  </a>
+
+</div>
+
+<div class="card locked">
+  <h2>Ebook #2 🔒</h2>
+  <p>$9.99</p>
+
   <button 
-    class="btn"
     data-ms-price:add="prc_ebook-1-acceso-o71a0sj1"
     data-ms-member="true"
   >
-    Comprar acceso
+    Comprar
   </button>
 
 </div>
 
-<div class="card">
-  <h2>Mi cuenta</h2>
-
-  <!-- LOGIN -->
-  <button class="btn" data-ms-action="login">
-    Login
-  </button>
-
-  <!-- LOGOUT -->
-  <button class="btn" data-ms-action="logout">
-    Logout
-  </button>
-
+<div class="card locked">
+  <h2>Ebook #3 🔒</h2>
+  <p>$19.99</p>
+  <button>Comprar</button>
 </div>
+
+<div class="card locked">
+  <h2>Ebook #4 🔒</h2>
+  <p>$29.99</p>
+  <button>Comprar</button>
+</div>
+
+<!-- Memberstack -->
+<script 
+data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" 
+src="https://static.memberstack.com/scripts/v2/memberstack.js">
+</script>
 
 </body>
 </html>
