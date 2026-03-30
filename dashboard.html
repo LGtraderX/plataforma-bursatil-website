@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
-<!-- MEMBERSTACK (SIN defer) -->
-<script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"
-src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
+<!-- MEMBERSTACK -->
+<script src="https://static.memberstack.com/scripts/v2/memberstack.js"
+data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"></script>
 
 <style>
 body {
@@ -72,26 +72,25 @@ De Cero a Trader
 
 </div>
 
-<!-- SCRIPT FINAL (checkout garantizado) -->
+<!-- SCRIPT FINAL (YA UBICADO CORRECTAMENTE) -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.getElementById("buyBtn").addEventListener("click", async () => {
 
-  const btn = document.getElementById("buyBtn");
+  let tries = 0;
 
-  if (btn) {
-    btn.addEventListener("click", async () => {
-
-      if (!window.$memberstackDom) {
-        alert("Memberstack no cargó");
-        return;
-      }
-
-      await window.$memberstackDom.openCheckout({
-        priceId: "prc_ebook-1-acceso-o71a0sj1"
-      });
-
-    });
+  while (!window.$memberstackDom && tries < 20) {
+    await new Promise(r => setTimeout(r, 200));
+    tries++;
   }
+
+  if (!window.$memberstackDom) {
+    alert("Memberstack no cargó");
+    return;
+  }
+
+  await window.$memberstackDom.openCheckout({
+    priceId: "prc_ebook-1-acceso-o71a0sj1"
+  });
 
 });
 </script>
