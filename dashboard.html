@@ -19,10 +19,6 @@ body {
   border-radius: 10px;
 }
 
-.locked {
-  opacity: 0.4;
-}
-
 .btn {
   display:inline-block;
   padding:12px 24px;
@@ -32,10 +28,6 @@ body {
   font-weight:bold;
   text-decoration:none;
   cursor:pointer;
-}
-
-.btn:hover {
-  background:#ffcc00;
 }
 </style>
 
@@ -52,7 +44,6 @@ De Cero a Trader
 <br>
 
 <a href="javascript:void(0);" data-ms-action="login" class="btn">Login</a>
-<a href="javascript:void(0);" data-ms-action="signup" class="btn">Crear cuenta / Comprar</a>
 
 <!-- ================= EBOOK #1 ================= -->
 
@@ -66,51 +57,42 @@ De Cero a Trader
   Volumen 1
   </p>
 
-  <p style="color:#aaa; font-size:14px;">
-  Acceso inmediato • Contenido actualizado constantemente
-  </p>
-
-  <!-- SI TIENE ACCESO -->
+  <!-- ACCESO -->
   <div data-ms-content="ebook-1-access">
     <a href="ebook/ebook1/index.html" target="_blank" class="btn">
       Acceder ahora
     </a>
   </div>
 
-  <!-- SI NO TIENE ACCESO -->
+  <!-- COMPRA -->
   <div data-ms-content="!ebook-1-access">
-    <a 
-      href="javascript:void(0);" 
-      data-ms-price:add="prc_ebook-1-acceso-u100a2s"
-      class="btn">
+    <a href="javascript:void(0);" class="btn" id="buyBtn">
       Comprar Ebook #1 ($4.99)
     </a>
   </div>
 
 </div>
 
-<!-- ================= EBOOKS FUTUROS ================= -->
-
-<div class="card locked">
-  <h2>Ebook #2 🔒</h2>
-  <p>$9.99</p>
-  <button disabled>Próximamente</button>
-</div>
-
-<div class="card locked">
-  <h2>Ebook #3 🔒</h2>
-  <p>$19.99</p>
-  <button disabled>Próximamente</button>
-</div>
-
-<div class="card locked">
-  <h2>Ebook #4 🔒</h2>
-  <p>$29.99</p>
-  <button disabled>Próximamente</button>
-</div>
-
-<!-- MEMBERSTACK (SOLO 1 VEZ) -->
+<!-- MEMBERSTACK -->
 <script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
+
+<!-- FIX FORZADO -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("buyBtn");
+
+  btn.addEventListener("click", async function () {
+    try {
+      await window.$memberstack.purchasePlansWithCheckout({
+        priceId: "prc_ebook-1-acceso-u100a2s"
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Error abriendo checkout");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
