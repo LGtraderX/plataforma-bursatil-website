@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
-<!-- MEMBERSTACK (SIEMPRE EN HEAD) -->
+<!-- MEMBERSTACK (CORRECTO) -->
 <script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"
 src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
 
@@ -21,10 +21,6 @@ body {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-}
-
-.locked {
-  opacity: 0.4;
 }
 
 .btn {
@@ -56,56 +52,18 @@ De Cero a Trader
 
 <br>
 
-<button data-ms-action="login" class="btn">Login</button>
-<button data-ms-action="signup" class="btn">Crear cuenta</button>
+<!-- BOTÓN DE COMPRA (ESTE ES EL CLAVE) -->
+<button data-ms-action="signup" data-ms-plan="Ebook #1" class="btn">
+  Comprar Ebook #1 ($4.99)
+</button>
 
-<!-- ================= EBOOK #1 ================= -->
+<br><br>
 
-<div class="card">
-
-  <h2>Ebook #1</h2>
-
-  <p>
-  Aprende a Invertir en la Bolsa de Valores de EEUU desde Cero<br>
-  Guía Inicial: Fundamentos para entender el mercado y dar tu primer paso<br>
-  Volumen 1
-  </p>
-
-  <p style="color:#aaa; font-size:14px;">
-  Acceso inmediato • Contenido actualizado constantemente
-  </p>
-
-  <!-- SI TIENE ACCESO -->
-  <div data-ms-content="ebook-1-access">
-    <a href="ebook/ebook1/index.html" target="_blank" class="btn">
-      Acceder ahora
-    </a>
-  </div>
-
-  <!-- SI NO TIENE ACCESO -->
-  <div data-ms-content="!ebook-1-access">
-    <button data-ms-price:add="prc_ebook-1-acceso-o71a0sj1" class="btn">
-      Comprar Ebook #1 ($4.99)
-    </button>
-  </div>
-
-</div>
-
-<!-- FUTURO -->
-
-<div class="card locked">
-  <h2>Ebook #2 🔒</h2>
-  <p>$9.99</p>
-</div>
-
-<div class="card locked">
-  <h2>Ebook #3 🔒</h2>
-  <p>$19.99</p>
-</div>
-
-<div class="card locked">
-  <h2>Ebook #4 🔒</h2>
-  <p>$29.99</p>
+<!-- ACCESO SOLO SI PAGÓ -->
+<div data-ms-content="ebook-1-access">
+  <a href="ebook/ebook1/index.html" class="btn">
+    Acceder ahora
+  </a>
 </div>
 
 </body>
