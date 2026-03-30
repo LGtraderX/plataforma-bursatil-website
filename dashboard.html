@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
 <!-- MEMBERSTACK -->
 <script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"
-src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
-
-<script>
-window.$memberstackDom.getCurrentMember().then(({ data: member }) => {
-  console.log("Memberstack cargado", member);
-});
-</script>
+src="https://static.memberstack.com/scripts/v2/memberstack.js" defer></script>
 
 <style>
 body {
@@ -70,25 +65,9 @@ De Cero a Trader
 
   <!-- SI NO TIENE ACCESO -->
   <div data-ms-content="!ebook-1-access">
-    
-<button class="btn" id="buyBtn">
-  Comprar Ebook ($4.99)
-</button>
-
-<script>
-document.getElementById("buyBtn").addEventListener("click", async () => {
-  if (!window.$memberstackDom) {
-    alert("Memberstack no cargó");
-    return;
-  }
-
-  await window.$memberstackDom.openCheckout({
-    priceId: "prc_ebook-1-acceso-o71a0sj1"
-  });
-});
-</script>
-
-
+    <button class="btn" data-ms-price="prc_ebook-1-acceso-o71a0sj1">
+      Comprar Ebook ($4.99)
+    </button>
   </div>
 
 </div>
