@@ -23,18 +23,19 @@ body {
   opacity: 0.4;
 }
 
-button {
-  padding: 12px 24px;
-  background: #FFD700;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+.btn {
+  display:inline-block;
+  padding:12px 24px;
+  background:#FFD700;
+  color:black;
+  border-radius:5px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
 }
 
-button:hover {
-  background: #ffcc00;
+.btn:hover {
+  background:#ffcc00;
 }
 </style>
 
@@ -48,8 +49,10 @@ button:hover {
 De Cero a Trader
 </p>
 
-<button data-ms-action="login">Login</button>
-<button data-ms-action="signup">Crear cuenta / Comprar</button>
+<br>
+
+<a href="#" data-ms-action="login" class="btn" onclick="return false;">Login</a>
+<a href="#" data-ms-action="signup" class="btn" onclick="return false;">Crear cuenta / Comprar</a>
 
 <!-- ================= EBOOK #1 ================= -->
 
@@ -69,16 +72,20 @@ De Cero a Trader
 
   <!-- SI TIENE ACCESO -->
   <div data-ms-content="ebook-1-access">
-    <a href="ebook/ebook1/index.html" target="_blank">
-      <button>Acceder ahora</button>
+    <a href="ebook/ebook1/index.html" target="_blank" class="btn">
+      Acceder ahora
     </a>
   </div>
 
   <!-- SI NO TIENE ACCESO -->
   <div data-ms-content="!ebook-1-access">
-    <button data-ms-price:add="prc_ebook-1-acceso-u100a2s">
+    <a 
+      href="#" 
+      data-ms-price:add="prc_ebook-1-acceso-u100a2s"
+      class="btn"
+      onclick="return false;">
       Comprar Ebook #1 ($4.99)
-    </button>
+    </a>
   </div>
 
 </div>
