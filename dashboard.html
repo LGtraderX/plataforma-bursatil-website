@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
+<!-- MEMBERSTACK (ARRIBA SIEMPRE) -->
+<script 
+  data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" 
+  src="https://static.memberstack.com/scripts/v2/memberstack.js"
+  defer
+></script>
+
 <style>
 body {
   font-family: Arial;
@@ -42,6 +49,15 @@ button:hover {
   color: #bbb;
   cursor: not-allowed;
 }
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+}
 </style>
 
 </head>
@@ -54,16 +70,31 @@ button:hover {
 De Cero a Trader
 </p>
 
-<!-- LOGIN -->
-<button data-ms-action="login">Login</button>
+<!-- LOGIN FORM REAL -->
+<div class="card">
+  <h3>Login</h3>
+  <form data-ms-form="login">
+    <input type="email" data-ms-member="email" placeholder="Email" required>
+    <input type="password" data-ms-member="password" placeholder="Password" required>
+    <button type="submit">Entrar</button>
+  </form>
+</div>
 
-<!-- CREAR CUENTA + COMPRA (ARREGLADO) -->
-<button 
-  data-ms-price:add="prc_ebook-1-acceso-o71a0sj1"
-  data-ms-member="true"
->
-  Crear cuenta / Comprar
-</button>
+<!-- SIGNUP + COMPRA -->
+<div class="card">
+  <h3>Crear cuenta y comprar</h3>
+  <form data-ms-form="signup">
+    <input type="email" data-ms-member="email" placeholder="Email" required>
+    <input type="password" data-ms-member="password" placeholder="Password" required>
+
+    <button 
+      type="submit"
+      data-ms-price:add="prc_ebook-1-acceso-o71a0sj1"
+    >
+      Crear cuenta y comprar Ebook #2
+    </button>
+  </form>
+</div>
 
 <!-- EBOOK 1 (LIBRE) -->
 <div class="card">
@@ -80,10 +111,9 @@ De Cero a Trader
   <a href="ebook/ebook1/index.html" target="_blank">
     <button>Acceder ahora</button>
   </a>
-
 </div>
 
-<!-- EBOOK 2 (VENTA) -->
+<!-- EBOOK 2 -->
 <div class="card locked">
   <h2>Ebook #2 🔒</h2>
   <p>$9.99</p>
@@ -92,9 +122,8 @@ De Cero a Trader
     data-ms-price:add="prc_ebook-1-acceso-o71a0sj1"
     data-ms-member="true"
   >
-    Comprar
+    Comprar acceso
   </button>
-
 </div>
 
 <!-- FUTUROS -->
@@ -109,12 +138,6 @@ De Cero a Trader
   <p>$29.99</p>
   <button>Comprar</button>
 </div>
-
-<!-- MEMBERSTACK -->
-<script 
-data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" 
-src="https://static.memberstack.com/scripts/v2/memberstack.js">
-</script>
 
 </body>
 </html>
