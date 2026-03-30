@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
-<!-- MEMBERSTACK (CORRECTO) -->
 <script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"
 src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
 
@@ -24,19 +23,12 @@ body {
 }
 
 .btn {
-  display:inline-block;
   padding:12px 24px;
   background:#FFD700;
-  color:black;
-  border-radius:5px;
-  font-weight:bold;
-  text-decoration:none;
-  cursor:pointer;
   border:none;
-}
-
-.btn:hover {
-  background:#ffcc00;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
 }
 </style>
 
@@ -50,20 +42,32 @@ body {
 De Cero a Trader
 </p>
 
-<br>
+<!-- ================= EBOOK #1 ================= -->
 
-<!-- BOTÓN DE COMPRA (ESTE ES EL CLAVE) -->
-<button data-ms-action="signup" data-ms-plan="Ebook #1" class="btn">
-  Comprar Ebook #1 ($4.99)
-</button>
+<div class="card">
 
-<br><br>
+  <h2>Ebook #1</h2>
 
-<!-- ACCESO SOLO SI PAGÓ -->
-<div data-ms-content="ebook-1-access">
-  <a href="ebook/ebook1/index.html" class="btn">
-    Acceder ahora
-  </a>
+  <p>
+  Aprende a Invertir en la Bolsa de Valores de EEUU desde Cero<br>
+  Guía Inicial: Fundamentos para entender el mercado y dar tu primer paso<br>
+  Volumen 1
+  </p>
+
+  <!-- SI TIENE ACCESO -->
+  <div data-ms-content="ebook-1-access">
+    <a href="ebook/ebook1/index.html">
+      <button class="btn">Acceder ahora</button>
+    </a>
+  </div>
+
+  <!-- SI NO TIENE ACCESO -->
+  <div data-ms-content="!ebook-1-access">
+    <a href="https://buy.stripe.com/TU_LINK_AQUI" target="_blank">
+      <button class="btn">Comprar Ebook ($4.99)</button>
+    </a>
+  </div>
+
 </div>
 
 </body>
