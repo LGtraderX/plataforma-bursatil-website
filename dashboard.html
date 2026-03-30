@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>LGX Dashboard</title>
 
-<!-- MEMBERSTACK -->
+<!-- MEMBERSTACK (OBLIGATORIO) -->
 <script src="https://static.memberstack.com/scripts/v2/memberstack.js"
 data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"></script>
 
@@ -15,22 +15,29 @@ body {
   background: #0b0b0b;
   color: white;
   text-align: center;
+  padding: 40px;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 20px;
-  margin: 20px;
+  padding: 25px;
+  margin: 20px auto;
   border-radius: 10px;
+  max-width: 400px;
 }
 
 .btn {
-  padding:12px 24px;
-  background:#FFD700;
-  border:none;
-  border-radius:6px;
-  font-weight:bold;
-  cursor:pointer;
+  padding: 12px 24px;
+  background: #FFD700;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+h1 {
+  color: #FFD700;
 }
 </style>
 
@@ -38,62 +45,37 @@ body {
 
 <body>
 
-<h1>LGX Trading System</h1>
-
-<p style="color:#FFD700; font-weight:bold;">
-De Cero a Trader
-</p>
-
-<!-- ================= EBOOK #1 ================= -->
+<h1>LGX Dashboard</h1>
 
 <div class="card">
+  <h2>Ebook LGX</h2>
+  <p>Acceso completo al contenido</p>
 
-  <h2>Ebook #1</h2>
-
-  <p>
-  Aprende a Invertir en la Bolsa de Valores de EEUU desde Cero<br>
-  Guía Inicial: Fundamentos para entender el mercado y dar tu primer paso<br>
-  Volumen 1
-  </p>
-
-  <!-- SI TIENE ACCESO -->
-  <div data-ms-content="ebook-1-access">
-    <a href="ebook/ebook1/index.html">
-      <button class="btn">Acceder ahora</button>
-    </a>
-  </div>
-
-  <!-- SI NO TIENE ACCESO -->
-  <div data-ms-content="!ebook-1-access">
-    <button class="btn" id="buyBtn">
-      Comprar Ebook ($4.99)
-    </button>
-  </div>
+  <!-- BOTÓN MEMBERSTACK -->
+  <button 
+    class="btn"
+    data-ms-price:add="prc_ebook-1-acceso-o71a0sj1"
+    data-ms-member="true"
+  >
+    Comprar acceso
+  </button>
 
 </div>
 
-<!-- SCRIPT FINAL (YA UBICADO CORRECTAMENTE) -->
-<script>
-document.getElementById("buyBtn").addEventListener("click", async () => {
+<div class="card">
+  <h2>Mi cuenta</h2>
 
-  let tries = 0;
+  <!-- LOGIN -->
+  <button class="btn" data-ms-action="login">
+    Login
+  </button>
 
-  while (!window.$memberstackDom && tries < 20) {
-    await new Promise(r => setTimeout(r, 200));
-    tries++;
-  }
+  <!-- LOGOUT -->
+  <button class="btn" data-ms-action="logout">
+    Logout
+  </button>
 
-  if (!window.$memberstackDom) {
-    alert("Memberstack no cargó");
-    return;
-  }
-
-  await window.$memberstackDom.openCheckout({
-    priceId: "prc_ebook-1-acceso-o71a0sj1"
-  });
-
-});
-</script>
+</div>
 
 </body>
 </html>
