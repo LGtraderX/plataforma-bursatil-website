@@ -19,6 +19,10 @@ body {
   border-radius: 10px;
 }
 
+.locked {
+  opacity: 0.4;
+}
+
 .btn {
   display:inline-block;
   padding:12px 24px;
@@ -47,8 +51,8 @@ De Cero a Trader
 
 <br>
 
-<a href="#" data-ms-action="login" class="btn">Login</a>
-<a href="#" data-ms-action="signup" class="btn">Crear cuenta</a>
+<button data-ms-action="login" class="btn">Login</button>
+<button data-ms-action="signup" class="btn">Crear cuenta</button>
 
 <!-- ================= EBOOK #1 ================= -->
 
@@ -62,6 +66,10 @@ De Cero a Trader
   Volumen 1
   </p>
 
+  <p style="color:#aaa; font-size:14px;">
+  Acceso inmediato • Contenido actualizado constantemente
+  </p>
+
   <!-- SI TIENE ACCESO -->
   <div data-ms-content="ebook-1-access">
     <a href="ebook/ebook1/index.html" target="_blank" class="btn">
@@ -71,13 +79,31 @@ De Cero a Trader
 
   <!-- SI NO TIENE ACCESO -->
   <div data-ms-content="!ebook-1-access">
-    <button 
-      data-ms-price:add="prc_ebook-1-acceso-ul100a2s"
-      class="btn">
+    <button data-ms-price:add="prc_ebook-1-acceso-ul100a2s" class="btn">
       Comprar Ebook #1 ($4.99)
     </button>
   </div>
 
+</div>
+
+<!-- ================= FUTURO ================= -->
+
+<div class="card locked">
+  <h2>Ebook #2 🔒</h2>
+  <p>$9.99</p>
+  <button disabled>Próximamente</button>
+</div>
+
+<div class="card locked">
+  <h2>Ebook #3 🔒</h2>
+  <p>$19.99</p>
+  <button disabled>Próximamente</button>
+</div>
+
+<div class="card locked">
+  <h2>Ebook #4 🔒</h2>
+  <p>$29.99</p>
+  <button disabled>Próximamente</button>
 </div>
 
 <!-- MEMBERSTACK -->
