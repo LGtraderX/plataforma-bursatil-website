@@ -47,7 +47,8 @@ De Cero a Trader
 
 <br>
 
-<a href="javascript:void(0);" data-ms-action="login" class="btn">Login</a>
+<a href="#" data-ms-action="login" class="btn">Login</a>
+<a href="#" data-ms-action="signup" class="btn">Crear cuenta</a>
 
 <!-- ================= EBOOK #1 ================= -->
 
@@ -70,32 +71,18 @@ De Cero a Trader
 
   <!-- SI NO TIENE ACCESO -->
   <div data-ms-content="!ebook-1-access">
-    <a href="javascript:void(0);" class="btn" id="buyBtn">
+    <button 
+      data-ms-price:add="prc_ebook-1-acceso-ul100a2s"
+      class="btn">
       Comprar Ebook #1 ($4.99)
-    </a>
+    </button>
   </div>
 
 </div>
 
 <!-- MEMBERSTACK -->
-<script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59" src="https://static.memberstack.com/scripts/v2/memberstack.js"></script>
-
-<!-- CHECKOUT FIX -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("buyBtn");
-
-  btn.addEventListener("click", async function () {
-    try {
-      await window.$memberstack.purchasePlansWithCheckout({
-        priceId: "prc_ebook-1-acceso-ul100a2s"
-      });
-    } catch (err) {
-      console.error(err);
-      alert("Error abriendo checkout");
-    }
-  });
-});
+<script data-memberstack-app="app_cmnckk45m000x0sydbv9bgr59"
+src="https://static.memberstack.com/scripts/v2/memberstack.js">
 </script>
 
 </body>
