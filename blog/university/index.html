@@ -127,6 +127,9 @@ h1 {
 
 <h1>LGX Trading University</h1>
 
+<input type="text" id="searchInput" placeholder="Buscar artículo..." 
+style="width:100%;max-width:500px;padding:10px;margin-top:10px;margin-bottom:30px;border-radius:8px;border:none;outline:none;">
+
 <!-- 🔥 NUEVO ARTÍCULO ARRIBA -->
 
 <div class="article">
@@ -641,6 +644,18 @@ Aprende paso a paso cómo ejecutar órdenes de opciones desde el celular en Thin
 </div>
 
 </div>
+
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function() {
+  const value = this.value.toLowerCase();
+  const articles = document.querySelectorAll(".article");
+
+  articles.forEach(function(article) {
+    const text = article.innerText.toLowerCase();
+    article.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+</script>
 
 </body>
 </html>
