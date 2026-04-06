@@ -264,8 +264,49 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
 
   <h2 style="color:#FFD700;">Get Access to the Playbook</h2>
 
-  <!-- SIGNUP + COMPRA -->
-  <form data-ms-form="signup">
+<!-- SIGNUP + COMPRA -->
+<form data-ms-form="signup">
+
+  <input 
+    type="email" 
+    data-ms-member="email" 
+    placeholder="Email" 
+    required
+  >
+
+  <input 
+    type="password" 
+    data-ms-member="password" 
+    placeholder="Password" 
+    required
+  >
+
+  <!-- NUEVO: CONFIRM PASSWORD -->
+  <input 
+    type="password" 
+    placeholder="Confirm Password" 
+    required
+  >
+
+  <button 
+    type="submit"
+    data-ms-price:add="prc_prueba-del-sistema-ckau0sb3"
+    class="cta-button">
+    👉 Buy Now – $49.99
+  </button>
+
+</form>
+
+
+<!-- LOGIN -->
+<div style="margin-top:20px;">
+  <p style="font-size:14px; color:#aaa;">
+    Already purchased?
+  </p>
+
+  <form 
+    data-ms-form="login" 
+    data-ms-redirect="/event-squeeze/en/dashboard/">
 
     <input 
       type="email" 
@@ -281,45 +322,17 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
       required
     >
 
-    <button 
-      type="submit"
-      data-ms-price:add="prc_prueba-del-sistema-ckau0sb3"
-      class="cta-button">
-      👉 Buy Now – $49.99
+    <button type="submit" class="cta-button">
+      Login
     </button>
 
   </form>
+</div>
 
-  <!-- LOGIN -->
-  <div style="margin-top:20px;">
-    <p style="font-size:14px; color:#aaa;">
-      Already purchased?
-    </p>
 
-    <form 
-      data-ms-form="login" 
-      data-ms-redirect="/event-squeeze/en/dashboard/">
 
-      <input 
-        type="email" 
-        data-ms-member="email" 
-        placeholder="Email" 
-        required
-      >
 
-      <input 
-        type="password" 
-        data-ms-member="password" 
-        placeholder="Password" 
-        required
-      >
 
-      <button type="submit" class="cta-button">
-        Login
-      </button>
-
-    </form>
-  </div>
 
 </div>
 
