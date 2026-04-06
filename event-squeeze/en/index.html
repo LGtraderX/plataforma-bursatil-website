@@ -265,12 +265,13 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
   <h2 style="color:#FFD700;">Get Access to the Playbook</h2>
 
 <!-- SIGNUP + COMPRA -->
-<form data-ms-form="signup">
+<form data-ms-form="signup" autocomplete="off">
 
   <input 
     type="email" 
     data-ms-member="email" 
     placeholder="Email" 
+    autocomplete="off"
     required
   >
 
@@ -279,6 +280,7 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
     id="password1"
     data-ms-member="password" 
     placeholder="Password" 
+    autocomplete="new-password"
     required
   >
 
@@ -286,10 +288,10 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
     type="password" 
     id="password2"
     placeholder="Confirm Password" 
+    autocomplete="new-password"
     required
   >
 
-  <!-- SHOW PASSWORD -->
   <label style="font-size:12px; color:#aaa;">
     <input type="checkbox" onclick="togglePassword()"> Show password
   </label>
@@ -312,12 +314,14 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
 
   <form 
     data-ms-form="login" 
-    data-ms-redirect="/event-squeeze/en/dashboard/">
+    data-ms-redirect="/event-squeeze/en/dashboard/"
+    autocomplete="off">
 
     <input 
       type="email" 
       data-ms-member="email" 
       placeholder="Email" 
+      autocomplete="off"
       required
     >
 
@@ -326,10 +330,10 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
       id="login-password"
       data-ms-member="password" 
       placeholder="Password" 
+      autocomplete="current-password"
       required
     >
 
-    <!-- SHOW PASSWORD LOGIN -->
     <label style="font-size:12px; color:#aaa;">
       <input type="checkbox" onclick="togglePassword()"> Show password
     </label>
@@ -338,27 +342,30 @@ World Cup 2026 Cash Playbook for Homeowners Near MetLife Stadium
       Login
     </button>
 
-<p style="font-size:12px; color:#aaa;">
-  Forgot your password?
-</p>
-
-<form data-ms-form="forgot-password">
-  <input 
-    type="email" 
-    data-ms-member="email" 
-    placeholder="Enter your email" 
-    required
-  >
-  <button type="submit" class="cta-button">
-    Reset Password
-  </button>
-</form>
-
   </form>
+
+  <!-- FORGOT PASSWORD (FUERA DEL LOGIN FORM) -->
+  <p style="font-size:12px; color:#aaa; margin-top:10px;">
+    Forgot your password?
+  </p>
+
+  <form data-ms-form="forgot-password" autocomplete="off">
+    <input 
+      type="email" 
+      data-ms-member="email" 
+      placeholder="Enter your email" 
+      autocomplete="off"
+      required
+    >
+    <button type="submit" class="cta-button">
+      Reset Password
+    </button>
+  </form>
+
 </div>
 
 
-<!-- SCRIPT (AL FINAL DEL BODY) -->
+<!-- SCRIPT -->
 <script>
 function togglePassword() {
   const p1 = document.getElementById("password1");
@@ -370,7 +377,6 @@ function togglePassword() {
   if (lp) lp.type = lp.type === "password" ? "text" : "password";
 }
 </script>
-
 
 
 
