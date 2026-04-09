@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<!-- ======================= TRACKING ======================= -->
+<script>
+function loadScript(a){
+  var b = document.getElementsByTagName("head")[0],
+      c = document.createElement("script");
+  c.type = "text/javascript",
+  c.src  = "https://tracker.metricool.com/resources/be.js",
+  c.onreadystatechange = a,
+  c.onload = a,
+  b.appendChild(c)
+}
+loadScript(function(){
+  beTracker.t({hash:"d4e95ba12e0accbcad04a9342f62bf85"})
+});
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '261269777921639');
+fbq('track', 'PageView');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5DDE1SRNKP');
+</script>
+
+<!-- ======================= META SEO ======================= -->
+<meta charset="UTF-8">
+<title>Cómo usar los Pivot Points para identificar la tendencia | Plataforma Bursátil</title>
+<meta name="description" content="Cómo usar los Pivot Points para identificar la tendencia en la bolsa de valores y definir objetivos como R1 y R2.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ======================= ESTILOS ======================= -->
+<style>
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+header {
+  background: #020617;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: -24px -24px 24px -24px;
+}
+
+header a {
+  color: #fbbf24;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post-container {
+  max-width: 820px;
+  margin: auto;
+}
+
+h1 { color: #facc15; }
+
+.sub { color: #cbd5e1; }
+
+p {
+  margin-bottom: 16px;
+}
+
+.nota {
+  margin: 40px 0;
+  padding: 20px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  border-radius: 12px;
+}
+
+.nota a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.cta-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-yellow { background:#facc15; color:#111; }
+.cta-blue { background:#38bdf8; color:#082f49; }
+.cta-green { background:#22c55e; color:#052e16; }
+.cta-purple { background:#8b5cf6; color:white; }
+
+.tag-lgx {
+  margin-top:20px;
+  color:#facc15;
+  font-weight:bold;
+}
+
+/* POPUP */
+#exitPopupOverlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.75);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#exitPopupBox {
+  background:#020617;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  max-width:420px;
+  width:90%;
+  position:relative;
+}
+
+#exitPopupClose {
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+#exitPopupButton {
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:#facc15;
+  color:#111;
+  font-weight:bold;
+  text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header>
+  <a href="../../index.html">Inicio</a>
+  <a href="../../curso-presencial.html">Programa Presencial</a>
+  <a href="../../curso-online.html">Programa Remoto</a>
+  <a href="../../mentoria-privada.html">Mentoria Privada</a>
+  <a href="../../suite.html">Suite</a>
+  <a href="../../paquete-tecnologico.html">Paquete Tecnologico</a>
+  <a href="../../paquete-completo.html">Paquete Completo</a>
+  <a href="../../webinario.html">Webinario</a>
+  <a href="../index.html">Blog</a>
+  <a href="../../contacto.html">Contacto</a>
+</header>
+
+<!-- ======================= ARTÍCULO ======================= -->
+<div class="post-container">
+
+<h1>Cómo usar los Pivot Points para identificar la tendencia</h1>
+
+<p class="sub">
+Los Pivot Points no solo sirven para identificar zonas de soporte y resistencia, sino también para determinar la tendencia dominante del mercado. Comprender la posición del precio respecto al pivot central permite a los traders tomar decisiones más claras y alineadas con el contexto.
+</p>
+
+<p>
+En la bolsa de valores de Estados Unidos, especialmente en instrumentos como el SP500, Nasdaq, acciones individuales y opciones, los Pivot Points ofrecen una referencia objetiva para interpretar la dirección del mercado. Esta herramienta puede aplicarse en cualquier instrumento financiero y en diferentes temporalidades, convirtiéndose en un elemento esencial dentro del análisis técnico.
+</p>
+
+<p>
+El concepto es simple pero poderoso: la ubicación del precio con respecto al pivot central define el sesgo del mercado para la jornada. Esta lectura inicial permite al trader enfocarse en oportunidades con mayor probabilidad de éxito.
+</p>
+
+<div class="nota">
+<strong>
+Precio por encima del pivot central sugiere un contexto alcista, mientras que precio por debajo del pivot central indica un sesgo bajista o de equilibrio.
+</strong>
+</div>
+
+<h2>Pivot central como referencia de tendencia</h2>
+
+<p>
+Cuando el mercado abre y se mantiene por encima del pivot central, la tendencia intradía tiende a ser alcista. En este escenario, el primer objetivo natural del precio suele ser el nivel R1. Si el mercado muestra fortaleza, el movimiento puede extenderse hacia R2 e incluso R3 en jornadas de alta volatilidad o fuerte impulso comprador.
+</p>
+
+<p>
+Este contexto favorece estrategias orientadas al alza, como la compra de acciones (stocks), la adquisición de opciones call o la venta de puts por debajo del pivot central. Estas decisiones permiten alinearse con la dirección predominante del mercado y aprovechar su inercia.
+</p>
+
+<p>
+Por el contrario, si en algún momento del día el precio se posiciona por debajo del pivot central, la idea de una tendencia alcista queda anulada. Este cambio puede indicar un día de equilibrio o el inicio de un retroceso que podría extenderse durante las siguientes sesiones. En este caso, el enfoque del trader debe ajustarse a la nueva realidad del mercado.
+</p>
+
+<h2>Interpretación de los niveles R y S</h2>
+
+<p>
+Los niveles de resistencia (R1, R2 y R3) y soporte (S1, S2 y S3) representan zonas donde el precio puede reaccionar. En un contexto alcista:
+</p>
+
+<p>
+- <strong>R1</strong>: primer objetivo natural del movimiento.<br>
+- <strong>R2</strong>: confirma fortaleza y continuación de la tendencia.<br>
+- <strong>R3</strong>: indica un mercado extremadamente fuerte o extendido.
+</p>
+
+<p>
+En un contexto bajista, los niveles S1, S2 y S3 cumplen la misma función, actuando como objetivos naturales a la baja. La interacción del precio con estos niveles ofrece información valiosa sobre la fortaleza o debilidad del mercado.
+</p>
+
+<h2>Pivot Points en diferentes temporalidades</h2>
+
+<p>
+Así como los pivots diarios son fundamentales para el trading intradía, los pivots semanales, mensuales y anuales cumplen la misma función en temporalidades más elevadas. Estos niveles permiten identificar zonas clave de tendencia y posibles puntos de giro en el mercado.
+</p>
+
+<p>
+Por ejemplo, un precio que se mantiene por encima del pivot semanal refuerza un sesgo alcista de mayor plazo, mientras que la pérdida de este nivel puede anticipar correcciones más profundas. De la misma manera, los pivots mensuales y anuales ayudan a comprender el contexto macro del mercado y a tomar decisiones estratégicas con una visión más amplia.
+</p>
+
+<h2>Aplicación práctica en la toma de decisiones</h2>
+
+<p>
+El uso de Pivot Points no se limita a identificar niveles estáticos, sino que también ayuda a estructurar un plan de trading. Antes de iniciar la jornada, el trader debe responder preguntas clave:
+</p>
+
+<p>
+- ¿Dónde se encuentra el precio respecto al pivot central?<br>
+- ¿Cuál es el objetivo natural del movimiento (R1 o S1)?<br>
+- ¿El mercado muestra fortaleza suficiente para extenderse hacia R2 o R3?<br>
+- ¿Existe confluencia con pivots de temporalidades superiores?
+</p>
+
+<p>
+Responder a estas preguntas permite operar con mayor claridad y disciplina, evitando decisiones impulsivas y alineando las operaciones con la estructura del mercado.
+</p>
+
+<h2>Conclusión: alinearse con la estructura del mercado</h2>
+
+<p>
+Los Pivot Points son una herramienta sencilla pero extremadamente efectiva para identificar la tendencia y estructurar decisiones de trading. La posición del precio respecto al pivot central proporciona una guía clara sobre el sesgo del mercado, mientras que los niveles de soporte y resistencia ayudan a definir objetivos y zonas de reacción.
+</p>
+
+<p>
+Comprender y aplicar correctamente esta herramienta permite al trader alinearse con la lógica del mercado, mejorar su toma de decisiones y operar con mayor confianza y consistencia.
+</p>
+
+<p>
+Este contenido forma parte del ecosistema LGX (LGtraderX) dentro de Plataforma Bursátil.
+</p>
+
+<p class="tag-lgx">#LGXuniversity</p>
+
+<!-- ======================= INTERLINK ======================= -->
+<div class="nota">
+  <p><strong>Lecturas recomendadas:</strong></p>
+
+  <p>
+    👉 <a href="bolsa-de-valores-pivot-points.html" style="color:#38bdf8;">
+    Bolsa de Valores Pivot Points
+    </a>
+  </p>
+
+  <p>
+    👉 <a href="como-aprender-trading.html" style="color:#38bdf8;">
+    Cómo aprender trading
+    </a>
+  </p>
+
+  <p>
+    👉 <a href="que-diferencia-nivel-fuerte-debil-trading-sp500-nasdaq.html" style="color:#38bdf8;">
+    Qué diferencia a un nivel fuerte de uno débil en trading SP500 Nasdaq
+    </a>
+  </p>
+</div>
+<!-- ======================= CTA ======================= -->
+<div class="cta-wrapper">
+
+<p><strong>Si quieres aprender a leer el mercado de esta forma,</strong><br>
+trabajo esto directamente en mis programas y comunidad.</p>
+
+<div class="cta-grid">
+
+<a class="cta-button cta-yellow" href="../../curso-presencial.html">Programa Presencial</a>
+
+<a class="cta-button cta-blue" href="../../curso-online.html">Programa Remoto</a>
+
+<a class="cta-button cta-green"
+href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20artículo%20y%20quiero%20más%20información."
+target="_blank">WhatsApp</a>
+
+<a class="cta-button cta-purple"
+href="https://discord.gg/hVbMbusS2v"
+target="_blank">Discord</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ======================= POPUP ======================= -->
+<div id="exitPopupOverlay">
+  <div id="exitPopupBox">
+    <button id="exitPopupClose">✕</button>
+    <h3>Accede gratis a LGX University</h3>
+    <p>Aprende a leer el mercado con niveles reales.</p>
+    <a id="exitPopupButton" href="https://plataformabursatil.com/university/">
+      👉 Entrar gratis
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  var popup = document.getElementById("exitPopupOverlay");
+  var close = document.getElementById("exitPopupClose");
+
+  if (!localStorage.getItem("lgx_popup_shown")) {
+    setTimeout(function () {
+      popup.style.display = "flex";
+      localStorage.setItem("lgx_popup_shown", "true");
+    }, 3000);
+  }
+
+  if (close) {
+    close.onclick = function () {
+      popup.style.display = "none";
+    };
+  }
+
+});
+</script>
+
+</body>
+</html>
