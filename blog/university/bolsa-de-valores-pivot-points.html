@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<!-- ======================= TRACKING ======================= -->
+<script>
+function loadScript(a){
+  var b = document.getElementsByTagName("head")[0],
+      c = document.createElement("script");
+  c.type = "text/javascript",
+  c.src  = "https://tracker.metricool.com/resources/be.js",
+  c.onreadystatechange = a,
+  c.onload = a,
+  b.appendChild(c)
+}
+loadScript(function(){
+  beTracker.t({hash:"d4e95ba12e0accbcad04a9342f62bf85"})
+});
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '261269777921639');
+fbq('track', 'PageView');
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DDE1SRNKP"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5DDE1SRNKP');
+</script>
+
+<!-- ======================= META SEO ======================= -->
+<meta charset="UTF-8">
+<title>Bolsa de Valores Pivot Points | Plataforma Bursátil</title>
+<meta name="description" content="Aprende qué son los Pivot Points en la bolsa de valores, cómo usarlos en SP500 y Nasdaq">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ======================= ESTILOS ======================= -->
+<style>
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+header {
+  background: #020617;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: -24px -24px 24px -24px;
+}
+
+header a {
+  color: #fbbf24;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post-container {
+  max-width: 820px;
+  margin: auto;
+}
+
+h1 { color: #facc15; }
+
+.sub { color: #cbd5e1; }
+
+p {
+  margin-bottom: 16px;
+}
+
+.nota {
+  margin: 40px 0;
+  padding: 20px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  border-radius: 12px;
+}
+
+.nota a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.cta-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-yellow { background:#facc15; color:#111; }
+.cta-blue { background:#38bdf8; color:#082f49; }
+.cta-green { background:#22c55e; color:#052e16; }
+.cta-purple { background:#8b5cf6; color:white; }
+
+.tag-lgx {
+  margin-top:20px;
+  color:#facc15;
+  font-weight:bold;
+}
+
+/* POPUP */
+#exitPopupOverlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.75);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#exitPopupBox {
+  background:#020617;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  max-width:420px;
+  width:90%;
+  position:relative;
+}
+
+#exitPopupClose {
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+#exitPopupButton {
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:#facc15;
+  color:#111;
+  font-weight:bold;
+  text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header>
+  <a href="../../index.html">Inicio</a>
+  <a href="../../curso-presencial.html">Programa Presencial</a>
+  <a href="../../curso-online.html">Programa Remoto</a>
+  <a href="../../mentoria-privada.html">Mentoria Privada</a>
+  <a href="../../suite.html">Suite</a>
+  <a href="../../paquete-tecnologico.html">Paquete Tecnologico</a>
+  <a href="../../paquete-completo.html">Paquete Completo</a>
+  <a href="../../webinario.html">Webinario</a>
+  <a href="../index.html">Blog</a>
+  <a href="../../contacto.html">Contacto</a>
+</header>
+
+<!-- ======================= ARTÍCULO ======================= -->
+<div class="post-container">
+
+<h1>Bolsa de Valores Pivot Points</h1>
+
+<p class="sub">
+Los Pivot Points son una de las herramientas más simples y al mismo tiempo más poderosas dentro de la bolsa de valores. No predicen el mercado, pero te ayudan a entender dónde el precio tiene mayor probabilidad de reaccionar.
+</p>
+
+<p>
+En trading, especialmente en instrumentos como SP500, Nasdaq, futuros, stocks y opciones, los Pivot Points funcionan como niveles de referencia que dividen el mercado en zonas de equilibrio, expansión y posible reversión.
+</p>
+
+<p>
+Lo importante no es solo conocer los niveles, sino entender cómo el precio se comporta alrededor de ellos.
+</p>
+
+<div class="nota">
+<strong>
+El primer trabajo de un trader no es operar. Es ubicarse. Saber dónde está el precio en relación a los niveles.
+</strong>
+</div>
+
+<p>
+Cada día, al inicio de la sesión regular del mercado en Estados Unidos (9:30 AM RTH), debes hacer una lectura clave: ¿Dónde está el precio respecto a los Pivot Points?
+</p>
+
+<p>
+Esta simple observación define el contexto inicial del día. Si el precio abre por encima del pivot central, el mercado tiene sesgo alcista. Si abre por debajo, el sesgo es bajista. Pero lo más importante ocurre cuando el precio interactúa con el pivot central.
+</p>
+
+<h2>El Pivot Central: el nivel más importante del día</h2>
+
+<p>
+El pivot central es el nivel más relevante dentro de toda la estructura. Es el punto de equilibrio del mercado basado en la sesión anterior.
+</p>
+
+<p>
+En la mayoría de los casos, el pivot central es testeado al menos una vez durante el día. Y ese testeo suele generar una reacción importante de varios puntos, especialmente en instrumentos como SP500 y Nasdaq.
+</p>
+
+<p>
+Aquí es donde aparece la oportunidad real: no necesitas operar todo el día. Solo necesitas estar atento a estos momentos clave donde el mercado toca niveles importantes.
+</p>
+
+<p>
+Cuando el precio llega al pivot central, debes observar:
+</p>
+
+<p>
+- Velocidad del movimiento<br>
+- Reacción inmediata<br>
+- Si hay rechazo o aceptación<br>
+- Contexto previo del mercado
+</p>
+
+<p>
+Esa reacción te da información. No es el nivel lo que importa. Es lo que el mercado hace cuando llega ahí.
+</p>
+
+<h2>Cómo se calculan los Pivot Points</h2>
+
+<p>
+Los Pivot Points se calculan utilizando el máximo, mínimo y cierre del día anterior.
+</p>
+
+<p>
+La fórmula principal es:
+</p>
+
+<p>
+Pivot = (High + Low + Close) / 3
+</p>
+
+<p>
+A partir de este valor se calculan los niveles adicionales:
+</p>
+
+<p>
+R1 = (2 × Pivot) − Low<br>
+R2 = Pivot + (High − Low)<br>
+R3 = High + 2 × (Pivot − Low)
+</p>
+
+<p>
+S1 = (2 × Pivot) − High<br>
+S2 = Pivot − (High − Low)<br>
+S3 = Low − 2 × (High − Pivot)
+</p>
+
+<p>
+Estos niveles representan posibles zonas donde el precio puede reaccionar, frenar o incluso revertir.
+</p>
+
+<p>
+Lo importante no es memorizar la fórmula, sino entender cómo utilizar estos niveles dentro del contexto del mercado.
+</p>
+
+<h2>Aplicación práctica en cualquier instrumento</h2>
+
+<p>
+Los Pivot Points funcionan en cualquier instrumento:
+</p>
+
+<p>
+- SP500<br>
+- Nasdaq<br>
+- Dow Jones<br>
+- Stocks individuales<br>
+- Opciones<br>
+- Futuros
+</p>
+
+<p>
+La lógica es siempre la misma: el mercado se mueve entre niveles buscando liquidez y reaccionando en zonas clave.
+</p>
+
+<p>
+Cuando combinas Pivot Points con lectura de contexto, tiempo y comportamiento del precio, empiezas a ver el mercado de forma diferente.
+</p>
+
+<p>
+Dejas de perseguir movimientos y empiezas a esperar en zonas donde el mercado tiene sentido.
+</p>
+
+<h2>Conclusión: niveles + contexto = ventaja</h2>
+
+<p>
+Los Pivot Points no son una estrategia. Son una herramienta.
+</p>
+
+<p>
+La ventaja real aparece cuando entiendes:
+</p>
+
+<p>
+- Dónde está el precio<br>
+- Qué está haciendo el mercado<br>
+- Cómo reacciona en niveles clave
+</p>
+
+<p>
+El pivot central, en particular, es uno de los puntos más importantes del día. No porque lo diga un indicador, sino porque el mercado lo respeta constantemente.
+</p>
+
+<p>
+Si aprendes a leer ese comportamiento, empiezas a operar con lógica, no con emoción.
+</p>
+
+<p>
+Este contenido forma parte del ecosistema LGX (LGtraderX) dentro de Plataforma Bursátil.
+</p>
+
+<p class="tag-lgx">#LGXuniversity</p>
+
+<!-- ======================= INTERLINK ======================= -->
+<div class="nota">
+<p><strong>Lecturas recomendadas:</strong></p>
+
+<p>
+👉 <a href="bolsa-de-valores-hoy-como-invertir-en-futuros-stocks-y-opciones.html" style="color:#38bdf8;">
+Bolsa de valores hoy: cómo invertir en futuros, stocks y opciones correctamente
+</a>
+</p>
+
+<p>
+👉 <a href="stock-market-vix.html" style="color:#38bdf8;">
+Stock Market VIX: cómo interpretar el VIX y usarlo como indicador de tendencia
+</a>
+</p>
+
+<p>
+👉 <a href="bolsa-de-valores-como-invertir.html" style="color:#38bdf8;">
+Bolsa de Valores cómo invertir
+</a>
+</p>
+</div>
+<!-- ======================= CTA ======================= -->
+<div class="cta-wrapper">
+
+<p><strong>Si quieres aprender a leer el mercado de esta forma,</strong><br>
+trabajo esto directamente en mis programas y comunidad.</p>
+
+<div class="cta-grid">
+
+<a class="cta-button cta-yellow" href="../../curso-presencial.html">Programa Presencial</a>
+
+<a class="cta-button cta-blue" href="../../curso-online.html">Programa Remoto</a>
+
+<a class="cta-button cta-green"
+href="https://wa.me/19084680867?text=Hola%20LGtraderX,%20vengo%20del%20artículo%20y%20quiero%20más%20información."
+target="_blank">WhatsApp</a>
+
+<a class="cta-button cta-purple"
+href="https://discord.gg/hVbMbusS2v"
+target="_blank">Discord</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ======================= POPUP ======================= -->
+<div id="exitPopupOverlay">
+  <div id="exitPopupBox">
+    <button id="exitPopupClose">✕</button>
+    <h3>Accede gratis a LGX University</h3>
+    <p>Aprende a leer el mercado con niveles reales.</p>
+    <a id="exitPopupButton" href="https://plataformabursatil.com/university/">
+      👉 Entrar gratis
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  var popup = document.getElementById("exitPopupOverlay");
+  var close = document.getElementById("exitPopupClose");
+
+  if (!localStorage.getItem("lgx_popup_shown")) {
+    setTimeout(function () {
+      popup.style.display = "flex";
+      localStorage.setItem("lgx_popup_shown", "true");
+    }, 3000);
+  }
+
+  if (close) {
+    close.onclick = function () {
+      popup.style.display = "none";
+    };
+  }
+
+});
+</script>
+
+</body>
+</html>
